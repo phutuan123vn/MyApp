@@ -29,6 +29,7 @@ android {
                             'src/main/res/layouts/SV',
                             'src/main/res/layouts/LOGIN',
                             'src/main/res/layouts/GV',
+                            'src/main/res/layouts/QL',
                             'src/main/res/layouts',
                             'src/main/res'
                     ]
