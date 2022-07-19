@@ -22,5 +22,10 @@ class LoginSV : AppCompatActivity() {
             val intent=Intent(this,ForgetPass::class.java)
             startActivity(intent)
         }
+
+
+
+
+
     }
 }

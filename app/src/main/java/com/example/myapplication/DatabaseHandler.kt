@@ -11,10 +11,12 @@ val TABLE_NAME="StudentInfo"
 val COL_LNAME="Last_name"
 val COL_FNAME="First_name"
 val COL_STUCODE="Student_code"
+val COL_EMAIL="EMAIL"
+val COL_PASS="Password"
 val COL_ID="id"
 class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,1){
     override fun onCreate(db: SQLiteDatabase?) {
-        val creatTable= " CREATE TABLE "+ TABLE_NAME + "(" + COL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT , " + COL_LNAME +" TEXT, " +  COL_FNAME +" TEXT, " + COL_STUCODE + " TEXT " + ");";
+        val creatTable= " CREATE TABLE "+ TABLE_NAME + "(" + COL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT , " + COL_LNAME + " TEXT, " +  COL_FNAME + " TEXT, " +  COL_EMAIL + " TEXT, " +  COL_PASS + " TEXT, " + COL_STUCODE + " TEXT " + ");";
         db?.execSQL(creatTable)
 
     }
@@ -29,6 +31,8 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         content.put(COL_LNAME,user.Last_Name)
         content.put(COL_FNAME,user.First_Name)
         content.put(COL_STUCODE,user.Student_code)
+        content.put(COL_EMAIL,user.Email)
+        content.put(COL_PASS,user.Password)
         var result = db.insert(TABLE_NAME,null,content)
         if(result == -1.toLong()){
             Toast.makeText(context,"failed",Toast.LENGTH_SHORT).show()
