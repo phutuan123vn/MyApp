@@ -4,14 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/GV/layout/gvpasschange.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/LOGIN/layout/activity_main.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/LOGIN/layout/login1.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/LOGIN/layout/signup.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/QL/layout/test.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/SV/layout/svdiemdanh.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/SV/layout/svdiemdanhqr.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/SV/layout/svinfo.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/login1.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_dkmhchange.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_dsmh.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_dssv.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/test.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svinfo.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svinfochange.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svlichhoc.xml" value="0.18297101449275363" />
       </map>
     </option>
   </component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dslop">GVdslop</string>
+    <string name="dssv">Danh sách Sinh Vien</string>
+    <string name="qldlsv">QLDL Sinh Viên</string>
+    <string name="qltksv">QLTK Sinh Viên</string>
+    <string name="dsgv">Danh sách Giảng Viên</string>
+    <string name="qldlgv">QLDL Giảng Viên</string>
+    <string name="qltkgv">QLTK Giảng Viên</string>
+    <string name="timkiem">Tìm Kiếm</string>
+    <string name="mhdk">Môn Học Đăng Kí</string>
+    <string name="mssv">MSSV:</string>
+</resources>

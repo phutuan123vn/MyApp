@@ -4,8 +4,6 @@
     <string name="sinhvien">Sinh Viên</string>
     <string name="giangvien">Giảng Viên</string>
     <string name="quanly">Quản lý</string>
-
-
     <string name="quenmatkhau">Quên mật khẩu?</string>
     <string name="taotaikhoan">Tạo tài khoản</string>
     <string name="quaylai">Quay lại</string>
@@ -46,5 +44,4 @@
     <string name="chonmondk">Chọn Môn Cần Đăng Kí:</string>
     <string name="cacmondadk">Các Môn Đã Đăng Kí:</string>
     <string name="guimaudk">Gữi Mẫu Đăng Kí</string>
-
 </resources>
