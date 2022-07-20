@@ -29,12 +29,14 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/L1user"
             android:layout_marginTop="20dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/username"
             android:layout_gravity="center" />
         <EditText
+            android:id="@+id/L1pass"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -42,6 +44,7 @@
             android:paddingTop="10dp"
             android:layout_gravity="center"/>
         <Button
+            android:id="@+id/L1log"
             android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"

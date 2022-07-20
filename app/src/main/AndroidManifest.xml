@@ -14,28 +14,28 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ForgetPass3"
+            android:name=".login.ForgetPass3"
             android:exported="false" />
         <activity
-            android:name=".ForgetPass1"
+            android:name=".login.ForgetPass1"
             android:exported="false" />
         <activity
-            android:name=".ForgetPass"
+            android:name=".login.ForgetPass"
             android:exported="false" />
         <activity
-            android:name=".SingUp"
+            android:name=".login.SingUp"
             android:exported="false" />
         <activity
-            android:name=".LoginQL"
+            android:name=".login.LoginQL"
             android:exported="false" />
         <activity
-            android:name=".LoginGV"
+            android:name=".login.LoginGV"
             android:exported="false" />
         <activity
-            android:name=".LoginSV"
+            android:name=".login.LoginSV"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

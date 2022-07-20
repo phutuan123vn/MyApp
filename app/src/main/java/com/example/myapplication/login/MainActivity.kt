@@ -1,11 +1,10 @@
-package com.example.myapplication
+package com.example.myapplication.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import com.example.myapplication.R
 import kotlinx.android.synthetic.main.account.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,24 +22,24 @@ class MainActivity : AppCompatActivity() {
 //                Toast.makeText(context, "Please fill information", Toast.LENGTH_SHORT).show()
 //            }
         bttnSV.setOnClickListener {
-            val intent= Intent(this,LoginSV::class.java)
+            val intent= Intent(this, LoginSV::class.java)
             startActivity(intent)
         }//GV button
         bttnGV.setOnClickListener {
-            val intent= Intent(this,LoginGV::class.java)
+            val intent= Intent(this, LoginGV::class.java)
             startActivity(intent)
         }
         bttnQL.setOnClickListener {
-            val intent= Intent(this,LoginQL::class.java)
+            val intent= Intent(this, LoginQL::class.java)
             startActivity(intent)
         }
         Acsignup.setOnClickListener{
-            val intent=Intent(this,SingUp::class.java)
+            val intent=Intent(this, SingUp::class.java)
             startActivity(intent)
         }
         //Text clickable
         Acforget.setOnClickListener{
-            val intent=Intent(this,ForgetPass::class.java)
+            val intent=Intent(this, ForgetPass::class.java)
             startActivity(intent)
         }
 

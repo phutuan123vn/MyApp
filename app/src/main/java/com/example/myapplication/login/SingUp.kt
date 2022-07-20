@@ -1,17 +1,20 @@
-package com.example.myapplication
+package com.example.myapplication.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import kotlinx.android.synthetic.main.signup.*
+import com.example.myapplication.DatabaseHandler
+import com.example.myapplication.R
+import com.example.myapplication.User
+import kotlinx.android.synthetic.main.signupsv.*
 
 class SingUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
         SUback.setOnClickListener {
-            intent=Intent(this,MainActivity::class.java)
+            intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
         SUbttn.setOnClickListener {
@@ -33,7 +36,7 @@ class SingUp : AppCompatActivity() {
                     )
                     var db = DatabaseHandler(this)
                     db.insertData(dulieu)
-                    startActivity(Intent(this,MainActivity::class.java))
+                    startActivity(Intent(this, MainActivity::class.java))
                 } //KIem tra Password match
                 else{
                     Toast.makeText(this,"Password not Correct",Toast.LENGTH_SHORT).show()
