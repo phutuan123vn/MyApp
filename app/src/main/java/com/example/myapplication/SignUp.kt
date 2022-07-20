@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.signup.*
 class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup)
+        setContentView(R.layout.signupsv)
         SUback.setOnClickListener {
             intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
