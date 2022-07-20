@@ -14,6 +14,8 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/menu/menu_gv.xml" value="0.24512820512820513" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/login1.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/login2.xml" value="0.1265625" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/login3.xml" value="0.1265625" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/signup.xml" value="0.21920289855072464" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/signupgv.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/signupsv.xml" value="0.10989583333333333" />
@@ -35,6 +37,7 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_qltk.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_qltkdetail.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/test.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svdiemdanh.xml" value="0.21920289855072464" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svinfo.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svinfochange.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svlichhoc.xml" value="0.18297101449275363" />

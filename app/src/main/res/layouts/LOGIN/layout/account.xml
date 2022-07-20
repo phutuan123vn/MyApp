@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,21 +39,5 @@
             android:layout_height="wrap_content"
             android:text="@string/quanly"
             android:layout_gravity="center"/>
-        <TextView
-            android:id="@+id/Acforget"
-            android:layout_marginTop="160dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/quenmatkhau"
-            android:textColor="#1f16c4"/>
-        <TextView
-            android:id="@+id/Acsignup"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/taotaikhoan"
-            android:textColor="#1f16c4"/>
     </LinearLayout>
 </RelativeLayout>

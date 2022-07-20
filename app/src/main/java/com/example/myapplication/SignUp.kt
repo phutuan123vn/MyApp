@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import kotlinx.android.synthetic.main.signup.*
+import kotlinx.android.synthetic.main.signupsv.*
 
 class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,14 +24,14 @@ class SignUp : AppCompatActivity() {
                 SUPassCon.text.toString().length>0
             ){
                 if (SUPass.text.toString() == SUPassCon.text.toString()) {
-                    var dulieu = User(
+                    val dulieu = User(
                         SULname.text.toString(),
                         SUFname.text.toString(),
                         0.toString(),
                         SUE.text.toString(),
                         SUPass.text.toString()
                     )
-                    var db = DatabaseHandler(this)
+                    val db = DatabaseHandler(this)
                     db.insertData(dulieu)
                     startActivity(Intent(this,MainActivity::class.java))
                 } //KIem tra Password match

@@ -5,6 +5,7 @@
     <string name="giangvien">Giảng Viên</string>
     <string name="quanly">Quản lý</string>
     <string name="quenmatkhau">Quên mật khẩu?</string>
+    <string name="taotaikhoan">Tạo tài khoản</string>
     <string name="taotaikhoangv">Tạo tài khoản Giảng Viên</string>
     <string name="taotaikhoansv">Tạo tài khoản Sinh Viên</string>
     <string name="quaylai">Quay lại</string>
@@ -63,8 +64,6 @@
     <string name="tkgv">Tài Khoản Giảng Viên</string>
     <string name="infotk">Thông tin Tài Khoản</string>
     <string name="xoatk">Xoá Tài Khoản</string>
-    <string name="taotaikhoangv">Tạo tài khoản GV</string>
-    <string name="taotaikhoansv">Tạo tài Khoản SV</string>
     <string name="svdihoctrongngay">SV đi học trong ngày</string>
     <string name="tksv">Tài Khoản Sinh Viên</string>
 </resources>
