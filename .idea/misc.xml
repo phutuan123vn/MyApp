@@ -4,17 +4,43 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/gvdslop.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/gvinfo.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/gvinfochange.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/gvnav.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/gvpasschange.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/gvthongtinday.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/layout/navgv.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/GV/menu/menu_gv.xml" value="0.24512820512820513" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/login1.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/signup.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/signupgv.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/LOGIN/layout/signupsv.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_dsgv.xml" value="0.15896739130434784" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_dslop.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_info.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_infochange.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_qldl.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_qldldetail.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_qltk.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/gv_qltkdetail.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_dkmhchange.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_dsmh.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_dssv.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_qldl.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_qldldetail.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_qltk.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/sv_qltkdetail.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/QL/layout/test.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svinfo.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svinfochange.xml" value="0.18297101449275363" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svlichhoc.xml" value="0.18297101449275363" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/layouts/SV/layout/svnav.xml" value="0.21920289855072464" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/menu/menu_gv.xml" value="0.1921875" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp/app/src/main/res/menu/menu_sv.xml" value="0.15104166666666666" />
       </map>
     </option>
   </component>

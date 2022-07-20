@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_gv"
+    app:startDestination="@id/gvthongtinday">
+    <fragment
+        android:id="@+id/gvthongtinday"
+        android:name="com.example.myapplication.Gvthongtinday"
+        android:label="Gvthongtinday"
+        tools:layout="@layout/gvthongtinday">
+    </fragment>
+    <fragment
+        android:id="@+id/gvdslop"
+        android:name="com.example.myapplication.Gvdslop"
+        android:label="Gvdslop"
+        tools:layout="@layout/gvdslop">
+        <argument
+            android:name="number2"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+    <fragment
+        android:id="@+id/gvpasschange"
+        android:name="com.example.myapplication.Gvpasschange"
+        android:label="Gvpasschange"
+        tools:layout="@layout/gvpasschange">
+        <argument
+            android:name="number3"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+    <fragment
+        android:id="@+id/gvinfo"
+        android:name="com.example.myapplication.Gvinfo"
+        android:label="Gvinfo"
+        tools:layout="@layout/gvinfo">
+        <argument
+            android:name="number4"
+            app:argType="integer"
+            android:defaultValue="4"/>
+    </fragment>
+</navigation>

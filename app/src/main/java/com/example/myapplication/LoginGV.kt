@@ -3,7 +3,6 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.login2.*
 
 class LoginGV : AppCompatActivity() {
@@ -15,7 +14,7 @@ class LoginGV : AppCompatActivity() {
             startActivity(intent)
         }
         GVsignup.setOnClickListener{
-            val intent=Intent(this,SingUp::class.java)
+            val intent=Intent(this,SignUp::class.java)
             startActivity(intent)
         }
         GVforget.setOnClickListener{

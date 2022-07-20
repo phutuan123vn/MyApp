@@ -23,7 +23,7 @@
             android:name=".ForgetPass"
             android:exported="false" />
         <activity
-            android:name=".SingUp"
+            android:name=".SignUp"
             android:exported="false" />
         <activity
             android:name=".LoginQL"

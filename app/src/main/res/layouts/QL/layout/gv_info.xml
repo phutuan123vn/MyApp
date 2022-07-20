@@ -8,12 +8,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/gvinfochange">
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:text="@string/thongtincanhan"
             android:textColor="#382EEC"
             android:textSize="40sp" />
@@ -22,13 +21,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="thông tin"
+            android:text="thong tin "
             android:textColor="#1f16c4"/>
+
         <Button
             android:layout_marginTop="200dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/capnhat"
+            android:text="@string/dslop"
+            android:layout_gravity="center"/>
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/chinhsua"
             android:layout_gravity="center"/>
         <Button
             android:layout_marginTop="10dp"
