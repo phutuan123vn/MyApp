@@ -46,4 +46,25 @@
     <string name="chonmondk">Chọn Môn Cần Đăng Kí:</string>
     <string name="cacmondadk">Các Môn Đã Đăng Kí:</string>
     <string name="guimaudk">Gữi Mẫu Đăng Kí</string>
+    <string name="dslop">Danh sách lớp</string>
+    <string name="dssv">Danh sách Sinh Vien</string>
+    <string name="qldlsv">QLDL Sinh Viên</string>
+    <string name="qltksv">QLTK Sinh Viên</string>
+    <string name="dsgv">Danh sách Giảng Viên</string>
+    <string name="qldlgv">QLDL Giảng Viên</string>
+    <string name="qltkgv">QLTK Giảng Viên</string>
+    <string name="timkiem">Tìm Kiếm</string>
+    <string name="mhdk">Môn Học Đăng Kí</string>
+    <string name="mssv">MSSV:</string>
+    <string name="ngay">Ngày:</string>
+    <string name="svdihoctrongngay">SV Đi Học Trong Ngày</string>
+    <string name="guibandl">Gửi bản dữ liệu</string>
+    <string name="tksv">Tài Khoản Sinh Viên</string>
+    <string name="infotk">Thông Tin Tài Khoản</string>
+    <string name="xoatk">Xoá Tài Khoản</string>
+    <string name="tkgv">Tài Khoản Giảng Viên</string>
+    <string name="msgv">MSGV</string>
+    <string name="gvdihoctrongngay">GV Đi Dạy Trong Ngày</string>
+    <string name="monday">Môn Dạy:</string>
+    <string name="thongtingiangvien">Thông Tin Giảng Viên</string>
 </resources>
