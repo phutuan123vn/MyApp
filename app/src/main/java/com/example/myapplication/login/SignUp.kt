@@ -26,6 +26,7 @@ class SignUp : AppCompatActivity() {
                 SUE.text.toString().length>0       &&  SUE.text.toString().length<25     &&
                 SUPass.text.toString().length>0    &&  SUPass.text.toString().length<25  &&
                 SUPassCon.text.toString().length>0 &&  SUPassCon.text.toString().length<25
+
             ){
                 if (SUPass.text.toString().length>=8 && SUPassCon.text.toString().length>=8) {
                     if (SUPass.text.toString() == SUPassCon.text.toString()) {
