@@ -32,21 +32,23 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/forget3pass"
+            android:inputType="textPassword"
+            android:id="@+id/forget2pass"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:hint="@string/matkhaumoi" />
         <EditText
-            android:id="@+id/forget3passcon"
+            android:inputType="textPassword"
+            android:id="@+id/forget2passcon"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:hint="@string/xacnhanmatkhaumoi" />
         <Button
-            android:id="@+id/forget3bttn"
+            android:id="@+id/forget2bttn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

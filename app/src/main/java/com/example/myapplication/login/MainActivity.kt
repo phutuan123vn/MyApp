@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         Acsignup.setOnClickListener{
-            val intent=Intent(this, SingUp::class.java)
+            val intent=Intent(this, SignUp::class.java)
             startActivity(intent)
         }
         //Text clickable

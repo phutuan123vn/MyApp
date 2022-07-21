@@ -13,7 +13,7 @@ class ForgetPass1 : AppCompatActivity() {
         setContentView(R.layout.forgetpass1)
         forget1reset.setOnClickListener {
             if(forget1code.text.toString().length>0){
-                startActivity(Intent(this, ForgetPass3::class.java))
+                startActivity(Intent(this, ForgetPass2::class.java))
             }else{
                 Toast.makeText(this,"Required Code",Toast.LENGTH_SHORT).show()
             }

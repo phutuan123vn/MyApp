@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
-import com.example.myapplication.User
+import com.example.myapplication.model.User
 import kotlinx.android.synthetic.main.signupsv.*
 
-class SingUp : AppCompatActivity() {
+class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
