@@ -14,7 +14,7 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".login.ForgetPass3"
+            android:name=".login.ForgetPass2"
             android:exported="false" />
         <activity
             android:name=".login.ForgetPass1"
@@ -23,7 +23,7 @@
             android:name=".login.ForgetPass"
             android:exported="false" />
         <activity
-            android:name=".login.SingUp"
+            android:name=".login.SignUp"
             android:exported="false" />
         <activity
             android:name=".login.LoginQL"

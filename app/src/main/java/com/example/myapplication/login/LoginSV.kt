@@ -17,7 +17,7 @@ class LoginSV : AppCompatActivity() {
             startActivity(intent)
         }
         SVsignup.setOnClickListener{
-            val intent=Intent(this, SingUp::class.java)
+            val intent=Intent(this, SignUp::class.java)
             startActivity(intent)
         }
         SVforget.setOnClickListener{

@@ -14,13 +14,8 @@ class LoginQL : AppCompatActivity() {
             val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-        QLsignup.setOnClickListener{
-            val intent= Intent(this, SingUp::class.java)
-            startActivity(intent)
-        }
-        QLforget.setOnClickListener{
-            val intent= Intent(this, ForgetPass::class.java)
-            startActivity(intent)
-        }
+
+
+
     }
 }

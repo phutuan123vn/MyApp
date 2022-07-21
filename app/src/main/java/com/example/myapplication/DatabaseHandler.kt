@@ -2,11 +2,10 @@ package com.example.myapplication
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
-import androidx.core.database.getStringOrNull
+import com.example.myapplication.model.User
 
 val DATABASE_NAME="MYDB"
 val TABLE_NAME="StudentInfo"

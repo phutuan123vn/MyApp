@@ -6,10 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -19,71 +21,86 @@
             android:textColor="#382EEC"
             android:textSize="30sp"
             android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="55dp"
+            android:layout_marginTop="20dp"
             android:text="@string/taotaikhoangv"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
         <EditText
-            android:id="@+id/SULname"
+            android:id="@+id/SUGLname"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:hint="@string/ho"
+            android:inputType="textPersonName"
             android:padding="10dp" />
+
         <EditText
-            android:id="@+id/SUFname"
+            android:id="@+id/SUGFname"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/ten"/>
+            android:hint="@string/ten"
+            android:inputType="textPersonName" />
+
         <EditText
-            android:id="@+id/SUE"
+            android:id="@+id/SUGE"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/email" />
+            android:hint="@string/email"
+            android:inputType="text" />
+
         <EditText
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/username"/>
+            android:hint="@string/username"
+            android:inputType="text" />
+
         <EditText
-            android:id="@+id/SUPass"
+            android:id="@+id/SUGPass"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/password" />
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
         <EditText
-            android:id="@+id/SUPassCon"
+            android:id="@+id/SUGPassCon"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/password_again" />
+            android:hint="@string/password_again"
+            android:inputType="textPassword" />
+
         <Button
-            android:id="@+id/SUbttn"
+            android:id="@+id/SUGbttn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
             android:padding="10dp"
             android:text="@string/dangki" />
+
         <Button
             android:id="@+id/SUback"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/quaylai"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/darker_gray" />
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/quaylai" />
     </LinearLayout>
 </RelativeLayout>

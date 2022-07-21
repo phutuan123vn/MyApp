@@ -33,15 +33,7 @@ class MainActivity : AppCompatActivity() {
             val intent= Intent(this, LoginQL::class.java)
             startActivity(intent)
         }
-        Acsignup.setOnClickListener{
-            val intent=Intent(this, SingUp::class.java)
-            startActivity(intent)
-        }
-        //Text clickable
-        Acforget.setOnClickListener{
-            val intent=Intent(this, ForgetPass::class.java)
-            startActivity(intent)
-        }
+
 
         }
     }

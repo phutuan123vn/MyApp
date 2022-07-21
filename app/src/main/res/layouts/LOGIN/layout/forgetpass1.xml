@@ -28,6 +28,7 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
         <EditText
+            android:inputType="text"
             android:id="@+id/forget1code"
             android:layout_marginTop="20dp"
             android:layout_width="300dp"
