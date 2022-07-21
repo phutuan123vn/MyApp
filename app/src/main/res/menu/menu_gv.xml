@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior ="single">
+        <item
+            android:title="Thông Tin Dạy"
+            android:id="@id/gvthongtinday"/>
+        <item
+            android:title="Danh Sách Lớp"
+            android:id="@id/gvdslop"/>
+        <item
+            android:title="Thông Tin Giảng Viên "
+            android:id="@id/gvinfo"/>
+        <item
+            android:title="Thay Đổi Mật Khẩu"
+            android:id="@id/gvpasschange"/>
+        <item
+            android:title="Thoát"
+            android:id="@+id/account"/>
+    </group>
+</menu>

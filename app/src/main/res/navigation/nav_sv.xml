@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sv"
+    app:startDestination="@id/svlichhoc">
+    <fragment
+        android:id="@+id/svlichhoc"
+        android:name="com.example.myapplication.Svlichhoc"
+        android:label="Svlichhoc"
+        tools:layout="@layout/svlichhoc"/>
+    <fragment
+        android:id="@+id/svdiemdanh"
+        android:name="com.example.myapplication.Svdiemdanh"
+        android:label="Svdiemdanh"
+        tools:layout="@layout/svdiemdanh"/>
+    <fragment
+        android:id="@+id/svinfo"
+        android:name="com.example.myapplication.Svinfo"
+        android:label="Svinfo"
+        tools:layout="@layout/svinfo"/>
+    <fragment
+        android:id="@+id/svdkmon"
+        android:name="com.example.myapplication.Svdkmon"
+        android:label="Svdkmon"
+        tools:layout="@layout/svdkmon"/>
+    <fragment
+        android:id="@+id/svpasschange"
+        android:name="com.example.myapplication.Svpasschange"
+        android:label="Svpasschange"
+        tools:layout="@layout/svpasschange"/>
+</navigation>

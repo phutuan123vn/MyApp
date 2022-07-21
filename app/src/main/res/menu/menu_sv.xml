@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior ="single">
+        <item
+            android:title="Lịch Học"
+            android:id="@id/svlichhoc"/>
+        <item
+            android:title="Điểm Danh"
+            android:id="@id/svdiemdanh"/>
+        <item
+            android:title="Thông Tin Sinh Viên "
+            android:id="@id/svinfo"/>
+        <item
+            android:title="Đăng kí Môn Học"
+            android:id="@id/svdkmon"/>
+        <item
+            android:title="Thay Đổi Mật Khẩu"
+            android:id="@id/svpasschange"/>
+        <item
+            android:title="Thoát"
+            android:id="@+id/account"/>
+    </group>
+</menu>
