@@ -7,13 +7,13 @@
     app:startDestination="@id/gvthongtinday">
     <fragment
         android:id="@+id/gvthongtinday"
-        android:name="com.example.myapplication.Gvthongtinday"
+        android:name="com.example.myapplication.giangvien.Gvthongtinday"
         android:label="Gvthongtinday"
         tools:layout="@layout/gvthongtinday">
     </fragment>
     <fragment
         android:id="@+id/gvdslop"
-        android:name="com.example.myapplication.Gvdslop"
+        android:name="com.example.myapplication.giangvien.Gvdslop"
         android:label="Gvdslop"
         tools:layout="@layout/gvdslop">
         <argument
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/gvpasschange"
-        android:name="com.example.myapplication.Gvpasschange"
+        android:name="com.example.myapplication.giangvien.Gvpasschange"
         android:label="Gvpasschange"
         tools:layout="@layout/gvpasschange">
         <argument
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/gvinfo"
-        android:name="com.example.myapplication.Gvinfo"
+        android:name="com.example.myapplication.giangvien.Gvinfo"
         android:label="Gvinfo"
         tools:layout="@layout/gvinfo">
         <argument
@@ -41,4 +41,9 @@
             app:argType="integer"
             android:defaultValue="4"/>
     </fragment>
+    <fragment
+        android:id="@+id/gvinfochange"
+        android:name="com.example.myapplication.giangvien.Gvinfochange"
+        android:label="Gvinfochange"
+        tools:layout="@layout/gvinfochange"/>
 </navigation>

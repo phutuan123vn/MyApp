@@ -1,35 +1,56 @@
-package com.example.myapplication
+package com.example.myapplication.giangvien
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
+import com.example.myapplication.*
 import kotlinx.android.synthetic.main.gvnav.*
+import com.example.myapplication.login.MainActivity
 
 class GVnavigation : AppCompatActivity() {
-    private lateinit var navController: NavController
+    lateinit var toogle : ActionBarDrawerToggle
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var listener: NavController.OnDestinationChangedListener
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.svnav)
+        setContentView(R.layout.gvnav)
 
-        navController = findNavController(R.id.fragmentgvnav)
         drawerLayout = findViewById(R.id.drawergvnav)
-        appBarConfiguration = AppBarConfiguration(navController.graph,drawerLayout)
-        navgvview.setupWithNavController(navController)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toogle)
+        toogle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportFragmentManager.beginTransaction().replace(R.id.framelayoutgvnav, Gvthongtinday()).commit()
+        navgvview.setNavigationItemSelectedListener {
+
+            it.isChecked = true
+
+            when(it.itemId){
+                R.id.gvthongtinday -> replaceFragment(Gvthongtinday(),it.title.toString())
+                R.id.gvdslop -> replaceFragment(Gvdslop(),it.title.toString())
+                R.id.gvinfo -> replaceFragment(Gvinfo(),it.title.toString())
+                R.id.gvpasschange -> replaceFragment(Gvpasschange(),it.title.toString())
+                R.id.account -> this.finish()
+            }
+            true
+        }
     }
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragmentgvnav)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+    private fun replaceFragment(fragment: Fragment, title : String){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.framelayoutgvnav, fragment)
+        fragmentTransaction.commit()
+        drawerLayout.closeDrawers()
+        setTitle(title)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(toogle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
