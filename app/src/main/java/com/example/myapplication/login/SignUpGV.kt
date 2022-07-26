@@ -24,7 +24,7 @@ class SignUpGV : AppCompatActivity() {
             ){
                 Toast.makeText(this,"Please Fill",Toast.LENGTH_SHORT).show()
             }else{
-                if (SUGPass.text.toString()>=8 && SUGPassCon.text.toString().length>=8){
+                if (SUGPass.text.toString().length>=8 && SUGPassCon.text.toString().length>=8){
                     if (SUGPass.text.toString()==SUGPassCon.text.toString()){
                         var dulieu= User(
                             SUGLname.text.toString(),
@@ -41,7 +41,7 @@ class SignUpGV : AppCompatActivity() {
                         Toast.makeText(this,"Password not match",Toast.LENGTH_SHORT).show()
                     }
                 }else{
-                    Toast.makeText(this,"Password required at least 8 character")
+                    Toast.makeText(this,"Password required at least 8 character",Toast.LENGTH_SHORT).show()
                 }
             }
         }
