@@ -18,7 +18,7 @@ class LoginGV : AppCompatActivity() {
             startActivity(intent)
         }
         GVsignup.setOnClickListener{
-            val intent=Intent(this, SignUp::class.java)
+            val intent=Intent(this, SignUpGV::class.java)
             startActivity(intent)
         }
         GVforget.setOnClickListener{
