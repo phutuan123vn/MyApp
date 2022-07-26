@@ -6,23 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawersvnav"
-    tools:context=".SVnavigation">
-
-    <fragment
-        android:id="@+id/fragmentsvnav"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    tools:context=".sinhvien.SVnavigation">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="2dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_sv" />
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/framelayoutsvnav"/>
 
+
+</androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navsvview"
         android:layout_width="wrap_content"
