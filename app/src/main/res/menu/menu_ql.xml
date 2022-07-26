@@ -10,7 +10,7 @@
 
     <item android:title="Giảng Viên">
         <menu>
-            <group>
+            <group android:checkableBehavior="single">
                 <item
                 android:title="Danh Sách Giảng Viên"
                 android:id="@+id/GVdsgv"/>
@@ -26,20 +26,22 @@
 
     <item android:title="Sinh Viên">
         <menu>
-            <item
-            android:title="Danh Sách Sinh Viên"
-            android:id="@+id/SVdssv"/>
-            <item
-            android:title="Quản Lý Dữ Liệu SV"
-            android:id="@+id/SVqldl"/>
-            <item
-            android:title="Quản Lý Tài Khoản SV"
-            android:id="@+id/SVqltk"/>
+            <group android:checkableBehavior="single">
+                <item
+                android:title="Danh Sách Sinh Viên"
+                android:id="@+id/SVdssv"/>
+                <item
+                android:title="Quản Lý Dữ Liệu SV"
+                android:id="@+id/SVqldl"/>
+                <item
+                android:title="Quản Lý Tài Khoản SV"
+                android:id="@+id/SVqltk"/>
+            </group>
         </menu>
     </item>
     <item android:title="Exit">
         <menu>
-            <group>
+            <group android:checkableBehavior="single">
                 <item
                 android:title="Thoát"
                 android:id="@+id/account" />

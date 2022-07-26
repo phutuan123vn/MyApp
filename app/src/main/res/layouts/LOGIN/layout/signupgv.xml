@@ -38,8 +38,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:hint="@string/ho"
-            android:inputType="textPersonName"
-            android:padding="10dp" />
+            android:inputType="textPersonName"/>
 
         <EditText
             android:id="@+id/SUGFname"

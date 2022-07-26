@@ -1,5 +1,7 @@
 package com.example.myapplication.sinhvien
 
+import android.content.Intent
+import android.icu.text.TimeZoneFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,6 +10,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.svnav.*
 import androidx.fragment.app.Fragment
 import com.example.myapplication.*
+import com.example.myapplication.login.ForgetPass
+import com.example.myapplication.login.LoginSV
 import com.example.myapplication.login.MainActivity
 
 class SVnavigation : AppCompatActivity() {
@@ -40,6 +44,7 @@ class SVnavigation : AppCompatActivity() {
             true
         }
     }
+
     private fun replaceFragment(fragment: Fragment, title : String){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
