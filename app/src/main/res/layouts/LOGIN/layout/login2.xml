@@ -29,6 +29,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/GVUser"
             android:inputType="text"
             android:layout_marginTop="20dp"
             android:layout_width="300dp"
@@ -36,6 +37,7 @@
             android:hint="@string/username"
             android:layout_gravity="center" />
         <EditText
+            android:id="@+id/GVPass"
             android:inputType="textPassword"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
@@ -44,6 +46,7 @@
             android:paddingTop="10dp"
             android:layout_gravity="center"/>
         <Button
+            android:id="@+id/GVbttn"
             android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"

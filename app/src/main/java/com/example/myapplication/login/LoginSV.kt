@@ -18,7 +18,7 @@ class LoginSV : AppCompatActivity() {
             startActivity(intent)
         }
         SVsignup.setOnClickListener{
-            val intent=Intent(this, SignUp::class.java)
+            val intent=Intent(this, SignUpSV::class.java)
             startActivity(intent)
         }
         SVforget.setOnClickListener{
@@ -30,11 +30,16 @@ class LoginSV : AppCompatActivity() {
             if (L1user.text.toString().isEmpty() || L1pass.text.toString().isEmpty()){
                 Toast.makeText(this, "Please FIll", Toast.LENGTH_SHORT).show()
             }else {
-//            db.CheckUser(L1user.text.toString(),L1pass.text.toString())
-                if (db.CheckUser(L1user.text.toString(),L1pass.text.toString())){
-                    Toast.makeText(this, "Success Log In", Toast.LENGTH_SHORT).show()
-                    val intent=Intent(this, SVnavigation::class.java)
-                    startActivity(intent)
+                var pass=L1pass.text.toString()
+                var email=L1user.text.toString()
+                var ValueR=db.ViewPass(email)
+                var passcheck=ValueR.get(0).Password
+                var role=ValueR.get(0).Role
+                if ( pass == passcheck && role == 1.toString() ){
+                    Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this,SVnavigation::class.java))
+                }else{
+                    Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
                 }
             }
         }

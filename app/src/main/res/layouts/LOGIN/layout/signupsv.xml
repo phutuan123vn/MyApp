@@ -52,13 +52,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:hint="@string/email" />
-        <EditText
-            android:inputType="text"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="@string/username"/>
+
         <EditText
             android:inputType="textPassword"
             android:id="@+id/SUPass"
