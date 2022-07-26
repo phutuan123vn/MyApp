@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.myapplication.DatabaseHandler
-import com.example.myapplication.GVnavigation
 import com.example.myapplication.R
 import com.example.myapplication.giangvien.GVnavigation
 import kotlinx.android.synthetic.main.login2.*
@@ -19,7 +18,7 @@ class LoginGV : AppCompatActivity() {
             startActivity(intent)
         }
         GVsignup.setOnClickListener{
-            val intent=Intent(this, SignUpGV::class.java)
+            val intent=Intent(this, SignUp::class.java)
             startActivity(intent)
         }
         GVforget.setOnClickListener{
