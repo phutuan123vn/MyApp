@@ -5,40 +5,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/login"
-            android:textColor="#382EEC"
+            android:textColor="#3f24d6"
             android:textSize="50sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/imageView2"
+            android:layout_width="214dp"
+            android:layout_height="228dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/logobk" />
+
         <Button
             android:id="@+id/bttnSV"
-            android:layout_marginTop="120dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/sinhvien"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/sinhvien" />
+
         <Button
             android:id="@+id/bttnGV"
-            android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/giangvien"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/giangvien" />
+
         <Button
             android:id="@+id/bttnQL"
-            android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/quanly"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/quanly" />
+
 
     </LinearLayout>
 </RelativeLayout>

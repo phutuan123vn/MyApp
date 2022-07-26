@@ -70,7 +70,7 @@
             android:textColor="#1f16c4"/>
         <TextView
             android:id="@+id/SVsignup"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

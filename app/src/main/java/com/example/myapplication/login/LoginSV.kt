@@ -32,7 +32,7 @@ class LoginSV : AppCompatActivity() {
             }else {
 //            db.CheckUser(L1user.text.toString(),L1pass.text.toString())
                 if (db.CheckUser(L1user.text.toString(),L1pass.text.toString())){
-                    Toast.makeText(this, "Succes Log In", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Success Log In", Toast.LENGTH_SHORT).show()
                     val intent=Intent(this, SVnavigation::class.java)
                     startActivity(intent)
                 }

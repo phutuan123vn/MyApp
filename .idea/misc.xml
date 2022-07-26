@@ -27,7 +27,23 @@
         <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/SV/layout/svinfochange.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/SV/layout/svlichhoc.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Phu Tuan/AndroidStudioProjects/MyApplication3/app/src/main/res/layouts/SV/layout/svpasschange.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.218" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/drawable/ic_launcher_background.xml" value="0.218" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvdslop.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvinfo.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvinfochange.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvnav.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvpasschange.xml" value="0.176" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvthongtinday.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.264" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/activity_main.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass1.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass2.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/login1.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/login2.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/login3.xml" value="0.19157608695652173" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupgv.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svnav.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/menu/menu_gv.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/menu/menu_sv.xml" value="0.25" />
