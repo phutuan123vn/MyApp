@@ -17,6 +17,9 @@
             android:name=".sinhvien.SVnavigation"
             android:exported="false" />
         <activity
+            android:name=".giangvien.GVnavigation"
+            android:exported="false" />
+        <activity
             android:name=".login.ForgetPass2"
             android:exported="false" />
         <activity
