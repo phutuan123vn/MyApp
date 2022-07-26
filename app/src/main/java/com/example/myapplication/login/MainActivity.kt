@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.R
 import com.example.myapplication.giangvien.GVnavigation
+import com.example.myapplication.quanly.QLnavigation
 import com.example.myapplication.sinhvien.SVnavigation
 import kotlinx.android.synthetic.main.account.*
 
