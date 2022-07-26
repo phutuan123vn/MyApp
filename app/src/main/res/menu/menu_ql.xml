@@ -8,38 +8,42 @@
     </group>
 
 
-<item android:title="Giảng Viên">
-    <menu>
-        <group>
-            <item
-                android:title="DanhSach GV"
+    <item android:title="Giảng Viên">
+        <menu>
+            <group>
+                <item
+                android:title="Danh Sách Giảng Viên"
                 android:id="@+id/GVdsgv"/>
-            <item
-                android:title="QLDL GV"
+                <item
+                android:title="Quản Lý Dữ Liệu GV"
                 android:id="@+id/GVqldl"/>
-            <item
-                android:title="QLTK GV"
+                <item
+                android:title="Quản Lý Tài Khoản GV"
                 android:id="@+id/GVqltk"/>
-        </group>
-    </menu>
-</item>
+            </group>
+        </menu>
+    </item>
 
-<item android:title="Sinh Viên">
-    <menu>
-        <item
-            android:title="DanhSach SV"
+    <item android:title="Sinh Viên">
+        <menu>
+            <item
+            android:title="Danh Sách Sinh Viên"
             android:id="@+id/SVdssv"/>
-        <item
-            android:title="QLDL SV"
+            <item
+            android:title="Quản Lý Dữ Liệu SV"
             android:id="@+id/SVqldl"/>
-        <item
-            android:title="QLTK SV"
+            <item
+            android:title="Quản Lý Tài Khoản SV"
             android:id="@+id/SVqltk"/>
-    </menu>
-</item>
-
-    <group>
-        <item android:title="Thoát"
-            android:id="@+id/account" />
-    </group>
+        </menu>
+    </item>
+    <item android:title="Exit">
+        <menu>
+            <group>
+                <item
+                android:title="Thoát"
+                android:id="@+id/account" />
+            </group>
+        </menu>
+    </item>
 </menu>
