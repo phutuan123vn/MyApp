@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Thời Khoá Biểu"
+            android:id="@+id/TKB"/>
+    </group>
+
+
+<item android:title="Giảng Viên">
+    <menu>
+        <group>
+            <item
+                android:title="DanhSach GV"
+                android:id="@+id/GVdsgv"/>
+            <item
+                android:title="QLDL GV"
+                android:id="@+id/GVqldl"/>
+            <item
+                android:title="QLTK GV"
+                android:id="@+id/GVqltk"/>
+        </group>
+    </menu>
+</item>
+
+<item android:title="Sinh Viên">
+    <menu>
+        <item
+            android:title="DanhSach SV"
+            android:id="@+id/SVdssv"/>
+        <item
+            android:title="QLDL SV"
+            android:id="@+id/SVqldl"/>
+        <item
+            android:title="QLTK SV"
+            android:id="@+id/SVqltk"/>
+    </menu>
+</item>
+
+    <group>
+        <item android:title="Thoát"
+            android:id="@+id/account" />
+    </group>
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_ql"
+    app:startDestination="@id/TKB">
+
+    <fragment
+        android:id="@+id/TKB"
+        android:name="com.example.myapplication.quanly.TKB"
+        android:label="TKB"
+        tools:layout="@layout/tkb"/>
+    <fragment
+        android:id="@+id/GVdsgv"
+        android:name="com.example.myapplication.quanly.GVdsgv"
+        android:label="GVdsgv"
+        tools:layout="@layout/gv_dsgv"/>
+    <fragment
+        android:id="@+id/GVqldl"
+        android:name="com.example.myapplication.quanly.GVqldl"
+        android:label="GVqldl"
+        tools:layout="@layout/gv_qldl"/>
+    <fragment
+        android:id="@+id/GVqltk"
+        android:name="com.example.myapplication.quanly.GVqltk"
+        android:label="GVqltk"
+        tools:layout="@layout/gv_qltk"/>
+    <fragment
+        android:id="@+id/SVdssv"
+        android:name="com.example.myapplication.quanly.SVdssv"
+        android:label="SVdssv"
+        tools:layout="@layout/sv_dssv"/>
+    <fragment
+        android:id="@+id/SVqldl"
+        android:name="com.example.myapplication.quanly.SVqldl"
+        android:label="SVqldl"
+        tools:layout="@layout/sv_qldl"/>
+    <fragment
+        android:id="@+id/SVqltk"
+        android:name="com.example.myapplication.quanly.SVqltk"
+        android:label="SVqltk"
+        tools:layout="@layout/sv_qltk"/>
+</navigation>
