@@ -33,13 +33,17 @@ class LoginSV : AppCompatActivity() {
                 var pass=L1pass.text.toString()
                 var email=L1user.text.toString()
                 var ValueR=db.ViewPass(email)
-                var passcheck=ValueR.get(0).Password
-                var role=ValueR.get(0).Role
-                if ( pass == passcheck && role == 1.toString() ){
-                    Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,SVnavigation::class.java))
+                if (ValueR.isEmpty()){
+                    Toast.makeText(this,"Password of Email Invalid",Toast.LENGTH_SHORT).show()
                 }else{
-                    Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
+                    var passcheck=ValueR.get(0).Password
+                    var role=ValueR.get(0).Role
+                    if ( pass == passcheck && role == 1.toString() ){
+                        Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,SVnavigation::class.java))
+                    }else{
+                        Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
         }

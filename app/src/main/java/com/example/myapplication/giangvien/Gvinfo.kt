@@ -11,7 +11,7 @@ import android.widget.Button
 import com.example.myapplication.R
 import androidx.navigation.Navigation
 import com.example.myapplication.login.MainActivity
-import com.example.myapplication.login.SignUp
+import com.example.myapplication.login.SignUpSV
 import kotlinx.android.synthetic.main.gvinfo.view.*
 import kotlinx.android.synthetic.main.gvinfochange.*
 import kotlinx.android.synthetic.main.login1.*

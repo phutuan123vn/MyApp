@@ -7,6 +7,7 @@ import android.widget.Toast
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.GVnavigation
 import com.example.myapplication.R
+import com.example.myapplication.giangvien.GVnavigation
 import kotlinx.android.synthetic.main.login2.*
 
 class LoginGV : AppCompatActivity() {
