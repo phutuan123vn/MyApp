@@ -10,7 +10,7 @@ import com.example.myapplication.R
 import com.example.myapplication.model.User
 import kotlinx.android.synthetic.main.signupsv.*
 
-class SignUp : AppCompatActivity() {
+class SignUpSV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
@@ -21,11 +21,11 @@ class SignUp : AppCompatActivity() {
         SUbttn.setOnClickListener {
             //nut nhan dang ky kiem tra input
             if (
-                SULname.text.toString().length>0   &&  SULname.text.toString().length<25 &&
-                SUFname.text.toString().length>0   &&  SUFname.text.toString().length<25 &&
-                SUE.text.toString().length>0       &&  SUE.text.toString().length<25     &&
-                SUPass.text.toString().length>0    &&  SUPass.text.toString().length<25  &&
-                SUPassCon.text.toString().length>0 &&  SUPassCon.text.toString().length<25
+                SULname.text.toString().length>0   &&
+                SUFname.text.toString().length>0   &&
+                SUE.text.toString().length>0       &&
+                SUPass.text.toString().length>0    &&
+                SUPassCon.text.toString().length>0
 
             ){
                 if (SUPass.text.toString().length>=8 && SUPassCon.text.toString().length>=8) {
@@ -39,13 +39,14 @@ class SignUp : AppCompatActivity() {
                         )
                         var db = DatabaseHandler(this)
                         db.insertData(dulieu)
+                        Toast.makeText(this,"Success Sign In",Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this, MainActivity::class.java))
                     } //KIem tra Password match
                     else {
                         Toast.makeText(this, "Password not Correct", Toast.LENGTH_SHORT).show()
                     }
                 }else{
-                    Toast.makeText(this,"Password need to be up to 8 character",Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Password required at least 8 character",Toast.LENGTH_LONG).show()
                 }
             }// Need to fill all input
             else{
