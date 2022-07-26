@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.myapplication.R
+import com.example.myapplication.sinhvien.SVnavigation
 import kotlinx.android.synthetic.main.account.*
 
 class MainActivity : AppCompatActivity() {

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
-import com.example.myapplication.SVnavigation
+import com.example.myapplication.sinhvien.SVnavigation
 import kotlinx.android.synthetic.main.login1.*
 
 class LoginSV : AppCompatActivity() {

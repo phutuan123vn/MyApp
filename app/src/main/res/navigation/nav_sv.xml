@@ -7,27 +7,27 @@
     app:startDestination="@id/svlichhoc">
     <fragment
         android:id="@+id/svlichhoc"
-        android:name="com.example.myapplication.Svlichhoc"
+        android:name="com.example.myapplication.sinhvien.Svlichhoc"
         android:label="Svlichhoc"
         tools:layout="@layout/svlichhoc"/>
     <fragment
         android:id="@+id/svdiemdanh"
-        android:name="com.example.myapplication.Svdiemdanh"
+        android:name="com.example.myapplication.sinhvien.Svdiemdanh"
         android:label="Svdiemdanh"
         tools:layout="@layout/svdiemdanh"/>
     <fragment
         android:id="@+id/svinfo"
-        android:name="com.example.myapplication.Svinfo"
+        android:name="com.example.myapplication.sinhvien.Svinfo"
         android:label="Svinfo"
         tools:layout="@layout/svinfo"/>
     <fragment
         android:id="@+id/svdkmon"
-        android:name="com.example.myapplication.Svdkmon"
+        android:name="com.example.myapplication.sinhvien.Svdkmon"
         android:label="Svdkmon"
         tools:layout="@layout/svdkmon"/>
     <fragment
         android:id="@+id/svpasschange"
-        android:name="com.example.myapplication.Svpasschange"
+        android:name="com.example.myapplication.sinhvien.Svpasschange"
         android:label="Svpasschange"
         tools:layout="@layout/svpasschange"/>
 </navigation>
