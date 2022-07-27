@@ -15,6 +15,7 @@ class LoginSV : AppCompatActivity() {
         setContentView(R.layout.login1)
         SVback.setOnClickListener {
             val intent=Intent(this, MainActivity::class.java)
+            finish()
             startActivity(intent)
         }
         SVsignup.setOnClickListener{
@@ -38,7 +39,7 @@ class LoginSV : AppCompatActivity() {
                 }else{
                     var passcheck=ValueR.get(0).Password
                     var role=ValueR.get(0).Role
-                    if ( pass == passcheck && role == 1.toString() ){
+                    if ( pass == passcheck && role == 0.toString() ){
                         Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this,SVnavigation::class.java))
                     }else{

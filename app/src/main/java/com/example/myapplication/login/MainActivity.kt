@@ -1,8 +1,10 @@
 package com.example.myapplication.login
 
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.giangvien.GVnavigation
 import com.example.myapplication.sinhvien.SVnavigation

@@ -26,18 +26,25 @@ class SignUpGV : AppCompatActivity() {
             }else{
                 if (SUGPass.text.toString().length>=8 && SUGPassCon.text.toString().length>=8){
                     if (SUGPass.text.toString()==SUGPassCon.text.toString()){
-                        var dulieu= User(
-                            SUGLname.text.toString(),
-                            SUGFname.text.toString(),
-                            1.toString(),
-                            SUGE.text.toString(),
-                            SUGPass.text.toString()
-                        )
+                        var email=SUGE.text.toString()
                         val db=DatabaseHandler(this)
-                        db.insertData(dulieu)
-                        Toast.makeText(this,"Success Sign In",Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this,LoginGV::class.java))
-                    }else{
+                        var checkmail=db.checkmail(email)
+                        if (email != checkmail) {
+                            var dulieu = User(
+                                SUGLname.text.toString(),
+                                SUGFname.text.toString(),
+                                1.toString(),
+                                SUGE.text.toString(),
+                                SUGPass.text.toString()
+                            )
+                            db.insertData(dulieu)
+                            Toast.makeText(this, "Success Sign In", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, LoginGV::class.java))
+                        }else{
+                            Toast.makeText(this,"Email have been used",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    else{
                         Toast.makeText(this,"Password not match",Toast.LENGTH_SHORT).show()
                     }
                 }else{

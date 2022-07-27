@@ -3,7 +3,12 @@ package com.example.myapplication.login
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import com.example.myapplication.DATABASE_NAME
+import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
+import com.example.myapplication.model.User
+import com.example.myapplication.quanly.QLnavigation
 import kotlinx.android.synthetic.main.login3.*
 
 class LoginQL : AppCompatActivity() {
@@ -14,7 +19,28 @@ class LoginQL : AppCompatActivity() {
             val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
+        QLbttn.setOnClickListener {
+            if (QLUser.text.toString().isEmpty() || QLPass.text.toString().isEmpty()){
+                Toast.makeText(this,"Please Fill",Toast.LENGTH_SHORT).show()
+            }else{
+                var email=QLUser.text.toString()
+                var pass=QLPass.text.toString()
+                val db= DatabaseHandler(this)
+                var ValueR=db.ViewPass(email)
+                if (ValueR.isEmpty()){
+                    Toast.makeText(this,"Email or Password is Invalid",Toast.LENGTH_SHORT).show()
+                }else{
+                    var passcheck=ValueR.get(0).Password
+                    var role=ValueR.get(0).Role
+                    if (pass == passcheck && role == 2.toString()){
+                        Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,QLnavigation::class.java))
+                    }else{
+                        Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
 
     }
 }

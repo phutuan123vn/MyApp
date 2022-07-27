@@ -30,17 +30,25 @@ class SignUpSV : AppCompatActivity() {
             ){
                 if (SUPass.text.toString().length>=8 && SUPassCon.text.toString().length>=8) {
                     if (SUPass.text.toString() == SUPassCon.text.toString()) {
-                        var dulieu = User(
-                            SULname.text.toString(),
-                            SUFname.text.toString(),
-                            0.toString(),
-                            SUE.text.toString(),
-                            SUPass.text.toString()
-                        )
-                        var db = DatabaseHandler(this)
-                        db.insertData(dulieu)
-                        Toast.makeText(this,"Success Sign In",Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, MainActivity::class.java))
+                        val db = DatabaseHandler(this)
+                        var email=SUE.text.toString()
+                        var checkemail= db.checkmail(email)
+                        if(email!=checkemail) {
+                            var dulieu = User(
+                                SULname.text.toString(),
+                                SUFname.text.toString(),
+                                0.toString(),
+                                SUE.text.toString(),
+                                SUPass.text.toString()
+                            )
+
+                            db.insertData(dulieu)
+                            Toast.makeText(this, "Success Sign In", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, MainActivity::class.java))
+                        }//keim tra mail
+                        else {
+                            Toast.makeText(this,"Email have been used",Toast.LENGTH_SHORT).show()
+                        }
                     } //KIem tra Password match
                     else {
                         Toast.makeText(this, "Password not Correct", Toast.LENGTH_SHORT).show()

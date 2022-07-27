@@ -19,15 +19,19 @@ val COL_ID="id"
 class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,1){
     override fun onCreate(db: SQLiteDatabase?) {
         val creatTable= " CREATE TABLE "+ TABLE_NAME + "(" + COL_ID+" INTEGER PRIMARY KEY AUTOINCREMENT , " + COL_LNAME + " TEXT, " +  COL_FNAME + " TEXT, " +  COL_EMAIL + " TEXT, " +  COL_PASS + " TEXT, " + COL_ROLE + " TEXT " + ");";
-        db?.execSQL(creatTable)
-        db?.execSQL("INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'admin', 'admin', '2' ) ")
+        db?.execSQL(creatTable);
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'admin', '123', '2' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'sinhvien', '123', '0' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien', '123', '1' ); ");
+
 
     }
 
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
-        onCreate(db)
+        onCreate(db=db);
+        db?.execSQL(" DROP TABLE IF EXISTS $TABLE_NAME ");
+        onCreate(db = db);
     }
     // data vao User
     fun insertData(user: User){
@@ -45,7 +49,7 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
             Toast.makeText(context,"Success",Toast.LENGTH_SHORT).show()
         }
     }
-    //
+    // Test Data
     fun CheckUser(email:String,pass:String):Boolean{
         val db=this.readableDatabase
         val query ="SELECT * FROM $TABLE_NAME WHERE EMAIL = ? AND $COL_PASS = ? "
@@ -59,6 +63,7 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
             return false
         }
     }
+    //kiem tra va lay data
     fun ViewPass(email: String):ArrayList<User>{
         val db=this.readableDatabase
         var Ulist:ArrayList<User> = ArrayList<User>()
@@ -76,5 +81,24 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         }
         Ulist.isEmpty()
         return Ulist
+    }
+    fun checkmail(email: String):String{
+        val db=this.readableDatabase
+        var list:ArrayList<User> = ArrayList<User>()
+        var valueR:String
+        val query = " SELECT * FROM $TABLE_NAME WHERE EMAIL = ? "
+        val arg= listOf<String>(email).toTypedArray()
+        var cursor:Cursor? = null
+        cursor=db.rawQuery(query,arg)
+        if(cursor.moveToNext()){
+            val user=User()
+            user.Email=cursor.getString(cursor.getColumnIndex(COL_EMAIL))
+            list.add(user)
+            valueR=list.get(0).Email
+            return valueR
+        }else{
+            valueR= 0.toString()
+            return valueR
+        }
     }
 }

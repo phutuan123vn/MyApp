@@ -18,4 +18,6 @@ class User {
         this.Role=Role
         this.Password=Password
     }
+    constructor(){
+    }
 }
