@@ -37,6 +37,7 @@ class QLnavigation : AppCompatActivity() {
                 R.id.TKB -> replaceFragment(TKB(),it.title.toString())
                 R.id.GVdsgv  -> replaceFragment(GVdsgv(),it.title.toString())
                 R.id.GVqldl -> replaceFragment(GVqldl(),it.title.toString())
+                R.id.GVqltk -> replaceFragment(GVqltk(),it.title.toString())
                 R.id.SVdssv -> replaceFragment(SVdssv(),it.title.toString())
                 R.id.SVqldl -> replaceFragment(SVqldl(),it.title.toString())
                 R.id.SVqltk -> replaceFragment(SVqltk(),it.title.toString())

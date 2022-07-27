@@ -27,8 +27,11 @@ class SVnavigation : AppCompatActivity() {
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        //val  homeFragment = Svlichhoc()
+        //val fragment : Fragment? = supportFragmentManager.findFragmentByTag(Svlichhoc::class.java.simpleName)
+        //if (fragment !is Svlichhoc) {
         supportFragmentManager.beginTransaction().replace(R.id.framelayoutsvnav, Svlichhoc()).commit()
         navsvview.setNavigationItemSelectedListener {
 
@@ -44,6 +47,7 @@ class SVnavigation : AppCompatActivity() {
             }
             true
         }
+    //}
     }
 
     private fun replaceFragment(fragment: Fragment, title : String){

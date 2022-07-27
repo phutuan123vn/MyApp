@@ -69,4 +69,5 @@
     <string name="thongtingiangvien">Thông Tin Giảng Viên</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="quetmaqr">Quét Mã QR</string>
 </resources>
