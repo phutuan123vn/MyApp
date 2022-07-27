@@ -14,8 +14,7 @@ class LoginGV : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login2)
         GVback.setOnClickListener {
-            val intent=Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            this.finish()
         }
         GVsignup.setOnClickListener{
             val intent=Intent(this, SignUpGV::class.java)

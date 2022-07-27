@@ -16,8 +16,7 @@ class LoginQL : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login3)
         QLback.setOnClickListener {
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            this.finish()
         }
         QLbttn.setOnClickListener {
             if (QLUser.text.toString().isEmpty() || QLPass.text.toString().isEmpty()){

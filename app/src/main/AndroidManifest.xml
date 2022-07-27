@@ -40,13 +40,13 @@
             android:exported="false" />
         <activity
             android:name=".login.LoginQL"
-            android:noHistory="true"/>
+            android:exported="false" />
         <activity
             android:name=".login.LoginGV"
-            android:noHistory="true"/>
+            android:exported="false" />
         <activity
             android:name=".login.LoginSV"
-            android:noHistory="true"/>
+            android:exported="false" />
         <activity
             android:name=".login.MainActivity"
             android:exported="true">

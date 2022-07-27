@@ -13,7 +13,7 @@ class SignUpGV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupgv)
-        SUGback.setOnClickListener { startActivity(Intent(this,MainActivity::class.java)) }
+        SUGback.setOnClickListener { this.finish() }
         SUGbttn.setOnClickListener {
             if (
                 SUGLname.text.toString().isEmpty()

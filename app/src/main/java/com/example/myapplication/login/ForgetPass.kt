@@ -18,8 +18,6 @@ class ForgetPass : AppCompatActivity() {
                 Toast.makeText(this,"Please Fill Your Email",Toast.LENGTH_SHORT).show()
             }
         }
-        forgetback.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
-        }
+        forgetback.setOnClickListener { this.finish() }
     }
 }

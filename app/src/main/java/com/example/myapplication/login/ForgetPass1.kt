@@ -19,7 +19,7 @@ class ForgetPass1 : AppCompatActivity() {
             }
         }
         forget1back.setOnClickListener {
-            startActivity(Intent(this, ForgetPass::class.java))
+            this.finish()
         }
         forget1refresh.setOnClickListener {
             val intent=intent

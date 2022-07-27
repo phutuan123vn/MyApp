@@ -14,9 +14,7 @@ class LoginSV : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login1)
         SVback.setOnClickListener {
-            val intent=Intent(this, MainActivity::class.java)
-            finish()
-            startActivity(intent)
+            this.finish()
         }
         SVsignup.setOnClickListener{
             val intent=Intent(this, SignUpSV::class.java)

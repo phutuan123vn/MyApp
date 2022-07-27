@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.qlnav.*
@@ -39,7 +40,7 @@ class QLnavigation : AppCompatActivity() {
                 R.id.SVdssv -> replaceFragment(SVdssv(),it.title.toString())
                 R.id.SVqldl -> replaceFragment(SVqldl(),it.title.toString())
                 R.id.SVqltk -> replaceFragment(SVqltk(),it.title.toString())
-                R.id.account -> this.finish()
+                R.id.account -> finish()
             }
             true
         }
@@ -52,10 +53,16 @@ class QLnavigation : AppCompatActivity() {
         drawerLayout.closeDrawers()
         setTitle(title)
     }
+    override fun finish() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){
             return true
         }
         return super.onOptionsItemSelected(item)
     }
+    override fun onBackPressed() {}
 }

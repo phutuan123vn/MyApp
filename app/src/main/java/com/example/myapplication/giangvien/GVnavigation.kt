@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -36,7 +37,7 @@ class GVnavigation : AppCompatActivity() {
                 R.id.gvdslop -> replaceFragment(Gvdslop(),it.title.toString())
                 R.id.gvinfo -> replaceFragment(Gvinfo(),it.title.toString())
                 R.id.gvpasschange -> replaceFragment(Gvpasschange(),it.title.toString())
-                R.id.account -> this.finish()
+                R.id.account -> finish()
             }
             true
         }
@@ -49,10 +50,18 @@ class GVnavigation : AppCompatActivity() {
         drawerLayout.closeDrawers()
         setTitle(title)
     }
+    override fun finish() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){
             return true
         }
         return super.onOptionsItemSelected(item)
     }
+
+    override fun onBackPressed() {}
+
 }

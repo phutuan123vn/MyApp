@@ -14,10 +14,7 @@ class SignUpSV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
-        SUback.setOnClickListener {
-            intent=Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        SUback.setOnClickListener { this.finish() }
         SUbttn.setOnClickListener {
             //nut nhan dang ky kiem tra input
             if (

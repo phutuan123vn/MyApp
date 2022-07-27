@@ -5,6 +5,7 @@ import android.icu.text.TimeZoneFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.svnav.*
@@ -39,7 +40,7 @@ class SVnavigation : AppCompatActivity() {
                 R.id.svinfo -> replaceFragment(Svinfo(),it.title.toString())
                 R.id.svdkmon -> replaceFragment(Svdkmon(),it.title.toString())
                 R.id.svpasschange -> replaceFragment(Svpasschange(),it.title.toString())
-                R.id.account -> this.finish()
+                R.id.account -> finish()
             }
             true
         }
@@ -53,10 +54,17 @@ class SVnavigation : AppCompatActivity() {
         drawerLayout.closeDrawers()
         setTitle(title)
     }
+
+    override fun finish() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(intent)
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){
             return true
         }
             return super.onOptionsItemSelected(item)
     }
+    override fun onBackPressed() {}
 }
