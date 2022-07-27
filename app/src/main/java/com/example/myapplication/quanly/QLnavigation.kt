@@ -1,5 +1,6 @@
 package com.example.myapplication.quanly
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,6 +9,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.qlnav.*
 import androidx.fragment.app.Fragment
 import com.example.myapplication.*
+import com.example.myapplication.login.LoginQL
+import com.example.myapplication.login.LoginSV
 import com.example.myapplication.login.MainActivity
 
 class QLnavigation : AppCompatActivity() {
