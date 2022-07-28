@@ -1,63 +1,95 @@
 package com.example.myapplication.login
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
+import android.text.TextWatcher
 import android.widget.Toast
 import androidx.core.text.trimmedLength
+import androidx.core.widget.addTextChangedListener
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
 import kotlinx.android.synthetic.main.signupsv.*
-
+import java.util.regex.Pattern
 class SignUpSV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
+        var al8:Boolean
+        var num:Boolean
+        var uc:Boolean
         SUback.setOnClickListener { this.finish() }
-        SUbttn.setOnClickListener {
-            //nut nhan dang ky kiem tra input
-            if (
-                SULname.text.toString().length>0   &&
-                SUFname.text.toString().length>0   &&
-                SUE.text.toString().length>0       &&
-                SUPass.text.toString().length>0    &&
-                SUPassCon.text.toString().length>0
+        SUbttn.setOnClickListener{
+            this.textChanged()
+            if (checkInputEmpty(this)){
+                Toast.makeText(this,"Please Fill",Toast.LENGTH_SHORT).show()
+            }else {
+                var pass=SUPass.text.toString()
+                var email=SUE.text.toString()
+                if (SVBox1.isChecked()){
 
-            ){
-                if (SUPass.text.toString().length>=8 && SUPassCon.text.toString().length>=8) {
-                    if (SUPass.text.toString() == SUPassCon.text.toString()) {
-                        val db = DatabaseHandler(this)
-                        var email=SUE.text.toString()
-                        var checkemail= db.checkmail(email)
-                        if(email!=checkemail) {
-                            var dulieu = User(
-                                SULname.text.toString(),
-                                SUFname.text.toString(),
-                                0.toString(),
-                                SUE.text.toString(),
-                                SUPass.text.toString()
-                            )
+                }//Pass <8
+                else {
 
-                            db.insertData(dulieu)
-                            Toast.makeText(this, "Success Sign In", Toast.LENGTH_SHORT).show()
-                            this.finish()
-                        }//keim tra mail
-                        else {
-                            Toast.makeText(this,"Email have been used",Toast.LENGTH_SHORT).show()
-                        }
-                    } //KIem tra Password match
-                    else {
-                        Toast.makeText(this, "Password not Correct", Toast.LENGTH_SHORT).show()
-                    }
-                }else{
-                    Toast.makeText(this,"Password required at least 8 character",Toast.LENGTH_LONG).show()
                 }
-            }// Need to fill all input
-            else{
-                Toast.makeText(this,"Please Fill Information",Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    public fun String.isEmailValid(): Boolean {
+        return !TextUtils.isEmpty(this) && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
+    }
+    public fun isValidPasswordFormat(password: String): Boolean {
+        val passwordREGEX = Pattern.compile("^" +
+                "(?=.*[0-9])" +         //at least 1 digit
+                "(?=.*[a-z])" +         //at least 1 lower case letter
+                "(?=.*[A-Z])" +         //at least 1 upper case letter
+                "(?=.*[a-zA-Z])" +      //any letter
+                "(?=\\S+$)" +           //no white spaces
+                ".{8,}" +               //at least 8 characters
+                "$");
+        return passwordREGEX.matcher(password).matches()
+    }
+    public fun textChanged(){
+        SUPass.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+
             }
 
+            override fun afterTextChanged(s: Editable?) {
+
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                var pass=SUPass.text.toString()
+                var passcon=SUPassCon.text.toString()
+                passwordValidate(pass,passcon)
+            }
+        })
+    }
+
+    private fun passwordValidate(pass:String,passcon:String) {
+        if (pass.length>=8 && passcon.length>=8){
+            SVBox1.isChecked()
         }
+    }
+
+    private fun checkInputEmpty(context: Context):Boolean{
+        if (
+            SULname.text.toString().isEmpty() ||
+            SUFname.text.toString().isEmpty() ||
+            SUE.text.toString().isEmpty()     ||
+            SUPass.text.toString().isEmpty()  ||
+            SUPassCon.text.toString().isEmpty()
+        ){
+            return true
+        }
+        return false
     }
 }
