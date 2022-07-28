@@ -71,4 +71,8 @@
     <string name="close">close</string>
     <string name="quetmaqr">Quét Mã QR</string>
     <string name="thoat">thoat</string>
+    <string name="boxnumber">Tối thiểu 1 kí tự số</string>
+    <string name="boxmin">Tối thiểu 8 kí tự</string>
+    <string name="passwordthoa">Password phải thoã:</string>
+    <string name="boxinhoa">Tối thiểu 1 kí tự IN HOA</string>
 </resources>

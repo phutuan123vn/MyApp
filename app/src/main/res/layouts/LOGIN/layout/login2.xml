@@ -30,16 +30,19 @@
             android:text="@string/dangnhaptaikhoangiangvien"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="@string/username"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            app:boxBackgroundMode="outline"
-            app:boxBackgroundColor="@color/white">
+            android:hint="@string/username"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/GVUser"
@@ -52,23 +55,26 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:hint="@string/password"
-            app:passwordToggleEnabled="true"
-            app:boxBackgroundMode="outline"
-            app:boxBackgroundColor="@color/design_default_color_background">
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/GVPass"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="15"
                 android:inputType="textPassword"
                 android:textColorHint="#616161"
-                tools:ignore="TextContrastCheck" />
+                tools:ignore="TextContrastCheck"
+                app:helperTextEnabled="true"
+                app:helperText="Please fill"
+                app:helperTextTextColor="@android:color/holo_red_dark"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -93,11 +99,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="100dp"
             android:text="@string/quenmatkhau"
             android:textColor="#1f16c4"
-            android:textStyle="italic"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/GVsignup"
@@ -107,8 +113,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/taotaikhoan"
             android:textColor="#1f16c4"
-            android:textStyle="bold"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

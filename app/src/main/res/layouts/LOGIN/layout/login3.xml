@@ -39,7 +39,10 @@
             android:layout_marginTop="20dp"
             android:hint="@string/username"
             app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/QLUser"
@@ -58,13 +61,16 @@
             android:layout_marginTop="15dp"
             android:hint="@string/password"
             app:boxBackgroundColor="@color/design_default_color_background"
-            app:boxBackgroundMode="outline"
-            app:passwordToggleEnabled="true">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/QLPass"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:ems="15"
                 android:inputType="textPassword"
                 android:textColorHint="#616161"

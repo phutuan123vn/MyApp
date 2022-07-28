@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".MainActivity">
-
+    android:layout_height="match_parent"
+    tools:context=".login.SignUpGV">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,61 +23,221 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
             android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
             android:text="@string/taotaikhoangv"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/SUGLname"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
             android:hint="@string/ho"
-            android:inputType="textPersonName"/>
-
-        <EditText
-            android:id="@+id/SUGFname"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUGLname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColorHint="#616161"
+                android:textSize="15sp"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:hint="@string/ten"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/SUGE"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUGFname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck"
+                android:textSize="15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:inputType="text" />
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="@color/white"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUGE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck"
+                android:textSize="15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-
-
-        <EditText
-            android:id="@+id/SUGPass"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:hint="@string/password"
-            android:inputType="textPassword" />
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUGPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck"
+                android:textSize="15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/SUGPassCon"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:hint="@string/password_again"
-            android:inputType="textPassword" />
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:helperTextEnabled="true"
+            app:helperText="Please fill"
+            app:helperTextTextColor="@android:color/holo_red_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUGPassCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck"
+                android:textSize="15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:text="@string/passwordthoa"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_marginStart="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#dcdcdc"
+                app:cardCornerRadius="25dp"
+                android:layout_marginStart="10dp">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/check_24" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center|start"
+                android:text="@string/boxmin"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_marginStart="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#dcdcdc"
+                app:cardCornerRadius="25dp"
+                android:layout_marginStart="10dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/check_24"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/boxnumber"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_marginStart="70dp"
+            android:gravity="start"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:cardBackgroundColor="#dcdcdc"
+                app:cardCornerRadius="25dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/check_24"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/boxinhoa"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
         <Button
-
             android:id="@+id/SUGbttn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -97,4 +255,4 @@
             android:backgroundTint="@android:color/darker_gray"
             android:text="@string/quaylai" />
     </LinearLayout>
-</RelativeLayout>
+</androidx.core.widget.NestedScrollView>
