@@ -34,6 +34,7 @@ class LoginQL : AppCompatActivity() {
                     if (pass == passcheck && role == 2.toString()){
                         Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this,QLnavigation::class.java))
+                        this.finish()
                     }else{
                         Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
                     }

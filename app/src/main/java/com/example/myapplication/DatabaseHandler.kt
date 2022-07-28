@@ -43,6 +43,7 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         content.put(COL_EMAIL,user.Email)
         content.put(COL_PASS,user.Password)
         var result = db.insert(TABLE_NAME,null,content)
+        db.close()
         if(result == -1.toLong()){
             Toast.makeText(context,"failed",Toast.LENGTH_SHORT).show()
         }else{
@@ -95,8 +96,10 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
             user.Email=cursor.getString(cursor.getColumnIndex(COL_EMAIL))
             list.add(user)
             valueR=list.get(0).Email
+            db.close()
             return valueR
         }else{
+            db.close()
             valueR= 0.toString()
             return valueR
         }

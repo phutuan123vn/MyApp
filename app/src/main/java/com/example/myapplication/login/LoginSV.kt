@@ -40,6 +40,7 @@ class LoginSV : AppCompatActivity() {
                     if ( pass == passcheck && role == 0.toString() ){
                         Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this,SVnavigation::class.java))
+                        this.finish()
                     }else{
                         Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
                     }

@@ -41,7 +41,7 @@ class SignUpSV : AppCompatActivity() {
 
                             db.insertData(dulieu)
                             Toast.makeText(this, "Success Sign In", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, MainActivity::class.java))
+                            this.finish()
                         }//keim tra mail
                         else {
                             Toast.makeText(this,"Email have been used",Toast.LENGTH_SHORT).show()

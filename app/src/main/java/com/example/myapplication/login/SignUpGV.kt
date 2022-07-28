@@ -39,7 +39,7 @@ class SignUpGV : AppCompatActivity() {
                             )
                             db.insertData(dulieu)
                             Toast.makeText(this, "Success Sign In", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, LoginGV::class.java))
+                            this.finish()
                         }else{
                             Toast.makeText(this,"Email have been used",Toast.LENGTH_SHORT).show()
                         }

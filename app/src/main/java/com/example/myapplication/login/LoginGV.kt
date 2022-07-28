@@ -40,6 +40,7 @@ class LoginGV : AppCompatActivity() {
                     if ( pass == passcheck && role == 1.toString()){
                         Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this,GVnavigation::class.java))
+                        this.finish()
                     }else{
                         Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
                     }
