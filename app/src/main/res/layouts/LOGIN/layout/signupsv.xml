@@ -153,7 +153,7 @@
             android:layout_marginTop="5dp"
             android:gravity="start"
             android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            <CheckBox
                 android:id="@+id/SVBox1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -161,12 +161,8 @@
                 app:cardBackgroundColor="#dcdcdc"
                 app:cardCornerRadius="25dp"
                 android:layout_marginStart="10dp">
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/check_24" />
-            </androidx.cardview.widget.CardView>
+
+            </CheckBox>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,7 +180,7 @@
             android:layout_marginTop="5dp"
             android:gravity="start"
             android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            <CheckBox
                 android:id="@+id/SVBox2"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -192,13 +188,8 @@
                 app:cardBackgroundColor="#dcdcdc"
                 app:cardCornerRadius="25dp"
                 android:layout_marginStart="10dp">
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:background="@drawable/check_24"
-                    />
-            </androidx.cardview.widget.CardView>
+
+            </CheckBox>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -215,7 +206,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            <CheckBox
                 android:id="@+id/SVBox3"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -223,13 +214,8 @@
                 app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp">
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:background="@drawable/check_24"
-                    />
-            </androidx.cardview.widget.CardView>
+
+            </CheckBox>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
