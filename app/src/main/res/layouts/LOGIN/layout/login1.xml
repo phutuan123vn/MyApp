@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    tools:context=".login.LoginSV">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,29 +22,49 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
             android:layout_marginTop="50dp"
             android:text="@string/dangnhaptaikhoansinhvien"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
-        <EditText
-            android:id="@+id/L1user"
-            android:inputType="text"
-            android:layout_marginTop="20dp"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/username"
-            android:layout_gravity="center" />
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/L1pass"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/L1user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:hint="@string/password"
-            android:paddingTop="10dp"
-            android:layout_gravity="center"/>
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/design_default_color_background">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/L1pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/L1log"
             android:layout_marginTop="50dp"
@@ -52,30 +72,35 @@
             android:layout_height="wrap_content"
             android:text="@string/dangnhap"
             android:layout_gravity="center"/>
+
         <Button
             android:id="@+id/SVback"
-            android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/quaylai"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/darker_gray"
-            android:layout_gravity="center"/>
+            android:text="@string/quaylai" />
         <TextView
             android:id="@+id/SVforget"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="150dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/quenmatkhau"
-            android:textColor="#1f16c4"/>
+            android:textColor="#1f16c4"
+            android:textStyle="italic"
+            android:textSize="15sp"/>
+
         <TextView
             android:id="@+id/SVsignup"
-            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
             android:text="@string/taotaikhoan"
-            android:textColor="#1f16c4"/>
-
+            android:textColor="#1f16c4"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

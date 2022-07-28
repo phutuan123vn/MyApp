@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    tools:context=".login.SignUpSV">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,57 +23,207 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="55dp"
+            android:layout_gravity="center"
+            android:textStyle="italic"
             android:text="@string/taotaikhoansv"
             android:textColor="@color/black"
             android:textSize="20sp" />
-        <EditText
-            android:inputType="textPersonName"
-            android:id="@+id/SULname"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:hint="@string/ho"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/ho" />
-        <EditText
-            android:inputType="textPersonName"
-            android:id="@+id/SUFname"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="@string/ten"/>
-        <EditText
-            android:inputType="text"
-            android:id="@+id/SUE"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="@string/email" />
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white">
 
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/SUPass"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/SULname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textColorHint="#616161"
+            tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/ten"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUFname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/password" />
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/SUPassCon"
+            android:hint="@string/password"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/design_default_color_background">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:hint="@string/password_again" />
+            android:hint="@string/password_again"
+            app:passwordToggleEnabled="true"
+            app:boxBackgroundMode="outline"
+            app:boxBackgroundColor="@color/design_default_color_background">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/SUPassCon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Password must be "
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#dcdcdc"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/check_24" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center|start"
+                android:text="Atleast 8 character"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:cardBackgroundColor="#dcdcdc"
+                app:cardCornerRadius="25dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/check_24"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="Mininum 1 number"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:cardBackgroundColor="#dcdcdc"
+                app:cardCornerRadius="25dp"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/check_24"
+                    />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="Minimum 1 uppercase"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/SUbttn"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:padding="10dp"
             android:text="@string/dangki" />
         <Button
@@ -85,4 +235,4 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/darker_gray" />
     </LinearLayout>
-</RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -4,8 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".MMainActivity">
+    android:layout_height="match_parent"
+    tools:context=".login.ForgetPass2">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,23 +35,45 @@
             android:text="@string/nhapmatkhaumoi"
             android:textColor="@color/black"
             android:textSize="20sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:hint="@string/matkhaumoi"
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:boxBackgroundMode="outline"
+            app:passwordToggleEnabled="true">
 
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/forget2pass"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/forget2pass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="@string/matkhaumoi" />
-        <EditText
-            android:inputType="textPassword"
-            android:id="@+id/forget2passcon"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:hint="@string/xacnhanmatkhaumoi" />
+            android:layout_marginTop="15dp"
+            android:hint="@string/matkhaumoi"
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:boxBackgroundMode="outline"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/forget2passcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <Button
             android:id="@+id/forget2bttn"
             android:layout_width="300dp"
@@ -54,6 +81,15 @@
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
             android:text="@string/thaydoi" />
+        <Button
+            android:id="@+id/thoat"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/thoat" />
+
 
     </LinearLayout>
 </RelativeLayout>

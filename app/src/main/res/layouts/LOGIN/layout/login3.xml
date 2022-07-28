@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".LoginQL">
+    android:layout_height="match_parent"
+    tools:context="login.LoginQL">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -18,49 +20,75 @@
             android:text="@string/login"
             android:textColor="#382EEC"
             android:textSize="50sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="@string/dangnhaptaikhoanquanli"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
-        <EditText
-            android:id="@+id/QLUser"
-            android:inputType="text"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
             android:hint="@string/username"
-            android:layout_gravity="center" />
-        <EditText
-            android:id="@+id/QLPass"
-            android:inputType="textPassword"
-            android:layout_marginTop="10dp"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/QLUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:hint="@string/password"
-            android:paddingTop="10dp"
-            android:layout_gravity="center"/>
+            app:boxBackgroundColor="@color/design_default_color_background"
+            app:boxBackgroundMode="outline"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/QLPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="15"
+                android:inputType="textPassword"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <Button
             android:id="@+id/QLbttn"
-            android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/dangnhap"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="@string/dangnhap" />
+
         <Button
             android:id="@+id/QLback"
-            android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/quaylai"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:backgroundTint="@android:color/darker_gray"
-            android:layout_gravity="center"/>
+            android:text="@string/quaylai" />
 
 
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

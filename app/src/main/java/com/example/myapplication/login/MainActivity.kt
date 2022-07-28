@@ -32,17 +32,14 @@ class MainActivity : AppCompatActivity() {
         bttnSV.setOnClickListener {
             val intent= Intent(this, LoginSV::class.java)
             startActivity(intent)
-            finish()
         }//GV button
         bttnGV.setOnClickListener {
             val intent= Intent(this, LoginGV::class.java)
             startActivity(intent)
-            finish()
         }
         bttnQL.setOnClickListener {
             val intent= Intent(this, LoginQL::class.java)
             startActivity(intent)
-            finish()
         }
     }
     override fun onBackPressed() {
