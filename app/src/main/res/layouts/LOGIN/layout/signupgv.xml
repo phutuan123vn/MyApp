@@ -21,6 +21,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:background="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -31,16 +32,14 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SUGLnamefill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/ho"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxBackgroundColor="@color/white"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGLname"
                 android:layout_width="match_parent"
@@ -52,16 +51,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SUGFnamefill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/ten"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxBackgroundColor="@color/white"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGFname"
                 android:layout_width="match_parent"
@@ -73,16 +70,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SUGEfill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/email"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxBackgroundColor="@color/white"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGE"
                 android:layout_width="match_parent"
@@ -94,6 +89,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SUGPassfill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -101,9 +97,7 @@
             android:hint="@string/password"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGPass"
                 android:layout_width="match_parent"
@@ -116,6 +110,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SUGPassConfill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -123,9 +118,7 @@
             android:hint="@string/password_again"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGPassCon"
                 android:layout_width="match_parent"
@@ -137,35 +130,35 @@
                 android:textSize="15sp"/>
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
+            android:background="@color/white"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="70dp"
             android:text="@string/passwordthoa"
             android:layout_marginTop="15dp"
             android:textColor="@android:color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:layout_marginLeft="70dp" />
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="200dp"
             android:layout_marginStart="70dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
-            android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
+            <CheckBox
                 android:id="@+id/card1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 app:cardBackgroundColor="#dcdcdc"
                 app:cardCornerRadius="25dp"
-                android:layout_marginStart="10dp">
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/check_24" />
-            </androidx.cardview.widget.CardView>
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp">
+            </CheckBox>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -173,69 +166,66 @@
                 android:layout_marginStart="10dp"
                 android:gravity="center|start"
                 android:text="@string/boxmin"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="200dp"
             android:layout_marginStart="70dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
-            android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
+            <CheckBox
                 android:id="@+id/card2"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 app:cardBackgroundColor="#dcdcdc"
                 app:cardCornerRadius="25dp"
-                android:layout_marginStart="10dp">
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:background="@drawable/check_24"
-                    />
-            </androidx.cardview.widget.CardView>
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="70dp">
+            </CheckBox>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@android:color/black"
                 android:text="@string/boxnumber"
                 android:gravity="center|start"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="70dp"/>
         </LinearLayout>
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="200dp"
             android:layout_marginStart="70dp"
             android:gravity="start"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-            <androidx.cardview.widget.CardView
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
+            <CheckBox
                 android:id="@+id/card3"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 app:cardBackgroundColor="#dcdcdc"
                 app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp">
-                <ImageView
-                    android:layout_gravity="center"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:background="@drawable/check_24"
-                    />
-            </androidx.cardview.widget.CardView>
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="70dp">
+            </CheckBox>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@android:color/black"
                 android:text="@string/boxinhoa"
                 android:gravity="center|start"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="70dp"/>
         </LinearLayout>
         <Button
             android:id="@+id/SUGbttn"

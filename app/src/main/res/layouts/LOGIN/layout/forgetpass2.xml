@@ -28,21 +28,21 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="55dp"
             android:layout_marginTop="50dp"
             android:text="@string/nhapmatkhaumoi"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginLeft="55dp" />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:hint="@string/matkhaumoi"
-            app:boxBackgroundColor="@color/design_default_color_background"
-            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -60,8 +60,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:hint="@string/matkhaumoi"
-            app:boxBackgroundColor="@color/design_default_color_background"
-            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
