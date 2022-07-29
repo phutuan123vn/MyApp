@@ -12,25 +12,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
             android:text="@string/thongtinday"
             android:textColor="#382EEC"
             android:textSize="40sp" />
-        <TextView
-            android:layout_marginTop="160dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="350dp"
+            android:layout_height="565dp"
             android:layout_gravity="center"
-            android:text="thong tin "
-            android:textColor="#1f16c4"/>
-        <TextView
-            android:layout_marginTop="70dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="@string/tietdayhomnay"
-            android:textColor="#1f16c4"
-            android:textSize="20sp"/>
+            app:srcCompat="@drawable/gvthongtinday" />
 
     </LinearLayout>
 </RelativeLayout>

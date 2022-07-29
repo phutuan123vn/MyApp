@@ -1,6 +1,5 @@
-package com.example.myapplication.giangvien
+package com.example.myapplication.sinhvien
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,23 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
-import com.example.myapplication.R
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.gvinfo.view.*
+import com.example.myapplication.R
+import kotlinx.android.synthetic.main.svinfochange.view.*
 
 
-class Gvinfo : Fragment() {
+class Svinfochange : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.gvinfo, container, false)
-        val edit = v.findViewById<Button>(R.id.gvinfoedit)
-        edit.setOnClickListener {
-            val Gvinfochange = Gvinfochange()
+        val v = inflater.inflate(R.layout.svinfochange, container, false)
+        val back = v.findViewById<Button>(R.id.svinfochangeback)
+        back.setOnClickListener {
+            val Svinfo = Svinfo()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-            transaction.replace(R.id.framelayoutgvnav, Gvinfochange)
+            transaction.replace(R.id.framelayoutsvnav, Svinfo)
             transaction.commit()
         }
         return v

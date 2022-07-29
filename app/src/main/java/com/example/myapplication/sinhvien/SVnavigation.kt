@@ -4,12 +4,14 @@ import android.content.Intent
 import android.icu.text.TimeZoneFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.svnav.*
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.myapplication.*
 import com.example.myapplication.login.ForgetPass
 import com.example.myapplication.login.LoginSV
@@ -21,7 +23,6 @@ class SVnavigation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.svnav)
-
         drawerLayout = findViewById(R.id.drawersvnav)
 
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
@@ -71,4 +72,5 @@ class SVnavigation : AppCompatActivity() {
             return super.onOptionsItemSelected(item)
     }
     override fun onBackPressed() {}
+
 }

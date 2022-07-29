@@ -10,23 +10,27 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/thongtinsinhvien"
             android:textColor="#382EEC"
             android:textSize="40sp" />
-        <TextView
-            android:layout_marginTop="160dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageView9"
             android:layout_gravity="center"
-            android:text="thong tin "
-            android:textColor="#1f16c4"/>
+            android:layout_width="350dp"
+            android:layout_height="464dp"
+            android:src="@drawable/svinfo" />
         <Button
-            android:layout_marginTop="200dp"
+            android:id="@+id/svinfoedit"
+            android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/chinhsua"
             android:layout_gravity="center"/>
+
+
     </LinearLayout>
 </RelativeLayout>

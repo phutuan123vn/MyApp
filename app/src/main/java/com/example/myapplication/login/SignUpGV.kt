@@ -1,5 +1,6 @@
 package com.example.myapplication.login
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,8 @@ import android.widget.Toast
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.signupgv.*
 import kotlinx.android.synthetic.main.signupsv.*
@@ -17,13 +20,9 @@ class SignUpGV : AppCompatActivity() {
         setContentView(R.layout.signupgv)
         SUGback.setOnClickListener { this.finish() }
         SUGbttn.setOnClickListener {
-            checkInputEmpty()
-            if (SUGLname.text.toString().isNotEmpty() &&
-                SUGFname.text.toString().isNotEmpty() &&
-                SUGE.text.toString().isNotEmpty()     &&
-                SUGPass.text.toString().isNotEmpty()  &&
-                SUGPassCon.text.toString().isNotEmpty())
-            {
+            if (checkInputEmpty(this)) {
+                Toast.makeText(this, "Fill Please", Toast.LENGTH_SHORT).show()
+            }else{
                 if (SUGPass.text.toString().length>=8 && SUGPassCon.text.toString().length>=8){
                     if (SUGPass.text.toString()==SUGPassCon.text.toString()){
                         var email=SUGE.text.toString()
@@ -53,16 +52,38 @@ class SignUpGV : AppCompatActivity() {
             }
         }
     }
-    private fun checkInputEmpty(){
-        if(SUGLname.text.toString().isEmpty()) {SUGLnamefill.error = "Không được để trống" }
-        else {SUGLnamefill.error = null}
-        if(SUGFname.text.toString().isEmpty()) {SUGFnamefill.error = "Không được để trống" }
-        else {SUFnamefill.error = null}
-        if(SUGE.text.toString().isEmpty()) {SUGEfill.error = "Không được để trống" }
-        else {SUGEfill.error = null}
-        if(SUGPass.text.toString().isEmpty()) {SUGPassfill.error = "Không được để trống" }
-        else {SUGPassfill.error = null}
-        if(SUGPassCon.text.toString().isEmpty()) {SUGPassConfill.error = "Không được để trống" }
-        else {SUGPassConfill.error = null}
+    private fun checkInputEmpty(context: Context):Boolean {
+        if (
+            SUGLname.text.toString().isEmpty() ||
+            SUGFname.text.toString().isEmpty() ||
+            SUGE.text.toString().isEmpty() ||
+            SUGPass.text.toString().isEmpty() ||
+            SUGPassCon.text.toString().isEmpty()
+        ) {
+            val list =
+                listOf<TextInputLayout>(SUGLnameHT, SUGFnameHT, SUGEHT, SUGPassHT, SUGPassConHT)
+            val list1 = listOf<TextInputEditText>(SUGLname, SUGFname, SUGE, SUGPass, SUGPassCon)
+            val listzip = list.zip(list1)
+            for (i in listzip) {
+                if (i.second.text.toString().isEmpty()) {
+                    i.first.helperText = "Please Fill"
+                } else {
+                    i.first.helperText = null
+                }
+            }
+//            list.forEach{ it ->
+//                for (j in list1.iterator()) {
+//                    if (j.text.toString().isEmpty()){
+//                        it.helperText="Please Fill"
+//                    }else{
+//                        it.helperText=null
+//                    }
+//                    continue
+//
+//                }
+//            }
+            return true
+        }
+        return false
     }
 }

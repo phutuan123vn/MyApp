@@ -16,15 +16,16 @@
             android:text="@string/thongtincanhan"
             android:textColor="#382EEC"
             android:textSize="40sp" />
-        <TextView
-            android:layout_marginTop="160dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/imageView4"
+            android:layout_width="350dp"
+            android:layout_height="436dp"
             android:layout_gravity="center"
-            android:text="thong tin "
-            android:textColor="#1f16c4"/>
+            app:srcCompat="@drawable/gvinfo" />
         <Button
-            android:layout_marginTop="200dp"
+            android:id="@+id/gvinfoedit"
+            android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/chinhsua"

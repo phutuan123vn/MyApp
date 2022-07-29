@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    tools:context=".sinhvien.Svdiemdanh">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
@@ -23,13 +24,21 @@
             android:layout_marginStart="40dp"
             android:text="@string/monhochomnay"
             android:textColor="#1f16c4"/>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="350dp"
+            android:layout_height="372dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/svdiemanh" />
         <Button
             android:id="@+id/quetmaqr"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/quetmaqr"/>
+
 
 
 

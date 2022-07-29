@@ -12,30 +12,145 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
             android:text="Thay Đổi Mật Khẩu"
             android:textColor="#382EEC"
             android:textSize="40sp" />
-        <EditText
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:hint="@string/matkhaucu"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
-            android:hint="@string/matkhaucu" />
-        <EditText
+            android:layout_marginTop="50dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:hint="@string/matkhaumoi"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="@string/matkhaumoi" />
-        <EditText
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:hint="@string/xacnhanmatkhaumoi"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:hint="@string/xacnhanmatkhaumoi"/>
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:errorEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorHint="#616161"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:text="@string/passwordthoa"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_marginStart="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/SVBox1"
+                android:clickable="false"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+
+                android:layout_marginStart="10dp">
+
+            </CheckBox>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:gravity="center|start"
+                android:text="@string/boxmin"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_marginStart="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/SVBox2"
+                android:clickable="false"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp">
+
+            </CheckBox>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/boxnumber"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_marginStart="70dp"
+            android:gravity="start"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/SVBox3"
+                android:clickable="false"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp">
+
+            </CheckBox>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/boxinhoa"
+                android:gravity="center|start"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
         <Button
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/capnhat"
