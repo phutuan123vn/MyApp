@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_gravity="center"
             android:text="@string/dangkimonhoc"
             android:textColor="#382EEC"
             android:textSize="40sp" />
@@ -23,18 +23,44 @@
             android:layout_marginStart="40dp"
             android:text="@string/chonmondk"
             android:textColor="#1f16c4"/>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Tìm kiếm mã môn học"
+            android:textStyle="italic"
+            android:inputType="text"/>
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="300dp"
+            android:layout_height="238dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/svdkm1" />
+
         <TextView
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:text="@string/cacmondadk"
             android:textColor="#1f16c4"/>
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/svdkm2" />
         <Button
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/guimaudk"
             android:layout_gravity="center"/>
+
+
+
+
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

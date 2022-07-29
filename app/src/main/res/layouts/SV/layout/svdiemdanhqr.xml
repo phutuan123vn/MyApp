@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    tools:context=".sinhvien.Svdiemdanhqr">
     <LinearLayout
         android:id="@+id/svdiemdanhqr"
         android:layout_width="match_parent"
@@ -18,9 +18,17 @@
             android:textColor="#382EEC"
             android:textSize="40sp" />
 
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_gravity="center"
+            android:layout_height="570dp"
+            app:srcCompat="@drawable/camera" />
+
         <Button
             android:id="@+id/quetmaqrback"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

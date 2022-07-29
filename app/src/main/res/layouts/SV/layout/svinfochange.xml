@@ -16,25 +16,29 @@
             android:text="@string/thongtinsinhvien"
             android:textColor="#382EEC"
             android:textSize="40sp" />
-        <TextView
-            android:layout_marginTop="160dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="350dp"
+            android:layout_height="363dp"
             android:layout_gravity="center"
-            android:text="thông tin"
-            android:textColor="#1f16c4"/>
+            app:srcCompat="@drawable/svinfochange" />
+
         <Button
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/capnhat"
             android:layout_gravity="center"/>
         <Button
+            android:id="@+id/svinfochangeback"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/quaylai"
             android:backgroundTint="@android:color/darker_gray"
             android:layout_gravity="center"/>
+
+
     </LinearLayout>
 </RelativeLayout>

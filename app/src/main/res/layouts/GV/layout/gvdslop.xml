@@ -12,17 +12,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_gravity="center"
             android:text="@string/dslop"
             android:textColor="#382EEC"
             android:textSize="40sp" />
-        <TextView
-            android:layout_marginTop="160dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="350dp"
             android:layout_gravity="center"
-            android:text="danh sach "
-            android:textColor="#1f16c4"/>
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/gvdslop" />
+
 
     </LinearLayout>
 </RelativeLayout>

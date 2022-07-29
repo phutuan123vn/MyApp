@@ -32,14 +32,16 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/SUGLnamefill"
+            android:id="@+id/SUGLnameHT"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/ho"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:helperTextEnabled="true"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGLname"
                 android:layout_width="match_parent"
@@ -51,14 +53,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/SUGFnamefill"
+            android:id="@+id/SUGFnameHT"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/ten"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:helperTextEnabled="true"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGFname"
                 android:layout_width="match_parent"
@@ -70,14 +74,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/SUGEfill"
+            android:id="@+id/SUGEHT"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/email"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:helperTextEnabled="true"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGE"
                 android:layout_width="match_parent"
@@ -89,7 +95,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/SUGPassfill"
+            android:id="@+id/SUGPassHT"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -97,7 +103,9 @@
             android:hint="@string/password"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:helperTextEnabled="true"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGPass"
                 android:layout_width="match_parent"
@@ -110,7 +118,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/SUGPassConfill"
+            android:id="@+id/SUGPassConHT"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -118,7 +126,9 @@
             android:hint="@string/password_again"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:helperTextEnabled="true"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGPassCon"
                 android:layout_width="match_parent"
