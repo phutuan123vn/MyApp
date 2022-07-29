@@ -32,12 +32,11 @@ class SignUpSV : AppCompatActivity() {
         setContentView(R.layout.signupsv)
         val db=DatabaseHandler(this)
         pass=SUPass.text.toString()
-        email=SUE.text.toString()
         passcon=SUPassCon.text.toString()
         this.onTextChange(this)
+        SUE.doAfterTextChanged { email=SUE.text.toString() }
         SUback.setOnClickListener { this.finish() }
         SUbttn.setOnClickListener{
-
             if (checkInputEmpty(this)){
                 Toast.makeText(this,"Fill Please",Toast.LENGTH_SHORT).show()
             }else {
@@ -48,7 +47,7 @@ class SignUpSV : AppCompatActivity() {
                     if(pass == passcon){
                         SUPassHT.helperText=null
                         SUPassConHT.helperText=null
-                        if (!email.isEmailValid()){
+                        if (isEmailValid(email)){
                             var mailcheck=db.checkmail(email)
                             if (mailcheck != email){
                                 SUEHT.helperText=null
@@ -56,7 +55,7 @@ class SignUpSV : AppCompatActivity() {
                                     SULname.text.toString(),
                                     SUFname.text.toString(),
                                     0.toString(),
-                                    email,
+                                    SUE.text.toString(),
                                     pass
                                 )
                                 db.insertData(dulieu)
@@ -118,12 +117,20 @@ class SignUpSV : AppCompatActivity() {
 
             }
         })
+
     }
 
 
     //kiem tra email chua xong
-    public fun String.isEmailValid(): Boolean {
-        return !TextUtils.isEmpty(this) && !Patterns.EMAIL_ADDRESS.matcher(this).matches()
+    private fun isValidEmail(email: String): Boolean {
+        return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+    // kiem tra email hcmut
+    fun isEmailValid(email: String): Boolean {
+        return Pattern.compile(
+            "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]|[\\w-]{2,}))"
+                    + "@hcmut.edu.vn$"  //thay doi email tai day
+        ).matcher(email).matches()
     }
     // ban? nhap' kiem tra PASSWORD
     public fun ValidPasswordFormat(password: String) {
