@@ -9,6 +9,7 @@ import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
 import com.example.myapplication.quanly.QLnavigation
+import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.login3.*
 
 class LoginQL : AppCompatActivity() {
@@ -19,8 +20,17 @@ class LoginQL : AppCompatActivity() {
             this.finish()
         }
         QLbttn.setOnClickListener {
-            if (QLUser.text.toString().isEmpty() || QLPass.text.toString().isEmpty()){
-                Toast.makeText(this,"Please Fill",Toast.LENGTH_SHORT).show()
+            if (QLUser.text.toString().isEmpty()) {
+                QLUserfill.error = "Không được để trống"}
+            else{
+                QLUserfill.error = null
+            }
+            if (QLPass.text.toString().isEmpty()){
+                QLPassfill.error = "Không được để trống"
+            } else {
+                QLPassfill.error = null}
+
+            if (QLUser.text.toString().isNotEmpty() && QLPass.text.toString().isNotEmpty()){
             }else{
                 var email=QLUser.text.toString()
                 var pass=QLPass.text.toString()

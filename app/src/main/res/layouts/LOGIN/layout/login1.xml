@@ -20,6 +20,7 @@
             android:textSize="50sp"
             android:textStyle="bold"/>
         <TextView
+            android:background="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -30,17 +31,15 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/L1usercontainer"
+            android:id="@+id/L1userfill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/username"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:boxBackgroundColor="@color/white"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/L1user"
                 android:layout_width="match_parent"
@@ -51,6 +50,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/L1passfill"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -58,9 +58,7 @@
             android:hint="@string/password"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:helperTextEnabled="true"
-            app:helperText="Please fill"
-            app:helperTextTextColor="@android:color/holo_red_dark">
+            app:errorEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/L1pass"
                 android:layout_width="match_parent"

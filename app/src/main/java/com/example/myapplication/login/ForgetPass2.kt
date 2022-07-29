@@ -16,7 +16,7 @@ class ForgetPass2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.forgetpass2)
-        thoat.setOnClickListener{finish()}
+        thoat.setOnClickListener{onBackPressed()}
         forget2bttn.setOnClickListener {
         //nut thay doi kiem tra pass
             if (forget2pass.text.toString().length>0 && forget2pass.text.toString().length>0){
@@ -51,6 +51,6 @@ class ForgetPass2 : AppCompatActivity() {
     override fun finish() {
         val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-        startActivity(intent)
-    }
+        startActivity(intent)}
+
 }

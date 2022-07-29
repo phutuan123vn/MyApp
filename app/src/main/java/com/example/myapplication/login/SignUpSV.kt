@@ -14,6 +14,7 @@ import androidx.core.widget.addTextChangedListener
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
+import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.signupsv.*
 import java.util.regex.Pattern
 class SignUpSV : AppCompatActivity() {
@@ -26,9 +27,13 @@ class SignUpSV : AppCompatActivity() {
         SUback.setOnClickListener { this.finish() }
         SUbttn.setOnClickListener{
             this.textChanged()
-            if (checkInputEmpty(this)){
-                Toast.makeText(this,"Please Fill",Toast.LENGTH_SHORT).show()
-            }else {
+            checkInputEmpty()
+            if (SULname.text.toString().isNotEmpty() &&
+                SUFname.text.toString().isNotEmpty() &&
+                SUE.text.toString().isNotEmpty()     &&
+                SUPass.text.toString().isNotEmpty()  &&
+                SUPassCon.text.toString().isNotEmpty()) {
+
                 var pass=SUPass.text.toString()
                 var email=SUE.text.toString()
                 if (SVBox1.isChecked()){
@@ -80,16 +85,16 @@ class SignUpSV : AppCompatActivity() {
         }
     }
 
-    private fun checkInputEmpty(context: Context):Boolean{
-        if (
-            SULname.text.toString().isEmpty() ||
-            SUFname.text.toString().isEmpty() ||
-            SUE.text.toString().isEmpty()     ||
-            SUPass.text.toString().isEmpty()  ||
-            SUPassCon.text.toString().isEmpty()
-        ){
-            return true
-        }
-        return false
+    private fun checkInputEmpty(){
+            if(SULname.text.toString().isEmpty()) {SULnamefill.error = "Không được để trống" }
+            else {SULnamefill.error = null}
+            if(SUFname.text.toString().isEmpty()) {SUFnamefill.error = "Không được để trống" }
+            else {SUFnamefill.error = null}
+            if(SUE.text.toString().isEmpty()) {SUEfill.error = "Không được để trống" }
+            else {SUEfill.error = null}
+            if(SUPass.text.toString().isEmpty()) {SUPassfill.error = "Không được để trống" }
+            else {SUPassfill.error = null}
+            if(SUPassCon.text.toString().isEmpty()) {SUPassConfill.error = "Không được để trống" }
+            else {SUPassConfill.error = null}
     }
 }
