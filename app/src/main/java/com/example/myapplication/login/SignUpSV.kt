@@ -41,6 +41,7 @@ class SignUpSV : AppCompatActivity() {
             if (checkInputEmpty(this)){
                 Toast.makeText(this,"Fill Please",Toast.LENGTH_SHORT).show()
             }else {
+                //check box
                 if (al8 && uc && num){
                     SUPassHT.helperText=null
                     SUPassConHT.helperText=null
