@@ -40,7 +40,6 @@
             app:boxBackgroundColor="@color/white"
             android:id="@+id/SULnameHT"
             app:helperTextEnabled="true"
-            app:errorEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SULname"

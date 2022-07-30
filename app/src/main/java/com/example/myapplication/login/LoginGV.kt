@@ -25,7 +25,8 @@ class LoginGV : AppCompatActivity() {
             val intent=Intent(this, ForgetPass::class.java)
             startActivity(intent)
         }
-        GVbttn.setOnClickListener {
+        val db = DatabaseHandler(applicationContext)
+        GVlog.setOnClickListener {
             if (GVUser.text.toString().isEmpty()) {
                 GVUserfill.error = "Không được để trống"}
             else{
@@ -37,10 +38,9 @@ class LoginGV : AppCompatActivity() {
                 GVPassfill.error = null}
 
             if (GVUser.text.toString().isNotEmpty() && GVPass.text.toString().isNotEmpty()){
-                var email=GVUser.text.toString()
-                var pass=GVPass.text.toString()
-                val db=DatabaseHandler(this)
-                var ValueR=db.ViewPass(email)
+                var pass = GVPass.text.toString()
+                var email = GVUser.text.toString()
+                var ValueR = db.ViewPass(email)
                 if (ValueR.isEmpty()){
                     Toast.makeText(this,"Password of Email Invalid",Toast.LENGTH_SHORT).show()
                 }else{

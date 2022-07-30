@@ -40,7 +40,6 @@
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
-            app:errorEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGLname"
@@ -61,7 +60,6 @@
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
-            app:errorEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGFname"
@@ -82,7 +80,6 @@
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
-            app:errorEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGE"
@@ -104,7 +101,6 @@
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
-            app:errorEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGPass"
@@ -127,7 +123,6 @@
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
-            app:errorEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGPassCon"
@@ -160,12 +155,11 @@
             android:orientation="horizontal"
             android:layout_marginLeft="70dp">
             <CheckBox
-                android:id="@+id/card1"
+                android:id="@+id/GVBox1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="#dcdcdc"
-                app:cardCornerRadius="25dp"
+                android:clickable="false"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp">
             </CheckBox>
@@ -190,12 +184,11 @@
             android:orientation="horizontal"
             android:layout_marginLeft="70dp">
             <CheckBox
-                android:id="@+id/card2"
+                android:id="@+id/GVBox2"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="#dcdcdc"
-                app:cardCornerRadius="25dp"
+                android:clickable="false"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="70dp">
             </CheckBox>
@@ -219,11 +212,10 @@
             android:orientation="horizontal"
             android:layout_marginLeft="70dp">
             <CheckBox
-                android:id="@+id/card3"
+                android:id="@+id/GVBox3"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                app:cardBackgroundColor="#dcdcdc"
-                app:cardCornerRadius="25dp"
+                android:clickable="false"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="70dp">
@@ -242,7 +234,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
             android:text="@string/dangki" />
 
