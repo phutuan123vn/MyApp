@@ -75,4 +75,11 @@
     <string name="boxmin">Tối thiểu 8 kí tự</string>
     <string name="passwordthoa">Password phải thoã:</string>
     <string name="boxinhoa">Tối thiểu 1 kí tự IN HOA</string>
+    <string name="hocol">HỌ</string>
+    <string name="tencol">TÊN</string>
+    <string name="mssvcol">MSSV</string>
+    <string name="tkcol">TÀI KHOẢN</string>
+    <string name="user">User</string>
+    <string name="pw">Password</string>
+    <string name="role">Role</string>
 </resources>

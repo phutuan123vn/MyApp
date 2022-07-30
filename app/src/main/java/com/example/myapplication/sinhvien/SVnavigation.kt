@@ -30,9 +30,6 @@ class SVnavigation : AppCompatActivity() {
         toogle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        //val  homeFragment = Svlichhoc()
-        //val fragment : Fragment? = supportFragmentManager.findFragmentByTag(Svlichhoc::class.java.simpleName)
-        //if (fragment !is Svlichhoc) {
         supportFragmentManager.beginTransaction().replace(R.id.framelayoutsvnav, Svlichhoc()).commit()
         navsvview.setNavigationItemSelectedListener {
 

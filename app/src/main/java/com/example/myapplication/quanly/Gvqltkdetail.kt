@@ -9,23 +9,22 @@ import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
 import com.example.myapplication.R
-import com.example.myapplication.sinhvien.Svdiemdanhqr
-import kotlinx.android.synthetic.main.gv_qltk.view.*
+import kotlinx.android.synthetic.main.gv_qltkdetail.view.*
 
 
-class GVqltk : Fragment() {
+class Gvqltkdetail : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // chi tiet tai khoan, chuyen sang fragment detail
-        val v = inflater.inflate(R.layout.gv_qltk, container, false)
-        val detail = v.findViewById<Button>(R.id.detailgva)
-        detail.setOnClickListener {
-            val Gvqltkdetail = Gvqltkdetail()
+        // back ve fragment qltk
+        val v = inflater.inflate(R.layout.gv_qltkdetail, container, false)
+        val back = v.findViewById<Button>(R.id.GVqltkback)
+        back.setOnClickListener {
+            val Gvqltk = GVqltk()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-            transaction.replace(R.id.framelayoutqlnav, Gvqltkdetail)
+            transaction.replace(R.id.framelayoutqlnav, Gvqltk)
             transaction.commit()
         }
         return v
