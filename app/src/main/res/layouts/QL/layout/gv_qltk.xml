@@ -49,13 +49,13 @@
             android:layout_width="400dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
-            android:stretchColumns="1,2,3,4">
+            android:stretchColumns="1,2,3,4"
+            android:background="@drawable/border">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/purple_500"
-                >
+                android:background="@color/purple_500">
 
                 <TextView
                     android:id="@+id/SVqltkrowho"
@@ -100,7 +100,8 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:background="@drawable/border">
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
@@ -129,7 +130,8 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent"
+                android:background="@drawable/border">
 
                 <TextView
                     android:id="@+id/textView5"

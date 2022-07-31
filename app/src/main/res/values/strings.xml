@@ -82,4 +82,9 @@
     <string name="user">User</string>
     <string name="pw">Password</string>
     <string name="role">Role</string>
+    <string name="mmhcol">MMH</string>
+    <string name="mhcol">Môn Học</string>
+    <string name="tietcol">Tiết</string>
+    <string name="thucol">Thứ</string>
+    <string name="diemdanhcol">ĐD</string>
 </resources>
