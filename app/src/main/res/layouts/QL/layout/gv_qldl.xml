@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="@string/ngay"
                 android:textColor="#382EEC"
                 android:textStyle="bold"/>
@@ -54,7 +54,7 @@
                 android:layout_marginStart="10dp"
                 android:text="01/01/2021"
                 android:textColor="#382EEC"
-                android:textSize="20dp"/>
+                android:textSize="20sp"/>
         </TableRow>
         <TextView
             android:layout_marginTop="10dp"
@@ -69,7 +69,6 @@
         android:layout_width="400dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:stretchColumns="1,2,3,4"
         android:background="@drawable/border">
 
         <TableRow
