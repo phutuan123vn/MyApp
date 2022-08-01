@@ -37,46 +37,50 @@ class SignUpSV : AppCompatActivity() {
         SUE.doAfterTextChanged { email=SUE.text.toString() }
         SUback.setOnClickListener { this.finish() }
         SUbttn.setOnClickListener{
+            var emailvalid :Boolean = false
+            var passmatch :Boolean =false
             if (checkInputEmpty(this)){
                 Toast.makeText(this,"Fill Please",Toast.LENGTH_SHORT).show()
             }else {
-                //check box
+                //check input
                 if (al8 && uc && num){
                     SUPassHT.helperText=null
                     SUPassConHT.helperText=null
-                    if(pass == passcon){
-                        SUPassHT.helperText=null
-                        SUPassConHT.helperText=null
-                        if (isEmailValid(email)){
-                            var mailcheck=db.checkmail(email)
-                            if (mailcheck != email){
-                                SUEHT.helperText=null
-                                val dulieu = User(
-                                    SULname.text.toString(),
-                                    SUFname.text.toString(),
-                                    0.toString(),
-                                    SUE.text.toString(),
-                                    pass
-                                )
-                                db.insertData(dulieu)
-                                this.finish()
-                            }//Mail khong co trong database
-                            else{
-                                SUEHT.helperText="Email Have Been Used"
-                            }
-                        }// Email khong hop le
-                        else{
-                            SUEHT.helperText="Email is Invalid"
-                        }
-                    }// pass khac voi passcon
-                    else{
-                        SUPassHT.helperText="Password Not Match"
-                        SUPassConHT.helperText="Password Not Match"
-                    }
-                }//Pass khong thoa dieu kien
+                }
+                //Pass khong thoa dieu kien
                 else {
                     SUPassHT.helperText="Password Must be Correct"
                     SUPassConHT.helperText="Password Must be Correct"
+                }
+                if (isEmailValid(email)){
+                    SUEHT.helperText=null
+                    val mailcheck=db.checkmail(email)
+                    if (email != mailcheck){
+                        SUEHT.helperText=null
+                        emailvalid = true
+                    }else{
+                        SUEHT.helperText="Email have been used"
+                    }
+                }else{
+                    SUEHT.helperText="Email is Invalid"
+                }
+                if (pass== passcon){
+                    SUPassHT.helperText=null
+                    SUPassConHT.helperText=null
+                    passmatch=true
+                }else{
+                    SUPassHT.helperText="Password not match"
+                    SUPassConHT.helperText="Password not match"
+                }
+                if (al8 && uc && num && emailvalid && passmatch){
+                    var user=User(
+                        SULname.text.toString(),
+                        SUFname.text.toString(),
+                        0.toString(),
+                        email, pass
+                    )
+                    db.insertData(user)
+                    this.finish()
                 }
             }
         }
@@ -129,7 +133,7 @@ class SignUpSV : AppCompatActivity() {
     fun isEmailValid(email: String): Boolean {
         return Pattern.compile(
             "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]|[\\w-]{2,}))"
-                    + "@hcmut.edu.vn$"  //thay doi email tai day
+                    + "@gmail.com$"  //thay doi email tai day
         ).matcher(email).matches()
     }
     // ban? nhap' kiem tra PASSWORD
@@ -170,6 +174,8 @@ class SignUpSV : AppCompatActivity() {
     }
     // KIEM TRA INPUT da xong
     private fun checkInputEmpty(context: Context):Boolean{
+        val list=listOf<TextInputLayout>(SULnameHT,SUFnameHT,SUEHT,SUPassHT,SUPassConHT)
+        val list1= listOf<TextInputEditText>(SULname,SUFname,SUE,SUPass,SUPassCon)
         if (
             SULname.text.toString().isEmpty() ||
             SUFname.text.toString().isEmpty() ||
@@ -177,8 +183,6 @@ class SignUpSV : AppCompatActivity() {
             SUPass.text.toString().isEmpty()  ||
             SUPassCon.text.toString().isEmpty()
         ){
-            val list=listOf<TextInputLayout>(SULnameHT,SUFnameHT,SUEHT,SUPassHT,SUPassConHT)
-            val list1= listOf<TextInputEditText>(SULname,SUFname,SUE,SUPass,SUPassCon)
             val listzip=list.zip(list1)
             for (i in listzip){
                 if (i.second.text.toString().isEmpty()){
@@ -199,6 +203,9 @@ class SignUpSV : AppCompatActivity() {
 //                }
 //            }
             return true
+        }
+        for (i in list){
+            i.helperText=null
         }
 
         return false
