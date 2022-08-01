@@ -24,11 +24,11 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'admin', '123', '2' ); ");
         db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'sinhvien', '123', '0' ); ");
         db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien', '123', '1' ); ");
-        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien1', '123', '1' ); ");
-        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien2', '123', '1' ); ");
-        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien3', '123', '1' ); ");
-        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien4', '123', '1' ); ");
-        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien5', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_LNAME,$COL_FNAME,$COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'Phu2', 'Tuan', 'giangvien1', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_LNAME,$COL_FNAME,$COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'Ph3u', 'Tuan', 'giangvien2', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_LNAME,$COL_FNAME,$COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'Ph3u', 'Tuan', 'giangvien3', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_LNAME,$COL_FNAME,$COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'Ph3u', 'Tuan', 'giangvien4', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_LNAME,$COL_FNAME,$COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'Ph3u', 'Tuan', 'giangvien5', '123', '1' ); ");
 
 
     }
@@ -126,18 +126,21 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         }
         db.close()
     }
-    fun getAllData():MutableList<User>{
+    fun getAllData():ArrayList<User>{
         var list:ArrayList<User> = ArrayList<User>()
         val db=this.readableDatabase
-        val query="SELECT * FROM $TABLE_NAME WHERE $COL_ID = '3' "
+        val query="SELECT * FROM $TABLE_NAME WHERE $COL_ID > 3 "
         var cursor:Cursor?=null
         cursor=db.rawQuery(query,null)
-        do {
-            User().Last_Name = cursor.getString(cursor.getColumnIndex(COL_LNAME))
-            User().First_Name = cursor.getString(cursor.getColumnIndex(COL_FNAME))
-            User().Email = cursor.getString(cursor.getColumnIndex(COL_EMAIL))
-            list.add(User())
-        }while (cursor.moveToNext())
+        if (cursor.moveToNext()) {
+            do {
+                var user=User()
+                user.Last_Name = cursor.getString(cursor.getColumnIndex(COL_LNAME))
+                user.First_Name = cursor.getString(cursor.getColumnIndex(COL_FNAME))
+                user.Email = cursor.getString(cursor.getColumnIndex(COL_EMAIL))
+                list.add(user)
+            } while (cursor.moveToNext())
+        }
         cursor.close()
         db.close()
         return list
