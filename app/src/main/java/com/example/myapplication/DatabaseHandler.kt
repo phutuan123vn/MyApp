@@ -24,6 +24,11 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'admin', '123', '2' ); ");
         db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'sinhvien', '123', '0' ); ");
         db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien1', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien2', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien3', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien4', '123', '1' ); ");
+        db?.execSQL(" INSERT INTO $TABLE_NAME ($COL_EMAIL,$COL_PASS,$COL_ROLE) VALUES ( 'giangvien5', '123', '1' ); ");
 
 
     }
@@ -80,6 +85,8 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
             Ulist.add(User(Password = pass, Role = role))
             return Ulist
         }
+        cursor.close()
+        db.close()
         Ulist.isEmpty()
         return Ulist
     }
@@ -96,9 +103,11 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
             user.Email=cursor.getString(cursor.getColumnIndex(COL_EMAIL))
             list.add(user)
             valueR=list.get(0).Email
+            cursor.close()
             db.close()
             return valueR
         }else{
+            cursor.close()
             db.close()
             valueR.isEmpty()
             return valueR
@@ -115,8 +124,22 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
         }else{
             Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show()
         }
+        db.close()
     }
-    fun getAllData(){
-
+    fun getAllData():MutableList<User>{
+        var list:ArrayList<User> = ArrayList<User>()
+        val db=this.readableDatabase
+        val query="SELECT * FROM $TABLE_NAME WHERE $COL_ID = '3' "
+        var cursor:Cursor?=null
+        cursor=db.rawQuery(query,null)
+        do {
+            User().Last_Name = cursor.getString(cursor.getColumnIndex(COL_LNAME))
+            User().First_Name = cursor.getString(cursor.getColumnIndex(COL_FNAME))
+            User().Email = cursor.getString(cursor.getColumnIndex(COL_EMAIL))
+            list.add(User())
+        }while (cursor.moveToNext())
+        cursor.close()
+        db.close()
+        return list
     }
 }

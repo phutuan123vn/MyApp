@@ -32,16 +32,6 @@ class LoginSV : AppCompatActivity() {
         }
         val db = DatabaseHandler(applicationContext)
         L1log.setOnClickListener {
-            if (L1user.text.toString().isEmpty()) {
-                L1userfill.error = "Không được để trống"}
-            else{
-                L1userfill.error = null
-            }
-            if (L1pass.text.toString().isEmpty()){
-                L1passfill.error = "Không được để trống"
-            } else {
-                L1passfill.error = null}
-
             if (L1user.text.toString().isNotEmpty() && L1pass.text.toString().isNotEmpty()){
                 var pass = L1pass.text.toString()
                 var email = L1user.text.toString()
@@ -60,6 +50,16 @@ class LoginSV : AppCompatActivity() {
                             .show()
                     }
                 }
+            }else{
+                if (L1user.text.toString().isEmpty()) {
+                    L1userfill.error = "Không được để trống"}
+                else{
+                    L1userfill.error = null
+                }
+                if (L1pass.text.toString().isEmpty()){
+                    L1passfill.error = "Không được để trống"
+                } else {
+                    L1passfill.error = null}
             }
         }
     }

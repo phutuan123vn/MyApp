@@ -27,16 +27,6 @@ class LoginGV : AppCompatActivity() {
         }
         val db = DatabaseHandler(applicationContext)
         GVlog.setOnClickListener {
-            if (GVUser.text.toString().isEmpty()) {
-                GVUserfill.error = "Không được để trống"}
-            else{
-                GVUserfill.error = null
-            }
-            if (GVPass.text.toString().isEmpty()){
-                GVPassfill.error = "Không được để trống"
-            } else {
-                GVPassfill.error = null}
-
             if (GVUser.text.toString().isNotEmpty() && GVPass.text.toString().isNotEmpty()){
                 var pass = GVPass.text.toString()
                 var email = GVUser.text.toString()
@@ -54,6 +44,16 @@ class LoginGV : AppCompatActivity() {
                         Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
                     }
                 }
+            }else{
+                if (GVUser.text.toString().isEmpty()) {
+                    GVUserfill.error = "Không được để trống"}
+                else{
+                    GVUserfill.error = null
+                }
+                if (GVPass.text.toString().isEmpty()){
+                    GVPassfill.error = "Không được để trống"
+                } else {
+                    GVPassfill.error = null}
             }
         }
 

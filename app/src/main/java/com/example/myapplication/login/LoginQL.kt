@@ -20,18 +20,7 @@ class LoginQL : AppCompatActivity() {
             this.finish()
         }
         QLbttn.setOnClickListener {
-            if (QLUser.text.toString().isEmpty()) {
-                QLUserfill.error = "Không được để trống"}
-            else{
-                QLUserfill.error = null
-            }
-            if (QLPass.text.toString().isEmpty()){
-                QLPassfill.error = "Không được để trống"
-            } else {
-                QLPassfill.error = null}
-
             if (QLUser.text.toString().isNotEmpty() && QLPass.text.toString().isNotEmpty()){
-            }else{
                 var email=QLUser.text.toString()
                 var pass=QLPass.text.toString()
                 val db= DatabaseHandler(this)
@@ -49,6 +38,16 @@ class LoginQL : AppCompatActivity() {
                         Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()
                     }
                 }
+            }else{
+                if (QLUser.text.toString().isEmpty()) {
+                    QLUserfill.error = "Không được để trống"}
+                else{
+                    QLUserfill.error = null
+                }
+                if (QLPass.text.toString().isEmpty()){
+                    QLPassfill.error = "Không được để trống"
+                } else {
+                    QLPassfill.error = null}
             }
         }
 
