@@ -77,7 +77,7 @@ class SignUpGV : AppCompatActivity() {
                     var user=User(
                         SUGLname.text.toString(),
                         SUGFname.text.toString(),
-                        0.toString(),
+                        1.toString(),
                         email, pass
                     )
                     db.insertData(user)
