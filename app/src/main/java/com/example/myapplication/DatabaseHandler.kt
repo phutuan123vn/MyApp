@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import androidx.core.content.contentValuesOf
 import com.example.myapplication.model.User
 
 val DATABASE_NAME="MYDB"
@@ -29,7 +30,6 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
 
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        onCreate(db=db);
         db?.execSQL(" DROP TABLE IF EXISTS $TABLE_NAME ");
         onCreate(db = db);
     }
@@ -86,7 +86,7 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
     fun checkmail(email: String):String{
         val db=this.readableDatabase
         var list:ArrayList<User> = ArrayList<User>()
-        var valueR:String
+        var valueR:String =""
         val query = " SELECT * FROM $TABLE_NAME WHERE EMAIL = ? "
         val arg= listOf<String>(email).toTypedArray()
         var cursor:Cursor? = null
@@ -100,8 +100,23 @@ class DatabaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
             return valueR
         }else{
             db.close()
-            valueR= 0.toString()
+            valueR.isEmpty()
             return valueR
         }
+    }
+    //doi password
+    fun changePass(user: User){
+        val db=this.writableDatabase
+        var cv=ContentValues()
+        cv.put(COL_PASS,user.Password)
+        val result=db.update(TABLE_NAME,cv,"$COL_EMAIL = ? ", arrayOf(user.Email))
+        if (result > -1){
+            Toast.makeText(context,"Success",Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show()
+        }
+    }
+    fun getAllData(){
+
     }
 }
