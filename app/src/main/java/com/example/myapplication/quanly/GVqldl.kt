@@ -9,6 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
 import com.example.myapplication.R
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.gv_qldl.view.*
 
 

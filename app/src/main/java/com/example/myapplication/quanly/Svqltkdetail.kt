@@ -21,8 +21,8 @@ class Svqltkdetail : Fragment() {
     ): View? {
         // back ve fragment qltk
         val v = inflater.inflate(R.layout.sv_qltkdetail, container, false)
-        val edit = v.findViewById<Button>(R.id.SVqltkback)
-        edit.setOnClickListener {
+        val back = v.findViewById<Button>(R.id.SVqltkback)
+        back.setOnClickListener {
             val SVqltk = SVqltk()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
             transaction.replace(R.id.framelayoutqlnav, SVqltk)

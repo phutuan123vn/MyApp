@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">University App</string>
     <string name="login">LOGIN</string>
     <string name="sinhvien">Sinh Viên</string>
     <string name="giangvien">Giảng Viên</string>
@@ -87,4 +87,10 @@
     <string name="tietcol">Tiết</string>
     <string name="thucol">Thứ</string>
     <string name="diemdanhcol">ĐD</string>
+    <string name="msgvcol">MSGV</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="designation">Designation</string>
+
+
 </resources>

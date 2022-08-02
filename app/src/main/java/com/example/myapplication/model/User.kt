@@ -1,6 +1,6 @@
 package com.example.myapplication.model
 
-class User {
+ class User {
     var id : Int=0
     var Last_Name : String =""
     var First_Name : String=""
@@ -21,3 +21,9 @@ class User {
     constructor(){
     }
 }
+data class Usersvqldl(
+    var Lastname:String,
+    var Firstname:String,
+    var Rolee:String,
+    var Emaill:String
+)
