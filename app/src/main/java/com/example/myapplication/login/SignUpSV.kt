@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.DatabaseHandler
+import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
 import com.google.android.material.textfield.TextInputEditText
@@ -31,8 +32,7 @@ class SignUpSV : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
         val db=DatabaseHandler(this)
-        pass=SUPass.text.toString()
-        passcon=SUPassCon.text.toString()
+        val DBONL=MYSQLHandler(this)
         this.onTextChange(this)
         SUE.doAfterTextChanged { email=SUE.text.toString() }
         SUback.setOnClickListener { this.finish() }
@@ -80,6 +80,7 @@ class SignUpSV : AppCompatActivity() {
                         email, pass
                     )
                     db.insertData(user)
+                    DBONL.insertUser(user)
                     this.finish()
                 }
             }
