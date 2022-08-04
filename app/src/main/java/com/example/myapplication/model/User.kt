@@ -21,9 +21,3 @@ package com.example.myapplication.model
     constructor(){
     }
 }
-data class Usersvqldl(
-    var Lastname:String,
-    var Firstname:String,
-    var Rolee:String,
-    var Emaill:String
-)

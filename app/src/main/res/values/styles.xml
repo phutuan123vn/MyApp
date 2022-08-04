@@ -31,5 +31,15 @@
         <item name="android:paddingLeft">@dimen/_10sdp</item>
         <item name="android:layout_height">@dimen/_30sdp</item>
     </style>
+    <style name="table_row_button" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_marginRight">@dimen/_1sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_1sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+    </style>
+
+
+
 
 </resources>

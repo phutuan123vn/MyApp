@@ -5,29 +5,41 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
+import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.application.tableviewwithrecyclerview.adapter.TableRowAdapterGVqldl
+import com.application.tableviewwithrecyclerview.adapter.TableRowAdapterGVqltk
+import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
+import com.example.myapplication.model.User
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.gv_qldl.view.*
 
 
 class GVqldl : Fragment() {
+    private lateinit var tableRecyclerView: RecyclerView
+    private lateinit var tableRowAdapterGVdl: TableRowAdapterGVqldl
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val v = inflater.inflate(R.layout.gv_qldl, container, false)
-        val detail = v.findViewById<Button>(R.id.qldldetailgva)
-        detail.setOnClickListener {
-            val GVqldldetail = GVqldldetail()
-            val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-            transaction.replace(R.id.framelayoutqlnav, GVqldldetail)
-            transaction.commit()
-        }
+        val data = activity.createContext(this)
+        dataInitlize(data)
+        val layoutManager = LinearLayoutManager(context)
+        tableRecyclerView = v.findViewById(R.id.table_recycler_view)
+        tableRecyclerView.layoutManager = layoutManager
+        tableRecyclerView.setHasFixedSize(true)
+        tableRowAdapterGVdl = TableRowAdapterGVqldl(data)
+        tableRecyclerView.adapter = tableRowAdapterGVdl
         return v
     }
-
+    private fun dataInitlize(array: ArrayList<User>) {
+    }
+}
+private fun FragmentActivity?.createContext(gVqldl: GVqldl): ArrayList<User> {
+    val db= DatabaseHandler(this!!)
+    return db.getAllData()
 }

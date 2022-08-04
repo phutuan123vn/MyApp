@@ -47,7 +47,7 @@
     <string name="cacmondadk">Các Môn Đã Đăng Kí:</string>
     <string name="guimaudk">Gữi Mẫu Đăng Kí</string>
     <string name="dslop">Danh sách lớp</string>
-    <string name="dssv">Danh sách Sinh Vien</string>
+    <string name="dssv">Danh sách Sinh Viên</string>
     <string name="qldlsv">QLDL Sinh Viên</string>
     <string name="qltksv">QLTK Sinh Viên</string>
     <string name="dsgv">Danh sách Giảng Viên</string>
@@ -91,6 +91,9 @@
     <string name="name">Name</string>
     <string name="age">Age</string>
     <string name="designation">Designation</string>
+    <string name="mondkcol">MÔN ĐK</string>
+    <string name="ndcol">NỘI DUNG</string>
+    <string name="infocol">THÔNG TIN</string>
 
 
 </resources>

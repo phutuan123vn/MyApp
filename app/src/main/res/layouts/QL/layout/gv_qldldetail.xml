@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".quanly.QLnavigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quanly.QLnavigation">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,7 +22,6 @@ tools:context=".quanly.QLnavigation">
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -29,7 +29,6 @@ tools:context=".quanly.QLnavigation">
                 android:text="@string/ho"
                 android:textColor="#382EEC"
                 android:textStyle="bold"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -41,7 +40,6 @@ tools:context=".quanly.QLnavigation">
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +47,6 @@ tools:context=".quanly.QLnavigation">
                 android:text="@string/ten"
                 android:textColor="#382EEC"
                 android:textStyle="bold"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,10 +54,10 @@ tools:context=".quanly.QLnavigation">
                 android:text="A"
                 android:textColor="#382EEC" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,7 +65,6 @@ tools:context=".quanly.QLnavigation">
                 android:text="@string/msgv"
                 android:textColor="#382EEC"
                 android:textStyle="bold"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,19 +72,17 @@ tools:context=".quanly.QLnavigation">
                 android:text="Gv191"
                 android:textColor="#382EEC" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-
                 android:text="@string/monday"
                 android:textColor="#382EEC"
                 android:textStyle="bold"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,19 +90,17 @@ tools:context=".quanly.QLnavigation">
                 android:text="TT Điện tử 1"
                 android:textColor="#382EEC" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
-
                 android:text="@string/ngay"
                 android:textColor="#382EEC"
                 android:textStyle="bold"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,8 +108,9 @@ tools:context=".quanly.QLnavigation">
                 android:text="01/01/2021"
                 android:textColor="#382EEC" />
         </TableRow>
+
         <TableLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_width="400dp"
             android:layout_height="300dp"
             android:layout_gravity="center"
@@ -128,7 +121,6 @@ tools:context=".quanly.QLnavigation">
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/purple_500">
-
                 <TextView
                     android:id="@+id/SVqltkrowho"
                     android:layout_width="140dp"
@@ -138,7 +130,6 @@ tools:context=".quanly.QLnavigation">
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:padding="6sp" />
-
                 <TextView
                     android:id="@+id/SVqltkrowten"
                     android:layout_width="70dp"
@@ -148,7 +139,6 @@ tools:context=".quanly.QLnavigation">
                     android:textColor="@color/white"
                     android:padding="6sp"
                     android:textStyle="bold"/>
-
                 <TextView
                     android:id="@+id/SVqltkmssv"
                     android:layout_width="100dp"
@@ -158,7 +148,6 @@ tools:context=".quanly.QLnavigation">
                     android:textColor="@color/white"
                     android:padding="6sp"
                     android:textStyle="bold"/>
-
                 <TextView
                     android:layout_width="90dp"
                     android:layout_height="match_parent"
@@ -171,8 +160,7 @@ tools:context=".quanly.QLnavigation">
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/border">
+                android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="wrap_content"
@@ -180,7 +168,6 @@ tools:context=".quanly.QLnavigation">
                     android:text="Huỳnh Khả"
                     android:layout_marginStart="6dp"
                     android:padding="6sp"/>
-
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
@@ -202,9 +189,8 @@ tools:context=".quanly.QLnavigation">
                     android:gravity="center"
                     android:text="v"
                     android:padding="6sp"/>
-
-
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -238,12 +224,11 @@ tools:context=".quanly.QLnavigation">
                     android:gravity="center"
                     android:text="x"
                     android:padding="6sp"/>
-
             </TableRow>
-
         </TableLayout>
+
         <Button
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/guibandl"
@@ -256,5 +241,6 @@ tools:context=".quanly.QLnavigation">
             android:text="@string/quaylai"
             android:backgroundTint="@android:color/darker_gray"
             android:layout_gravity="center"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
