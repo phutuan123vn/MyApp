@@ -1,14 +1,21 @@
 package com.example.myapplication.login
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.inputmethod.InputMethod
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 //import com.example.myapplication.databinding.Login1Binding
 import com.example.myapplication.sinhvien.SVnavigation
+import kotlinx.android.synthetic.main.gv_qltkdetail.*
 import kotlinx.android.synthetic.main.login1.*
+import kotlinx.android.synthetic.main.login2.view.*
 
 class LoginSV : AppCompatActivity() {
     //private lateinit var  binding: Login1Binding
@@ -18,7 +25,7 @@ class LoginSV : AppCompatActivity() {
         //binding = Login1Binding.inflate(layoutInflater)
         //setContentView(binding.root)
         setContentView(R.layout.login1)
-
+        this.textchange(this)
         SVback.setOnClickListener {
             this.finish()
         }
@@ -50,18 +57,29 @@ class LoginSV : AppCompatActivity() {
                             .show()
                     }
                 }
-            }else{
-                if (L1user.text.toString().isEmpty()) {
-                    L1userfill.error = "Không được để trống"}
-                else{
-                    L1userfill.error = null
-                }
-                if (L1pass.text.toString().isEmpty()){
-                    L1passfill.error = "Không được để trống"
-                } else {
-                    L1passfill.error = null}
+            } else{
+                L1userfill.error="Không được để trống"
+                L1passfill.error="Không được để trống"
             }
         }
     }
 
+    private fun textchange(context: Context) {
+        L1user.doAfterTextChanged {
+            if (L1user.text.toString().isEmpty()){
+                L1userfill.error = "Không được để trống"
+            }else{
+                L1userfill.error=null
+                L1userfill.isErrorEnabled = false
+            }
+        }
+        L1pass.doAfterTextChanged {
+            if (L1pass.text.toString().isEmpty()){
+                L1passfill.error="Không được để trống"
+            }else{
+                L1passfill.error=null
+                L1passfill.isErrorEnabled = false
+            }
+        }
+    }
 }
