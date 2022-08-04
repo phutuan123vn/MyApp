@@ -79,7 +79,7 @@ class SignUpSV : AppCompatActivity() {
                         0.toString(),
                         email, pass
                     )
-                    db.insertData(user)
+                   // db.insertData(user)
                     DBONL.insertUser(user)
                     this.finish()
                 }
