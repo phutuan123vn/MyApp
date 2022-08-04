@@ -5,12 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     tools:context="login.LoginQL">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:onClick="closekeyboard">
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,7 +45,8 @@
             android:layout_marginTop="20dp"
             android:hint="@string/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:errorEnabled="false"
+            app:startIconDrawable="@drawable/icon_email">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/QLUser"
                 android:layout_width="match_parent"
@@ -61,7 +66,8 @@
             android:hint="@string/password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:passwordToggleEnabled="true"
-            app:errorEnabled="true">
+            app:errorEnabled="false"
+            app:startIconDrawable="@drawable/icon_lock">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/QLPass"

@@ -5,11 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     tools:context=".login.LoginSV">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:onClick="closekeyboard">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,15 +42,17 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:errorEnabled="false"
+            app:startIconDrawable="@drawable/icon_email"
+            android:focusableInTouchMode="true"
+            app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/L1user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:textColorHint="#616161"
-                tools:ignore="TextContrastCheck" />
+                android:textColorHint="#616161" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -58,7 +64,8 @@
             android:hint="@string/password"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="true">
+            app:errorEnabled="false"
+            app:startIconDrawable="@drawable/icon_lock">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/L1pass"
                 android:layout_width="match_parent"
@@ -75,7 +82,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/dangnhap"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <Button
             android:id="@+id/SVback"

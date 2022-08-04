@@ -7,6 +7,9 @@ import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Patterns
+import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
@@ -16,6 +19,7 @@ import com.example.myapplication.R
 import com.example.myapplication.model.User
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.signupsv.*
 import kotlinx.android.synthetic.main.signupsv.view.*
 import java.util.regex.Pattern
@@ -37,6 +41,7 @@ class SignUpSV : AppCompatActivity() {
         SUE.doAfterTextChanged { email=SUE.text.toString() }
         SUback.setOnClickListener { this.finish() }
         SUbttn.setOnClickListener{
+            hidekeyboard()
             var emailvalid :Boolean = false
             var passmatch :Boolean =false
             if (checkInputEmpty(this)){
@@ -210,6 +215,22 @@ class SignUpSV : AppCompatActivity() {
         }
 
         return false
+    }
+    fun hidekeyboard() {
+        val xem = this.currentFocus
+        if (xem != null) {
+            val hide = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hide.hideSoftInputFromWindow(xem.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+        SULname.clearFocus()
+        SUFname.clearFocus()
+        SUE.clearFocus()
+        SUPass.clearFocus()
+        SUPassCon.clearFocus()
+    }
+    fun closekeyboard(view: View) {
+        hidekeyboard()
     }
 
 }

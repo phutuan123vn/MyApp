@@ -1,12 +1,19 @@
 package com.example.myapplication.login
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.giangvien.GVnavigation
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.login2.*
 
@@ -26,9 +33,13 @@ class LoginGV : AppCompatActivity() {
             startActivity(intent)
         }
         val db = DatabaseHandler(applicationContext)
+        val list= listOf<TextInputLayout>(GVUserfill,GVPassfill)
+        val list1= listOf<TextInputEditText>(GVUser,GVUser)
+        val listall=list.zip(list1)
         GVlog.setOnClickListener {
+            hidekeyboard()
             if (GVUser.text.toString().isNotEmpty() && GVPass.text.toString().isNotEmpty()){
-                var pass = GVPass.text.toString()
+                var pass = GVUser.text.toString()
                 var email = GVUser.text.toString()
                 var ValueR = db.ViewPass(email)
                 if (ValueR.isEmpty()){
@@ -45,17 +56,45 @@ class LoginGV : AppCompatActivity() {
                     }
                 }
             }else{
-                if (GVUser.text.toString().isEmpty()) {
-                    GVUserfill.error = "Không được để trống"}
-                else{
-                    GVUserfill.error = null
+                for (i in listall) {
+                    if (i.second.text.toString().isEmpty()) {
+                        i.first.error = "Không được để trống"
+                    }
                 }
-                if (GVPass.text.toString().isEmpty()){
-                    GVPassfill.error = "Không được để trống"
-                } else {
-                    GVPassfill.error = null}
             }
         }
 
     }
+    private fun textchange(context: Context) {
+        GVUser.doAfterTextChanged {
+            if (GVUser.text.toString().isEmpty()){
+                GVUserfill.error = "Không được để trống"
+            }else{
+                GVUserfill.error=null
+                GVUserfill.isErrorEnabled = false
+            }
+        }
+        GVPass.doAfterTextChanged {
+            if (GVPass.text.toString().isEmpty()){
+                GVPassfill.error="Không được để trống"
+            }else{
+                GVPassfill.error=null
+                GVPassfill.isErrorEnabled = false
+            }
+        }
+    }
+    fun hidekeyboard() {
+        val xem = this.currentFocus
+        if (xem != null) {
+            val hide = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hide.hideSoftInputFromWindow(xem.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+        GVUser.clearFocus()
+        GVPass.clearFocus()
+    }
+    fun closekeyboard(view: View) {
+        hidekeyboard()
+    }
+
 }
