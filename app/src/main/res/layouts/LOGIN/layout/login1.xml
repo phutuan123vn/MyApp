@@ -8,7 +8,8 @@
     android:clickable="true"
     android:focusableInTouchMode="true"
     android:focusable="true"
-    tools:context=".login.LoginSV">
+    tools:context=".login.LoginSV"
+    android:background="@drawable/gradient">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,18 +21,17 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/login"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="50sp"
             android:textStyle="bold"/>
         <TextView
-            android:background="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textStyle="italic"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="100dp"
             android:text="@string/dangnhaptaikhoansinhvien"
-            android:textColor="@color/black"
+            android:textColor="@color/colornew"
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:textColorHint="#616161" />
+                android:textColorHint="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -77,29 +77,31 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:backgroundTint="@color/colornew"
             android:id="@+id/L1log"
             android:layout_marginTop="50dp"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="@string/dangnhap"
             android:layout_gravity="center" />
 
         <Button
             android:id="@+id/SVback"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:backgroundTint="@android:color/darker_gray"
             android:text="@string/quaylai" />
         <TextView
             android:id="@+id/SVforget"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/quenmatkhau"
-            android:textColor="#1f16c4"
+            android:textColor="@color/black"
             android:textStyle="italic"
             android:textSize="15sp"/>
 
@@ -110,7 +112,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="@string/taotaikhoan"
-            android:textColor="#1f16c4"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="15sp"/>
     </LinearLayout>

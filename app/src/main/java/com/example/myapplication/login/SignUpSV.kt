@@ -33,6 +33,7 @@ class SignUpSV : AppCompatActivity() {
         var email :String=""
     }
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupsv)
         val db=DatabaseHandler(this)

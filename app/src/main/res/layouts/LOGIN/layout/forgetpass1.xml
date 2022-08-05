@@ -8,7 +8,8 @@
     android:clickable="true"
     android:focusableInTouchMode="true"
     android:focusable="true"
-    tools:context="login.ForgetPass1">
+    tools:context="login.ForgetPass1"
+    android:background="@drawable/gradient">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,19 +20,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/password"
-            android:textColor="#382EEC"
+            android:text="@string/pw"
+            android:textColor="@color/colornew"
             android:textSize="50sp"
             android:textStyle="bold"/>
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginStart="55dp"
+            android:layout_gravity="center"
             android:text="@string/nhapmakhoiphuc"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginLeft="55dp" />
+            android:textColor="@color/colornew"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
@@ -54,15 +54,16 @@
         <Button
             android:id="@+id/forget1reset"
             android:layout_marginTop="20dp"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="@string/khoiphuc"
             android:layout_gravity="center"/>
         <Button
             android:id="@+id/forget1back"
             android:layout_marginTop="10dp"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:text="@string/quaylai"
             android:backgroundTint="@android:color/darker_gray"
             android:layout_gravity="center"/>
@@ -74,11 +75,12 @@
             android:text="@string/neuchuanhanduocma"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginLeft="55dp" />
+            android:layout_marginLeft="55dp"
+            android:textStyle="italic"/>
         <Button
             android:id="@+id/forget1refresh"
             android:layout_marginTop="10dp"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:text="@string/guilaima"
             android:layout_gravity="center"

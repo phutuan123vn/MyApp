@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.login1.*
 
 class LoginSV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.login1)

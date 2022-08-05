@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.forgetpass1.*
 
 class ForgetPass1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.forgetpass1)
         forget1reset.setOnClickListener {

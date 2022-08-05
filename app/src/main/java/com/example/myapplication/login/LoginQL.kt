@@ -22,8 +22,10 @@ import kotlinx.android.synthetic.main.login3.*
 
 class LoginQL : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login3)
+        this.textchange(this)
         QLback.setOnClickListener {
             this.finish()
         }

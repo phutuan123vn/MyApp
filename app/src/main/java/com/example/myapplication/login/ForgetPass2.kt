@@ -19,6 +19,7 @@ class ForgetPass2 : AppCompatActivity() {
     private val runningActivities = mutableSetOf<ForgetPass2>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.forgetpass2)
         thoat.setOnClickListener{onBackPressed()}

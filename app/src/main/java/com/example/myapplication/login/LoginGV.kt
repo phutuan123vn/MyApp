@@ -19,8 +19,11 @@ import kotlinx.android.synthetic.main.login2.*
 
 class LoginGV : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.login2)
+        this.textchange(this)
         GVback.setOnClickListener {
             this.finish()
         }
