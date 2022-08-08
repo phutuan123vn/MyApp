@@ -1,4 +1,4 @@
-package com.example.myapplication.quanly
+package com.example.myapplication.quanly.quanlysv
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.application.tableviewwithrecyclerview.adapter.TableRowAdapterSVqltk
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User

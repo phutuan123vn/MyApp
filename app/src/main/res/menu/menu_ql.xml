@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
         <item
             android:title="Thời Khoá Biểu"
+            android:icon="@drawable/calendar"
             android:id="@+id/TKB"/>
     </group>
 
@@ -13,13 +13,16 @@
             <group android:checkableBehavior="single">
                 <item
                 android:title="Danh Sách Giảng Viên"
-                android:id="@+id/GVdsgv"/>
+                android:id="@+id/GVdsgv"
+                    android:icon="@drawable/person"/>
                 <item
                 android:title="Quản Lý Dữ Liệu GV"
-                android:id="@+id/GVqldl"/>
+                android:id="@+id/GVqldl"
+                    android:icon="@drawable/file"/>
                 <item
                 android:title="Quản Lý Tài Khoản GV"
-                android:id="@+id/GVqltk"/>
+                android:id="@+id/GVqltk"
+                    android:icon="@drawable/key"/>
             </group>
         </menu>
     </item>
@@ -29,22 +32,27 @@
             <group android:checkableBehavior="single">
                 <item
                 android:title="Danh Sách Sinh Viên"
-                android:id="@+id/SVdssv"/>
+                android:id="@+id/SVdssv"
+                    android:icon="@drawable/person"/>
                 <item
                 android:title="Quản Lý Dữ Liệu SV"
-                android:id="@+id/SVqldl"/>
+                android:id="@+id/SVqldl"
+                    android:icon="@drawable/file"/>
                 <item
                 android:title="Quản Lý Tài Khoản SV"
-                android:id="@+id/SVqltk"/>
+                android:id="@+id/SVqltk"
+                    android:icon="@drawable/key"/>
             </group>
         </menu>
     </item>
-    <item android:title="Exit">
+    <item
+        android:title="Exit">
         <menu>
             <group android:checkableBehavior="single">
                 <item
                 android:title="Thoát"
-                android:id="@+id/account" />
+                android:id="@+id/account"
+                    android:icon="@drawable/exit"/>
             </group>
         </menu>
     </item>

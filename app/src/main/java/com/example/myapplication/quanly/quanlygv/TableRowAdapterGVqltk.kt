@@ -1,4 +1,4 @@
-package com.application.tableviewwithrecyclerview.adapter
+package com.example.myapplication.quanly.quanlygv
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,10 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.model.User
-import com.example.myapplication.quanly.GVqldldetail
 import kotlin.collections.ArrayList
 
-class TableRowAdapterGVqldl(private var userArrayListGV: ArrayList<User>) : RecyclerView.Adapter<TableRowAdapterGVqldl.ViewHolder>() {
+class TableRowAdapterGVqltk(private var userArrayListGV: ArrayList<User>) : RecyclerView.Adapter<TableRowAdapterGVqltk.ViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.table_row_layout, viewGroup, false)
         return ViewHolder(itemView)
@@ -25,8 +24,8 @@ class TableRowAdapterGVqldl(private var userArrayListGV: ArrayList<User>) : Recy
         viewHolder.morecol.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
                 val activity = v!!.context as AppCompatActivity
-                val gvqldldetail = GVqldldetail()
-                activity.supportFragmentManager.beginTransaction().replace(R.id.framelayoutqlnav, gvqldldetail).addToBackStack(null).commit()
+                val gvqltkdetail = Gvqltkdetail()
+                activity.supportFragmentManager.beginTransaction().replace(R.id.framelayoutqlnav, gvqltkdetail).addToBackStack(null).commit()
             }
         })
     }

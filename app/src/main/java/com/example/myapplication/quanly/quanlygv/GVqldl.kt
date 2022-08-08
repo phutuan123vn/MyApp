@@ -1,4 +1,4 @@
-package com.example.myapplication.quanly
+package com.example.myapplication.quanly.quanlygv
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,13 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.application.tableviewwithrecyclerview.adapter.TableRowAdapterGVqldl
-import com.application.tableviewwithrecyclerview.adapter.TableRowAdapterGVqltk
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
-import kotlinx.android.synthetic.*
-import kotlinx.android.synthetic.main.gv_qldl.view.*
 
 
 class GVqldl : Fragment() {

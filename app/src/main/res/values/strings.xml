@@ -94,6 +94,9 @@
     <string name="mondkcol">MÔN ĐK</string>
     <string name="ndcol">NỘI DUNG</string>
     <string name="infocol">THÔNG TIN</string>
+    <string name="tsmdk">Tổng Số Môn Đăng Kí:</string>
+    <string name="tstcdk">Tổng Số Tín Chỉ Đăng Kí:</string>
+    <string name="tiet">Tiết 1</string>
 
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.myapplication.quanly
+package com.example.myapplication.quanly.quanlysv
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,23 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
 import com.example.myapplication.R
-import kotlinx.android.synthetic.main.sv_qldldetail.view.*
 
 
-class SVqldldetail : Fragment() {
+class Quanlysvdkmonchange : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val v = inflater.inflate(R.layout.sv_qldldetail, container, false)
-        val back = v.findViewById<Button>(R.id.qldldetailback)
+        val v = inflater.inflate(R.layout.sv_dkmhchange, container, false)
+        val back = v.findViewById<Button>(R.id.quanlysvdkmonchangeback)
         back.setOnClickListener {
-            val Svqldl = SVqldl()
+            val quanlysvdkmon = Quanlysvdkmon()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-            transaction.replace(R.id.framelayoutqlnav, Svqldl)
+            transaction.replace(R.id.framelayoutqlnav, quanlysvdkmon)
             transaction.commit()
         }
         return v

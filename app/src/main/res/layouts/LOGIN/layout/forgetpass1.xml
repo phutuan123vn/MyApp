@@ -84,6 +84,7 @@
             android:layout_height="wrap_content"
             android:text="@string/guilaima"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:backgroundTint="@android:color/black"/>
 
     </LinearLayout>

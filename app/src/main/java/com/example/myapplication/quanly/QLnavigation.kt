@@ -1,18 +1,33 @@
 package com.example.myapplication.quanly
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
+import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import kotlinx.android.synthetic.main.qlnav.*
 import androidx.fragment.app.Fragment
 import com.example.myapplication.*
-import com.example.myapplication.login.LoginQL
-import com.example.myapplication.login.LoginSV
 import com.example.myapplication.login.MainActivity
+import com.example.myapplication.quanly.quanlygv.GVdsgv
+import com.example.myapplication.quanly.quanlygv.GVqldl
+import com.example.myapplication.quanly.quanlygv.GVqltk
+import com.example.myapplication.quanly.quanlysv.SVdssv
+import com.example.myapplication.quanly.quanlysv.SVqldl
+import com.example.myapplication.quanly.quanlysv.SVqltk
+import kotlinx.android.synthetic.main.gv_dsgv.*
+import kotlinx.android.synthetic.main.gv_qldl.*
+import kotlinx.android.synthetic.main.gv_qltk.*
+import kotlinx.android.synthetic.main.login1.*
+import kotlinx.android.synthetic.main.sv_dssv.*
+import kotlinx.android.synthetic.main.sv_qldl.*
+import kotlinx.android.synthetic.main.sv_qltk.*
+import kotlinx.android.synthetic.main.sv_qltkdetail.*
 
 class QLnavigation : AppCompatActivity() {
     lateinit var toogle : ActionBarDrawerToggle
@@ -20,7 +35,7 @@ class QLnavigation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.qlnav)
-
+        hidekeyboard()
         drawerLayout = findViewById(R.id.drawerqlnav)
 
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
@@ -66,4 +81,21 @@ class QLnavigation : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
     override fun onBackPressed() {}
+    fun hidekeyboard() {
+        val xem = this.currentFocus
+        if (xem != null) {
+            val hide = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hide.hideSoftInputFromWindow(xem.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+//        dsgvsearch.clearFocus()
+//        gvqldlsearch.clearFocus()
+//        gvqltksearch.clearFocus()
+//        dssvsearch.clearFocus()
+//        svqldlsearch.clearFocus()
+//        svqltksearch.clearFocus()
+    }
+    fun closekeyboard(view: View) {
+        hidekeyboard()
+    }
 }

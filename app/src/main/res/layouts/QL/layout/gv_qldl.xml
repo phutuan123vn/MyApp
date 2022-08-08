@@ -12,9 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="0dp"
         android:text="@string/qldlgv"
-        android:textColor="#382EEC"
+        android:textColor="@color/colornew"
         android:textSize="40sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,6 +25,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gvqldlsearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -43,7 +43,7 @@
                 android:layout_marginStart="60dp"
                 android:textSize="20sp"
                 android:text="@string/ngay"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="01/01/2021"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textSize="20sp"/>
         </TableRow>
         <TextView
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:text="@string/gvdihoctrongngay"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="20sp"/>
     <TableLayout
         android:id="@+id/table_heading_layout"
