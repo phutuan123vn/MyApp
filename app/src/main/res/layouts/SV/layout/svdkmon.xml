@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -51,27 +51,28 @@
 <!--            android:layout_gravity="center"-->
 <!--            app:srcCompat="@drawable/svdkm1" />-->
         <TableLayout
+            android:id="@+id/table_recycler_view_svdkmon"
             android:layout_marginTop="10dp"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:stretchColumns="1,2,3,4,5">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TableRow>
                 <TextView
+                    android:layout_width="60dp"
                     android:text="@string/mmhcol"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:layout_width="50dp"
+                    android:layout_column="0"
                     android:layout_height="wrap_content"
                     android:background="@drawable/boderhead"
                     android:padding="6sp"
                     android:gravity="center_horizontal" />
                 <TextView
-                    android:layout_width="140dp"
+                    android:layout_width="150dp"
+                    android:layout_column="1"
                     android:layout_height="wrap_content"
                     android:text="@string/mhcol"
                     android:textStyle="bold"
@@ -80,18 +81,22 @@
                     android:padding="6sp"
                     android:textAlignment="center"
                     android:background="@drawable/boderhead" />
+
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/tietcol"
-                    android:textStyle="bold"
+                    android:layout_column="2"
+                    android:background="@drawable/boderhead"
                     android:gravity="center"
-                    android:textColor="@color/white"
                     android:padding="6sp"
+                    android:text="@string/tietcol"
                     android:textAlignment="center"
-                    android:background="@drawable/boderhead" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
+                    android:layout_column="3"
                     android:layout_height="wrap_content"
                     android:text="@string/thucol"
                     android:textStyle="bold"
@@ -101,7 +106,8 @@
                     android:textAlignment="center"
                     android:background="@drawable/boderhead" />
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
+                    android:layout_column="4"
                     android:layout_height="wrap_content"
                     android:text="Chọn"
                     android:textStyle="bold"
@@ -111,251 +117,17 @@
                     android:background="@drawable/boderhead"/>
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="-1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A1"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="TT Điện Tử 1"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1,2"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="T2"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <CheckBox
-                    android:layout_width="30dp"
-                    android:layout_height="31.5dp"
-                    android:background="@drawable/border" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A2"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="Vật Lí Bán Dẫn"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3,4"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="T3"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <CheckBox
-                    android:layout_width="30dp"
-                    android:layout_height="31.5dp"
-                    android:background="@drawable/border" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A3"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="Vật Lí Bán Dẫn"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3,4"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="T3"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    android:layout_width="30dp"
-                    android:layout_height="31.5dp"
-                    android:background="@drawable/border" />
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="44dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/border"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-            </TableRow>
         </TableLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/table_recycler_view_dsmondk"
+            android:layout_gravity="center"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/table_recycler_view_svdkmon"
+            tools:listitem="@layout/tablerowmondk">
+        </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
             android:textStyle="bold"
@@ -367,27 +139,28 @@
             android:textColor="@color/colornew"
             android:layout_marginLeft="40dp" />
         <TableLayout
+            android:id="@+id/table_recycler_view_svmondadk"
             android:layout_marginTop="10dp"
             android:layout_width="400dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:stretchColumns="1,2,3,4,5">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TableRow>
                 <TextView
+                    android:layout_width="60dp"
                     android:text="@string/mmhcol"
                     android:textAlignment="center"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:layout_width="50dp"
+                    android:layout_column="0"
                     android:layout_height="wrap_content"
                     android:background="@drawable/boderhead"
                     android:padding="6sp"
                     android:gravity="center_horizontal" />
                 <TextView
-                    android:layout_width="140dp"
+                    android:layout_width="150dp"
+                    android:layout_column="1"
                     android:layout_height="wrap_content"
                     android:text="@string/mhcol"
                     android:textStyle="bold"
@@ -396,18 +169,22 @@
                     android:padding="6sp"
                     android:textAlignment="center"
                     android:background="@drawable/boderhead" />
+
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/tietcol"
-                    android:textStyle="bold"
+                    android:layout_column="2"
+                    android:background="@drawable/boderhead"
                     android:gravity="center"
-                    android:textColor="@color/white"
                     android:padding="6sp"
+                    android:text="@string/tietcol"
                     android:textAlignment="center"
-                    android:background="@drawable/boderhead" />
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
+                    android:layout_column="3"
                     android:layout_height="wrap_content"
                     android:text="@string/thucol"
                     android:textStyle="bold"
@@ -417,162 +194,34 @@
                     android:textAlignment="center"
                     android:background="@drawable/boderhead" />
                 <TextView
-                    android:layout_width="40dp"
+                    android:layout_width="60dp"
+                    android:layout_column="4"
                     android:layout_height="wrap_content"
-                    android:text="Chọn"
+                    android:text="Xoá"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:padding="6sp"
                     android:background="@drawable/boderhead"/>
             </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="-1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A1"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="TT Điện Tử 1"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1,2"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="T2"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <Button
-                    android:layout_width="@dimen/_10sdp"
-                    android:layout_height="35dp"
-                    android:paddingTop="-1dp"
-                    android:layout_marginTop="-3dp"
-                    android:layout_marginBottom="-10dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:text="X"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A2"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="Vật Lí Bán Dẫn"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3,4"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="T3"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <Button
-                    android:layout_width="@dimen/_10sdp"
-                    android:layout_height="35dp"
-                    android:paddingTop="-1dp"
-                    android:layout_marginTop="-3dp"
-                    android:layout_marginBottom="-10dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:text="X"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="A3"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:text="Vật Lí Bán Dẫn"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3,4"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="T3"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:padding="6sp"
-                    android:background="@drawable/border"/>
-                <Button
-                    android:layout_width="@dimen/_10sdp"
-                    android:layout_height="35dp"
-                    android:paddingTop="-1dp"
-                    android:layout_marginTop="-3dp"
-                    android:layout_marginBottom="-10dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:text="X"/>
-            </TableRow>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/table_recycler_view_mondadk"
+                android:layout_gravity="center"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_recycler_view_svmondadk"
+                tools:listitem="@layout/tablerowmondadk">
+            </androidx.recyclerview.widget.RecyclerView>
         </TableLayout>
         <Button
             android:layout_marginTop="30dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_30sdp"
             android:text="@string/guimaudk"
             android:layout_gravity="center"/>
 
-
-
-
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
