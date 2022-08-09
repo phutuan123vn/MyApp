@@ -9,15 +9,11 @@ import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
-import com.example.myapplication.DATABASE_NAME
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
-import com.example.myapplication.model.User
 import com.example.myapplication.quanly.QLnavigation
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import kotlinx.android.synthetic.main.login1.*
-import kotlinx.android.synthetic.main.login2.*
 import kotlinx.android.synthetic.main.login3.*
 
 class LoginQL : AppCompatActivity() {
@@ -46,7 +42,7 @@ class LoginQL : AppCompatActivity() {
                     var role=ValueR.get(0).Role
                     if (pass == passcheck && role == 2.toString()){
                         Toast.makeText(this,"Success Login",Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this,QLnavigation::class.java))
+                        startActivity(Intent(this, QLnavigation::class.java))
                         this.finish()
                     }else{
                         Toast.makeText(this,"Password or Email is Incorrect",Toast.LENGTH_SHORT).show()

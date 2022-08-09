@@ -17,8 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-        <activity android:name=".quanly.Test"
-            android:exported="false"/>
+<!--        <activity android:name=".quanly.Test"-->
+<!--            android:exported="false"/>-->
         <activity
             android:name=".login.SignUpGV"
             android:exported="false" />

@@ -20,14 +20,6 @@ import com.example.myapplication.quanly.quanlygv.GVqltk
 import com.example.myapplication.quanly.quanlysv.SVdssv
 import com.example.myapplication.quanly.quanlysv.SVqldl
 import com.example.myapplication.quanly.quanlysv.SVqltk
-import kotlinx.android.synthetic.main.gv_dsgv.*
-import kotlinx.android.synthetic.main.gv_qldl.*
-import kotlinx.android.synthetic.main.gv_qltk.*
-import kotlinx.android.synthetic.main.login1.*
-import kotlinx.android.synthetic.main.sv_dssv.*
-import kotlinx.android.synthetic.main.sv_qldl.*
-import kotlinx.android.synthetic.main.sv_qltk.*
-import kotlinx.android.synthetic.main.sv_qltkdetail.*
 
 class QLnavigation : AppCompatActivity() {
     lateinit var toogle : ActionBarDrawerToggle

@@ -1,16 +1,12 @@
 package com.example.myapplication.login
 
 import android.content.Intent
-import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.myapplication.R
 import androidx.appcompat.app.AlertDialog
-import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.giangvien.GVnavigation
 import com.example.myapplication.quanly.QLnavigation
-import com.example.myapplication.quanly.Svqltkdetail
 import com.example.myapplication.sinhvien.SVnavigation
 import kotlinx.android.synthetic.main.account.*
 
@@ -35,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         bttnSV.setOnClickListener {
             val intent= Intent(this, LoginSV::class.java)
             startActivity(intent)
-        }//GV button
+        }//QGV button
         bttnGV.setOnClickListener {
             val intent= Intent(this, LoginGV::class.java)
             startActivity(intent)
