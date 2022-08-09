@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".quanly.Svqltkdetail">
+    tools:context=".quanly.quanlysv.Svqltkdetail">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:text="@string/infotk"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp"
             android:layout_gravity="center"/>
         <TableRow
@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:text="@string/ho"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Huỳnh Khả "
-                android:textColor="#382EEC" />
+                android:textColor="@color/colornew"/>
         </TableRow>
 
         <TableRow
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:text="@string/ten"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Giang"
-                android:textColor="#382EEC" />
+                android:textColor="@color/colornew"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:text="@string/mssv"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Sv191"
-                android:textColor="#382EEC" />
+                android:textColor="@color/colornew"/>
         </TableRow>
 
         <TableLayout
@@ -95,7 +95,7 @@
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/purple_500"
+                    android:background="@color/colornew"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/user"
@@ -124,7 +124,7 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/purple_500"
+                    android:background="@color/colornew"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/pw"
@@ -155,7 +155,7 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/purple_500"
+                    android:background="@color/colornew"
                     android:gravity="center"
                     android:padding="10dp"
                     android:text="@string/role"

@@ -3,21 +3,37 @@
     <group android:checkableBehavior ="single">
         <item
             android:title="Lịch Học"
-            android:id="@id/svlichhoc"/>
+            android:id="@id/svlichhoc"
+            android:icon="@drawable/calendar"/>
+    </group>
+    <group android:checkableBehavior ="single">
         <item
             android:title="Điểm Danh"
-            android:id="@id/svdiemdanh"/>
+            android:id="@id/svdiemdanh"
+            android:icon="@drawable/check"/>
+    </group>
+    <group android:checkableBehavior ="single">
         <item
             android:title="Thông Tin Sinh Viên "
-            android:id="@id/svinfo"/>
+            android:id="@id/svinfo"
+            android:icon="@drawable/person"/>
+    </group>
+    <group android:checkableBehavior ="single">
         <item
             android:title="Đăng kí Môn Học"
-            android:id="@id/svdkmon"/>
+            android:id="@id/svdkmon"
+            android:icon="@drawable/list"/>
+    </group>
+    <group android:checkableBehavior ="single">
         <item
             android:title="Thay Đổi Mật Khẩu"
-            android:id="@id/svpasschange"/>
+            android:id="@id/svpasschange"
+            android:icon="@drawable/key"/>
+    </group>
+    <group android:checkableBehavior ="single">
         <item
             android:title="Thoát"
-            android:id="@+id/account"/>
+            android:id="@+id/account"
+            android:icon="@drawable/exit"/>
     </group>
 </menu>

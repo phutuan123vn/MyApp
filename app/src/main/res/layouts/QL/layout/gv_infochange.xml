@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/thongtingiangvien"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp" />
 
         <ImageView

@@ -8,6 +8,9 @@ import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
 import android.util.Patterns
+import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.DatabaseHandler
@@ -17,6 +20,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.signupgv.*
+import kotlinx.android.synthetic.main.signupsv.*
 import java.util.regex.Pattern
 
 class SignUpGV : AppCompatActivity() {
@@ -29,6 +33,7 @@ class SignUpGV : AppCompatActivity() {
         var email :String=""
     }
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupgv)
         val db=DatabaseHandler(this)
@@ -38,6 +43,7 @@ class SignUpGV : AppCompatActivity() {
         SUGE.doAfterTextChanged { email=SUGE.text.toString() }
         SUGback.setOnClickListener { this.finish() }
         SUGbttn.setOnClickListener{
+            hidekeyboard()
             var emailvalid :Boolean = false
             var passmatch :Boolean =false
             if (checkInputEmpty(this)){
@@ -210,6 +216,22 @@ class SignUpGV : AppCompatActivity() {
         }
 
         return false
+    }
+    fun hidekeyboard() {
+        val xem = this.currentFocus
+        if (xem != null) {
+            val hide = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            hide.hideSoftInputFromWindow(xem.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+        SUGLname.clearFocus()
+        SUGFname.clearFocus()
+        SUGE.clearFocus()
+        SUGPass.clearFocus()
+        SUGPassCon.clearFocus()
+    }
+    fun closekeyboard(view: View) {
+        hidekeyboard()
     }
 
 }

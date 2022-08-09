@@ -14,15 +14,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/lichhoc"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp" />
-        <ImageView
-            android:layout_marginTop="@dimen/_20sdp"
-            android:id="@+id/imageView7"
-            android:layout_width="350dp"
-            android:layout_height="372dp"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/svlichhoc" />
+        <include
+            android:layout_marginTop="20dp"
+            layout="@layout/tablelichoc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
         <Button
             android:layout_marginTop="20dp"
             android:layout_width="300dp"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,15 +14,219 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/thongtinsinhvien"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp" />
-
         <ImageView
-            android:id="@+id/imageView9"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src="@tools:sample/avatars" />
+        <TableLayout
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_width="350dp"
-            android:layout_height="464dp"
-            android:src="@drawable/svinfo" />
+            android:stretchColumns="1,2">
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border">
+
+            <TextView
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:text="@string/ho"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/_5sdp"
+/>
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Huỳnh Khả "
+                android:textColor="@color/colornew"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border">
+
+            <TextView
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:text="@string/ten"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/_5sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giang"
+                android:layout_gravity="center"
+                android:textColor="@color/colornew"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border">
+            <TextView
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:text="@string/mssv"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/_5sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sv191"
+                android:layout_gravity="center"
+                android:textColor="@color/colornew"/>
+        </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+            <TextView
+                android:paddingStart="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:text="Giới Tính:"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/_5sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:layout_gravity="center"
+                android:textColor="@color/colornew"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:text="Thời gian học:"
+                    android:textColor="@color/colornew"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2019 - 20XX"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colornew"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:text="Nơi ở hiện tại:"
+                    android:textColor="@color/colornew"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tân Bình"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colornew"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:text="CMND/CCCD:"
+                    android:textColor="@color/colornew"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="000XXX123"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colornew"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:text="SĐT liên lạc:"
+                    android:textColor="@color/colornew"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0xxx123"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colornew"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:text="Email:"
+                    android:textColor="@color/colornew"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_5sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="abc@gmail.com"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colornew"/>
+            </TableRow>
+
+        </TableLayout>
+
         <Button
             android:id="@+id/svinfoedit"
             android:layout_marginTop="50dp"
@@ -32,5 +236,7 @@
             android:layout_gravity="center"/>
 
 
+
+
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

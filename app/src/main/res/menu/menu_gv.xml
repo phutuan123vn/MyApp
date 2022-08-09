@@ -4,18 +4,23 @@
     <group android:checkableBehavior ="single">
         <item
             android:title="Thông Tin Dạy"
-            android:id="@id/gvthongtinday"/>
+            android:id="@id/gvthongtinday"
+            android:icon="@drawable/info"/>
         <item
             android:title="Danh Sách Lớp"
-            android:id="@id/gvdslop"/>
+            android:id="@id/gvdslop"
+            android:icon="@drawable/list"/>
         <item
             android:title="Thông Tin Giảng Viên "
-            android:id="@id/gvinfo"/>
+            android:id="@id/gvinfo"
+            android:icon="@drawable/person"/>
         <item
             android:title="Thay Đổi Mật Khẩu"
-            android:id="@id/gvpasschange"/>
+            android:id="@id/gvpasschange"
+            android:icon="@drawable/key"/>
         <item
             android:title="Thoát"
-            android:id="@+id/account"/>
+            android:id="@+id/account"
+            android:icon="@drawable/exit"/>
     </group>
 </menu>

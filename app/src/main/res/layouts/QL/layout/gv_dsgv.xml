@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/dsgv"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp" />
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -24,6 +24,7 @@
             android:layout_marginTop="20dp"
             android:hint="@string/timkiem">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dsgvsearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"

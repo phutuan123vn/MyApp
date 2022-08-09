@@ -12,35 +12,75 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_gravity="center"
             android:text="@string/mhdk"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="@string/ho"
-            android:textColor="#382EEC" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="@string/ten"
-            android:textColor="#382EEC" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="@string/mssv"
-            android:textColor="#382EEC" />
+        <TableRow
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:text="@string/ho"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Huỳnh Khả "
+                android:textColor="@color/colornew"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:text="@string/ten"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Giang"
+                android:textColor="@color/colornew"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:text="@string/mssv"
+                android:textColor="@color/colornew"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Sv191"
+                android:textColor="@color/colornew"/>
+        </TableRow>
         <TextView
             android:layout_marginTop="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="bảng danh sach"
-            android:textColor="#382EEC" />
+            android:textColor="@color/colornew" />
         <Button
             android:layout_marginTop="200dp"
             android:layout_width="300dp"

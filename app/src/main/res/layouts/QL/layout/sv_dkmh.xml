@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:text="@string/mhdk"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:layout_gravity="center"
             android:textSize="40sp" />
         <TableRow
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:text="@string/ho"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Huỳnh Khả "
-                android:textColor="#382EEC" />
+                android:textColor="@color/colornew"/>
         </TableRow>
 
         <TableRow
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:text="@string/ten"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Giang"
-                android:textColor="#382EEC" />
+                android:textColor="@color/colornew"/>
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:text="@string/mssv"
-                android:textColor="#382EEC"
+                android:textColor="@color/colornew"
                 android:textStyle="bold"/>
 
             <TextView
@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:text="Sv191"
-                android:textColor="#382EEC" />
+                android:textColor="@color/colornew"/>
         </TableRow>
         <TextView
             android:layout_marginTop="40dp"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="bảng danh sach mon dk"
-            android:textColor="#382EEC" />
+            android:textColor="@color/colornew"/>
         <Button
             android:id="@+id/quanlysvdkmonedit"
             android:layout_marginTop="200dp"

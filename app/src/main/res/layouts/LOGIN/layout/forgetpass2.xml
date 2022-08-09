@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.ForgetPass2">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"/>
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    tools:context=".login.ForgetPass2"
+    android:id="@+id/constraintLayout"
+    android:background="@drawable/gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:onClick="closekeyboard">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/password"
-            android:textColor="#382EEC"
+            android:text="@string/pw"
+            android:textColor="@color/colornew"
             android:textSize="50sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
             android:layout_marginTop="50dp"
+            android:layout_gravity="center"
             android:text="@string/nhapmatkhaumoi"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginLeft="55dp" />
+            android:textColor="@color/colornew"
+            android:textSize="20sp" />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -75,20 +75,20 @@
 
         <Button
             android:id="@+id/forget2bttn"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
             android:text="@string/thaydoi" />
         <Button
             android:id="@+id/thoat"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:textColor="@color/black"
             android:backgroundTint="@android:color/darker_gray"
             android:text="@string/thoat" />
 
-
     </LinearLayout>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

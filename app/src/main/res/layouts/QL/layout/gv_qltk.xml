@@ -15,12 +15,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="0dp"
             android:text="@string/qltkgv"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="40sp"
             android:layout_gravity="center"/>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/L1userfill"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="@string/timkiem"
@@ -29,7 +28,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/L1user"
+                android:id="@+id/gvqltksearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -42,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/tkgv"
-            android:textColor="#382EEC"
+            android:textColor="@color/colornew"
             android:textSize="20sp"/>
         <TableLayout
             android:id="@+id/table_heading_layout"

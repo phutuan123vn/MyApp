@@ -10,9 +10,9 @@
     <string name="taotaikhoansv">Tạo tài khoản Sinh Viên</string>
     <string name="quaylai">Quay lại</string>
     <string name="guilaima">Gửi lại mã</string>
-    <string name="dangnhaptaikhoansinhvien">Đăng nhập tài khoản Sinh Viên:</string>
-    <string name="dangnhaptaikhoangiangvien">Đăng nhập tài khoản Giảng Viên:</string>
-    <string name="dangnhaptaikhoanquanli">Đăng nhập tài khoản Quản Lí:</string>
+    <string name="dangnhaptaikhoansinhvien">Đăng nhập tài khoản Sinh Viên</string>
+    <string name="dangnhaptaikhoangiangvien">Đăng nhập tài khoản Giảng Viên</string>
+    <string name="dangnhaptaikhoanquanli">Đăng nhập tài khoản Quản Lí</string>
     <string name="neuchuanhanduocma">Nếu chưa nhận được mã:</string>
     <string name="madangnhap">Mã đăng nhập:</string>
     <string name="email">Email:</string>
@@ -94,6 +94,9 @@
     <string name="mondkcol">MÔN ĐK</string>
     <string name="ndcol">NỘI DUNG</string>
     <string name="infocol">THÔNG TIN</string>
+    <string name="tsmdk">Tổng Số Môn Đăng Kí:</string>
+    <string name="tstcdk">Tổng Số Tín Chỉ Đăng Kí:</string>
+    <string name="tiet">Tiết 1</string>
 
 
 </resources>

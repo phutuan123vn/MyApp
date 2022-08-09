@@ -1,11 +1,15 @@
 package com.example.myapplication.sinhvien
 
+import android.content.Context
 import android.content.Intent
 import android.icu.text.TimeZoneFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.MenuItem
+import android.view.View
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -16,6 +20,8 @@ import com.example.myapplication.*
 import com.example.myapplication.login.ForgetPass
 import com.example.myapplication.login.LoginSV
 import com.example.myapplication.login.MainActivity
+import kotlinx.android.synthetic.main.svdkmon.*
+import kotlinx.android.synthetic.main.svinfochange.*
 
 class SVnavigation : AppCompatActivity() {
     lateinit var toogle : ActionBarDrawerToggle
@@ -24,7 +30,7 @@ class SVnavigation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.svnav)
         drawerLayout = findViewById(R.id.drawersvnav)
-
+        hidekeyboard()
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
@@ -69,5 +75,25 @@ class SVnavigation : AppCompatActivity() {
             return super.onOptionsItemSelected(item)
     }
     override fun onBackPressed() {}
+    fun hidekeyboard() {
+        val xem = this.currentFocus
+        if (xem != null) {
+            val hide = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            hide.hideSoftInputFromWindow(xem.windowToken, 0)
+        }
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+//        svdkmonhosearch.clearFocus()
+//        hoedit.clearFocus()
+//        tenedit.clearFocus()
+//        gtedit.clearFocus()
+//        noiedit.clearFocus()
+//        cmndedit.clearFocus()
+//        sdtedit.clearFocus()
+//        mailedit.clearFocus()
+
+    }
+    fun closekeyboard(view: View) {
+        hidekeyboard()
+    }
 
 }
