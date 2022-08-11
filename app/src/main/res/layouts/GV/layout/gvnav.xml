@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawergvnav"
-    tools:context=".giangvien.GVnavigation"
-    android:background="@drawable/gradient">
+    tools:context=".giangvien.GVnavigation">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

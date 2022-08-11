@@ -6,17 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentActivity
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
-import com.example.myapplication.quanly.quanlysv.SVqltk
 import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdsmondk
 import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVmondadk
-import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVqltk
-import kotlinx.android.synthetic.main.svdkmon.view.*
 
 
 class Svdkmon : Fragment() {

@@ -10,9 +10,9 @@ import com.example.myapplication.R
 import com.example.myapplication.model.User
 import kotlin.collections.ArrayList
 
-class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<User>) : RecyclerView.Adapter<TableRowAdapterSVmondadk.ViewHolder>() {
+class TableRowAdapterSVqldldetail(private var userArrayListSV: ArrayList<User>) : RecyclerView.Adapter<TableRowAdapterSVqldldetail.ViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.tablerowmondadk, viewGroup, false)
+        val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.tablerowdiemdanh, viewGroup, false)
         return ViewHolder(itemView)
     }
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
