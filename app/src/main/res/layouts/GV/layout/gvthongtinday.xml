@@ -15,7 +15,7 @@
             android:layout_gravity="center"
             android:text="@string/thongtinday"
             android:textColor="@color/colornew"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <ImageView
             android:layout_marginTop="@dimen/_20sdp"

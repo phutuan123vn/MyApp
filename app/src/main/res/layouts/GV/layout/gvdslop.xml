@@ -8,20 +8,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:onClick="closekeyboard">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/dslop"
             android:textColor="@color/colornew"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="@string/timkiem"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            app:startIconDrawable="@drawable/search"
+            app:endIconMode="clear_text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText

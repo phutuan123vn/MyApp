@@ -6,14 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawergvnav"
-    tools:context=".giangvien.GVnavigation">
+    tools:context=".giangvien.GVnavigation"
+    android:onClick="closekeyboard">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:onClick="closekeyboard">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/framelayoutgvnav"/>
+        android:id="@+id/framelayoutgvnav"
+        android:onClick="closekeyboard"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -23,6 +26,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_gv"/>
-
+        app:menu="@menu/menu_gv"
+        android:onClick="closekeyboard"/>
 </androidx.drawerlayout.widget.DrawerLayout>

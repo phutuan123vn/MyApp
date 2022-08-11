@@ -17,7 +17,7 @@
             android:layout_gravity="center"
             android:text="@string/thongtingiangvien"
             android:textColor="@color/colornew"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <TableLayout
             android:layout_marginTop="@dimen/_30sdp"
@@ -43,6 +43,7 @@
                     />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/hoedit"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
@@ -68,6 +69,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/tenedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -92,6 +94,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -115,6 +118,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/gtedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -138,6 +142,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/noiedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -161,6 +166,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/cmndedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -184,6 +190,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/sdtedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -207,6 +214,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:id="@+id/mailedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -230,6 +238,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -252,6 +261,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -274,6 +284,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

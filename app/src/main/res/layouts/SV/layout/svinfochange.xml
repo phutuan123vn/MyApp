@@ -42,6 +42,7 @@
 
                 <EditText
                     android:id="@+id/hoedit"
+                    android:inputType="text"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -67,6 +68,7 @@
 
                 <EditText
                     android:id="@+id/tenedit"
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -93,6 +95,7 @@
 
                 <EditText
                     android:id="@+id/gtedit"
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -116,6 +119,7 @@
 
                 <EditText
                     android:id="@+id/noiedit"
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -139,6 +143,7 @@
 
                 <EditText
                     android:id="@+id/cmndedit"
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -162,6 +167,7 @@
 
                 <EditText
                     android:id="@+id/sdtedit"
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -185,6 +191,7 @@
 
                 <EditText
                     android:id="@+id/mailedit"
+                    android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

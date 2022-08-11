@@ -16,7 +16,7 @@
             android:layout_gravity="center"
             android:text="@string/qltksv"
             android:textColor="@color/colornew"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="350dp"
@@ -24,6 +24,7 @@
             android:hint="@string/timkiem"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            app:startIconDrawable="@drawable/search"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText

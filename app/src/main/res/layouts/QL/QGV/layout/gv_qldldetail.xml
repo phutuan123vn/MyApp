@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:text="@string/qldlgv"
             android:textColor="@color/colornew"
-            android:textSize="40sp"
+            android:textSize="35sp"
             android:layout_gravity="center"/>
         <TableRow
             android:layout_marginTop="20dp"

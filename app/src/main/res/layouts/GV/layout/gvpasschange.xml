@@ -15,7 +15,7 @@
             android:layout_gravity="center"
             android:text="Thay Đổi Mật Khẩu"
             android:textColor="@color/colornew"
-            android:textSize="40sp" />
+            android:textSize="35sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
