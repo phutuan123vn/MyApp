@@ -8,16 +8,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.findFragment
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.DatabaseHandler
 import com.example.myapplication.R
 //import com.example.myapplication.databinding.SvdiemdanhBinding
 import com.example.myapplication.login.LoginSV
+import com.example.myapplication.model.User
+import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdiemdanh
+import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdsmondk
 import kotlinx.android.synthetic.main.svdiemdanh.*
 import kotlinx.android.synthetic.main.svdiemdanh.view.*
 
 class Svdiemdanh : Fragment() {
+    private lateinit var tableRecyclerView : RecyclerView
+    private lateinit var tableRowAdapterSVdiemdanh: TableRowAdapterSVdiemdanh
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -26,6 +35,16 @@ class Svdiemdanh : Fragment() {
         savedInstanceState: Bundle?
     ):View? {
         val v = inflater.inflate(R.layout.svdiemdanh, container, false)
+
+        val data=activity.createContext(this)
+        dataInitlize(data)
+        val layoutManager = LinearLayoutManager(context)
+        tableRecyclerView = v.findViewById(R.id.table_recycler_view_diemdanh)
+        tableRecyclerView.layoutManager = layoutManager
+        tableRecyclerView.setHasFixedSize(true)
+        tableRowAdapterSVdiemdanh = TableRowAdapterSVdiemdanh(data)
+        tableRecyclerView.adapter = tableRowAdapterSVdiemdanh
+
         val qmqr = v.findViewById<Button>(R.id.quetmaqr)
         qmqr.setOnClickListener {
             val Svquetmaqr = Svdiemdanhqr()
@@ -35,5 +54,11 @@ class Svdiemdanh : Fragment() {
         }
         return v
     }
+    private fun dataInitlize(array: ArrayList<User>) {
+    }
 
+}
+private fun FragmentActivity?.createContext(sVdiemdanh: Svdiemdanh): ArrayList<User> {
+    val db= DatabaseHandler(this!!)
+    return db.getAllData()
 }
