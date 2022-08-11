@@ -5,8 +5,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputType
 import android.text.TextUtils
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.view.WindowManager
@@ -14,31 +16,36 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.DatabaseHandler
+import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.User
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.login1.*
 import kotlinx.android.synthetic.main.signupgv.*
-import kotlinx.android.synthetic.main.signupsv.*
+import java.util.*
 import java.util.regex.Pattern
+import kotlin.collections.ArrayList
 
 class SignUpGV : AppCompatActivity() {
+
     companion object{
         var al8 : Boolean = false
         var uc : Boolean = false
         var num : Boolean = false
-        var pass : String =""
-        var passcon: String=""
+        var pass:String=""
+        var passcon:String=""
         var email :String=""
+        var Lname:String=""
+        var Fname:String=""
+        val listvar1 = mutableListOf( Lname, Fname, email, pass,passcon)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signupgv)
         val db=DatabaseHandler(this)
-        pass=SUGPass.text.toString()
-        passcon=SUGPassCon.text.toString()
+        val MYSQL=MYSQLHandler(this)
         this.onTextChange(this)
         SUGE.doAfterTextChanged { email=SUGE.text.toString() }
         SUGback.setOnClickListener { this.finish() }
@@ -46,30 +53,13 @@ class SignUpGV : AppCompatActivity() {
             hidekeyboard()
             var emailvalid :Boolean = false
             var passmatch :Boolean =false
-            if (checkInputEmpty(this)){
+            if (checkInputEmpty(this )){
                 Toast.makeText(this,"Fill Please",Toast.LENGTH_SHORT).show()
             }else {
-                //check input
-                if (al8 && uc && num){
-                    SUGPassHT.helperText=null
-                    SUGPassConHT.helperText=null
-                }
-                //Pass khong thoa dieu kien
-                else {
+                //check validate pass
+                if (!al8 || !uc || !num){
                     SUGPassHT.helperText="Password Must be Correct"
                     SUGPassConHT.helperText="Password Must be Correct"
-                }
-                if (isEmailValid(email)){
-                    SUGEHT.helperText=null
-                    val mailcheck=db.checkmail(email)
-                    if (email != mailcheck){
-                        SUGEHT.helperText=null
-                        emailvalid = true
-                    }else{
-                        SUGEHT.helperText="Email have been used"
-                    }
-                }else{
-                    SUGEHT.helperText="Email is Invalid"
                 }
                 if (pass == passcon){
                     SUGPassHT.helperText=null
@@ -79,68 +69,72 @@ class SignUpGV : AppCompatActivity() {
                     SUGPassHT.helperText="Password not match"
                     SUGPassConHT.helperText="Password not match"
                 }
-                if (al8 && uc && num && emailvalid && passmatch){
-                    var user=User(
-                        SUGLname.text.toString(),
-                        SUGFname.text.toString(),
-                        1.toString(),
-                        email, pass
-                    )
-                    db.insertData(user)
-                    this.finish()
+                if(isEmailValid(email)) {
+                    MYSQL.checkmail(email,object :MYSQLHandler.VolleyCallback{
+                        override fun onSuccess(Data: ArrayList<User>) {
+                            super.onSuccess(Data)
+                            if (Data.isEmpty()){
+                                emailvalid=true
+                                if (al8 && uc && num && emailvalid && passmatch){
+                                    var user=User(Lname, Fname,1.toString(), email, pass)
+                                    MYSQL.insertUser(user)
+                                    this@SignUpGV.finish()
+                                }
+                            }else{
+                                emailvalid=false
+                                SUGEHT.helperText="Email have been used"
+                            }
+                        }
+                    })
+                }else{
+                    SUGEHT.helperText = "Email is Invalid"
                 }
             }
         }
     }
 
     private fun onTextChange(context: Context) {
-        SUGPass.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                //
-
-
+        var list=listOf<TextInputLayout>(SUGLnameHT,SUGFnameHT,SUGEHT,SUGPassHT,SUGPassConHT)
+        var list1=listOf<TextInputEditText>(SUGLname,SUGFname,SUGE,SUGPass,SUGPassCon)
+        val listvar = mutableListOf(Lname, Fname, email, pass, passcon)
+        var listzip = list1.zip(list)
+        listzip.forEachIndexed { i, element ->
+            element.first.doAfterTextChanged {
+                listvar[i] =element.first.text.toString().trim()
+                if (listvar[i].isEmpty()){
+                    element.second.helperText = "This Can't be Empty"
+                }else{
+                    element.second.helperText = null
+                    if (i==2){
+                        email=listvar[2].lowercase()
+                    }
+                    if (i>=3){
+                        pass=listvar[3]
+                        passcon= listvar[4]
+                        passwordValidate(pass, passcon)
+                    }
+                }
             }
-
-            override fun afterTextChanged(s: Editable?) {
-                //
-                pass=SUGPass.text.toString()
-                passwordValidate(pass, passcon)
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                //
-
-            }
-        })
-        SUGPassCon.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-                //
-                passcon=SUGPassCon.text.toString()
-                passwordValidate(pass, passcon)
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-            }
-        })
-
+        }
     }
 
 
-    //kiem tra email chua xong
+    //kiem tra email day du cac dang
     private fun isValidEmail(email: String): Boolean {
-        return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
-    // kiem tra email hcmut
+    // kiem tra email hcmut and gmail
     fun isEmailValid(email: String): Boolean {
         return Pattern.compile(
             "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]|[\\w-]{2,}))"
-                    + "@gmail.com$"  //thay doi email tai day
+                    + "@gmail.com"  //thay doi email tai day
+//                     "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+//                    "\\@" +
+//                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+//                    "(" +
+//                    "\\." +
+//                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+//                    ")+"
         ).matcher(email).matches()
     }
     // ban? nhap' kiem tra PASSWORD
@@ -183,6 +177,7 @@ class SignUpGV : AppCompatActivity() {
     private fun checkInputEmpty(context: Context):Boolean{
         val list=listOf<TextInputLayout>(SUGLnameHT,SUGFnameHT,SUGEHT,SUGPassHT,SUGPassConHT)
         val list1= listOf<TextInputEditText>(SUGLname,SUGFname,SUGE,SUGPass,SUGPassCon)
+        val listzip=list.zip(list1)
         if (
             SUGLname.text.toString().isEmpty() ||
             SUGFname.text.toString().isEmpty() ||
@@ -190,7 +185,6 @@ class SignUpGV : AppCompatActivity() {
             SUGPass.text.toString().isEmpty()  ||
             SUGPassCon.text.toString().isEmpty()
         ){
-            val listzip=list.zip(list1)
             for (i in listzip){
                 if (i.second.text.toString().isEmpty()){
                     i.first.helperText="Please Fill"
@@ -198,23 +192,8 @@ class SignUpGV : AppCompatActivity() {
                     i.first.helperText=null
                 }
             }
-//            list.forEach{ it ->
-//                for (j in list1.iterator()) {
-//                    if (j.text.toString().isEmpty()){
-//                        it.helperText="Please Fill"
-//                    }else{
-//                        it.helperText=null
-//                    }
-//                    continue
-//
-//                }
-//            }
             return true
         }
-        for (i in list){
-            i.helperText=null
-        }
-
         return false
     }
     fun hidekeyboard() {

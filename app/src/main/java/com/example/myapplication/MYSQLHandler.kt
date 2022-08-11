@@ -34,8 +34,7 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.1.6/android/"
-        var email=""
+        val BASE_URL="http://192.168.11.60/android/"
      }
     fun insertUser(user: User){
         val url=BASE_URL + "insertUser.php"
@@ -146,15 +145,14 @@ class MYSQLHandler(var context: Context){
                     if (jsonObject.get("response").equals("Success")) {
                         val jsonArray = jsonObject.getJSONArray("data")
                         val data = jsonArray.getJSONObject(0)
-                        user.Password = data.get("PASSWORD").toString()
-                        user.Role = data.get("ROLE").toString()
+                        user.Email = data.get("EMAIL").toString()
                         DataUser.clear()
                         DataUser.add(user)
                     }
                 }finally {
                     respnseDone = true
                 }
-                callback.onSuccess(user.Password, user.Role)
+                callback.onSuccess(DataUser)
             },
             VolleyResponse.ErrorListener { error ->
             }
@@ -168,8 +166,43 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(StringRequest)
     }
+    fun checkmail(email:String,callback:VolleyCallback){
+        val url= BASE_URL + "checkMailDB.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val StringRequest = object : StringRequest(
+            Request.Method.POST,
+            url,
+            Listener { response ->
+                try {
+                    var jsonObject = JSONObject(response)
+                    if (jsonObject.get("response").equals("Success")) {
+                        val jsonArray = jsonObject.getJSONArray("data")
+                        val data = jsonArray.getJSONObject(0)
+                        user.Email = data.get("EMAIL").toString()
+                        DataUser.clear()
+                        DataUser.add(user)
+                    }else{
+                        DataUser.clear()
+                    }
+                }finally {
+                    Log.d("TAG", DataUser.toString())
+                }
+                callback.onSuccess(DataUser)
+            },
+            VolleyResponse.ErrorListener { error ->
+            }
+        ){
+            override fun getParams(): HashMap<String, String> {
+                val map=HashMap<String,String>()
+                map["EMAIL"]=email
+                return map
+            }
+
+        }
+        requestQueue.add(StringRequest)
+    }
     public interface VolleyCallback{
-        fun onSuccess(result: String,result1: String) {
+        fun onSuccess(Data:ArrayList<User>) {
 
         }
         fun onError(result: String) {

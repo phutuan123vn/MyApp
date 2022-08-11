@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.view.View
 import android.view.WindowManager
@@ -28,9 +29,13 @@ class SignUpSV : AppCompatActivity() {
         var al8 : Boolean = false
         var uc : Boolean = false
         var num : Boolean = false
-        var pass : String =""
-        var passcon: String=""
+        var pass:String=""
+        var passcon:String=""
         var email :String=""
+        var Lname:String=""
+        var Fname:String=""
+        val listvar = mutableListOf( Lname, Fname, email, pass,passcon)
+
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
@@ -49,86 +54,67 @@ class SignUpSV : AppCompatActivity() {
                 Toast.makeText(this,"Fill Please",Toast.LENGTH_SHORT).show()
             }else {
                 //check input
-                if (al8 && uc && num){
-                    SUPassHT.helperText=null
-                    SUPassConHT.helperText=null
-                }
-                //Pass khong thoa dieu kien
-                else {
+                if (!al8 || !uc || !num){
                     SUPassHT.helperText="Password Must be Correct"
                     SUPassConHT.helperText="Password Must be Correct"
                 }
-                if (isEmailValid(email)){
-                    SUEHT.helperText=null
-                    val mailcheck=db.checkmail(email)
-                    if (email != mailcheck){
-                        SUEHT.helperText=null
-                        emailvalid = true
-                    }else{
-                        SUEHT.helperText="Email have been used"
-                    }
-                }else{
-                    SUEHT.helperText="Email is Invalid"
-                }
                 if (pass== passcon){
-                    SUPassHT.helperText=null
-                    SUPassConHT.helperText=null
                     passmatch=true
                 }else{
+                    passmatch=false
                     SUPassHT.helperText="Password not match"
                     SUPassConHT.helperText="Password not match"
                 }
-                if (al8 && uc && num && emailvalid && passmatch){
-                    var user=User(
-                        SULname.text.toString(),
-                        SUFname.text.toString(),
-                        0.toString(),
-                        email, pass
-                    )
-                   // db.insertData(user)
-                    DBONL.insertUser(user)
-                    this.finish()
+                if (isEmailValid(email)){
+                    DBONL.checkmail(email,object :MYSQLHandler.VolleyCallback{
+                        override fun onSuccess(Data: ArrayList<User>) {
+                            super.onSuccess(Data)
+                            Log.d("DATA1",Data.toString())
+                            if (Data.isEmpty()){
+                                Log.d("DATA",Data.toString())
+                                emailvalid=true
+                                if (al8 && uc && num && emailvalid && passmatch){
+                                    var user=User(Lname, Fname,0.toString(), email, pass)
+                                    // db.insertData(user)
+                                    DBONL.insertUser(user)
+                                    this@SignUpSV.finish()
+                                }
+                            }else{
+                                Log.d("DATA1",Data.toString())
+                                emailvalid=false
+                                SUEHT.helperText="Email have been used"
+                            }
+                        }
+                    })
+                }else{
+                    SUEHT.helperText="Email is Invalid"
                 }
             }
         }
     }
 
     private fun onTextChange(context: Context) {
-        SUPass.addTextChangedListener(object :TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                //
-
-
+        val list= listOf<TextInputLayout>(SULnameHT,SUFnameHT,SUEHT,SUPassHT,SUPassConHT)
+        val list1= listOf<TextInputEditText>(SULname,SUFname,SUE,SUPass,SUPassCon)
+        val listzip=list1.zip(list)
+        listzip.forEachIndexed { i, element ->
+            element.first.doAfterTextChanged {
+                listvar[i]=element.first.text.toString().trim()
+                if (listvar[i].isEmpty()){
+                    element.second.helperText="This can't be Empty"
+                }else{
+                    element.second.helperText=null
+                    if (i==2){
+                        email=listvar[2].lowercase()
+                    }
+                    if (i>=3){
+                        pass= listvar[3]
+                        passcon = listvar[4]
+                        passwordValidate(pass, passcon)
+                    }
+                }
             }
-
-            override fun afterTextChanged(s: Editable?) {
-                //
-                pass=SUPass.text.toString()
-                passwordValidate(pass, passcon)
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                //
-
-            }
-        })
-       SUPassCon.addTextChangedListener(object : TextWatcher{
-            override fun afterTextChanged(s: Editable?) {
-                //
-                passcon=SUPassCon.text.toString()
-                passwordValidate(pass, passcon)
-            }
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-            }
-        })
-
+        }
     }
 
 
@@ -198,21 +184,8 @@ class SignUpSV : AppCompatActivity() {
                     i.first.helperText=null
                 }
             }
-//            list.forEach{ it ->
-//                for (j in list1.iterator()) {
-//                    if (j.text.toString().isEmpty()){
-//                        it.helperText="Please Fill"
-//                    }else{
-//                        it.helperText=null
-//                    }
-//                    continue
-//
-//                }
-//            }
+
             return true
-        }
-        for (i in list){
-            i.helperText=null
         }
 
         return false
