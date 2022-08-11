@@ -79,7 +79,6 @@ class MYSQLHandler(var context: Context){
                 count=true
             }
             override fun doInBackground(vararg params: Void?): Void? {
-                getPassNRole(Email)
                 return null
             }
 
@@ -95,10 +94,9 @@ class MYSQLHandler(var context: Context){
         }
         doAsynct.execute()
     }
-    fun getPassNRole(Email:String){
+    fun getPassNRole(Email:String,callback: VolleyCallback){
         val url=BASE_URL + "getPass.php"
         val loading=LoadingDialog(context as Activity)
-        var count = CountDownLatch(1)
         val requestQueue = Volley.newRequestQueue(context)
         val StringRequest = object : StringRequest(
             Request.Method.POST,
@@ -113,11 +111,13 @@ class MYSQLHandler(var context: Context){
                         user.Role = data.get("ROLE").toString()
                         DataUser.clear()
                         DataUser.add(user)
+                    }else{
+                        DataUser.clear()
                     }
                 }finally {
-                    respnseDone = true
-                    count.countDown()
+                    Log.d("TAG", DataUser.toString())
                 }
+                callback.onSuccess(DataUser)
             },
             VolleyResponse.ErrorListener { error ->
             }
@@ -131,7 +131,6 @@ class MYSQLHandler(var context: Context){
         }
         // xong chuoit data
         requestQueue.add(StringRequest)
-        count.await()
     }
     fun testPassNRole(callback: VolleyCallback){
         val url=BASE_URL+"getPass.php"

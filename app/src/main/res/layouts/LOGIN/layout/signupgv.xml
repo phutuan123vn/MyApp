@@ -49,7 +49,7 @@
                 android:id="@+id/SUGLname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|textCapWords"
                 android:textColorHint="#616161"
                 android:textSize="15sp"
                 tools:ignore="TextContrastCheck" />
@@ -69,7 +69,7 @@
                 android:id="@+id/SUGFname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|textCapWords"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck"
                 android:textSize="15sp"/>

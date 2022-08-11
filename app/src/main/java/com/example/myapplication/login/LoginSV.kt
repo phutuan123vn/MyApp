@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
@@ -14,7 +16,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.widget.doAfterTextChanged
 import com.example.myapplication.DatabaseHandler
+import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
+import com.example.myapplication.model.User
 import com.example.myapplication.sinhvien.SVnavigation
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -22,6 +26,11 @@ import kotlinx.android.synthetic.main.login1.*
 
 
 class LoginSV : AppCompatActivity() {
+    companion object{
+        var user= User()
+        var email :String=""
+        var pass :String=""
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
@@ -43,32 +52,41 @@ class LoginSV : AppCompatActivity() {
         val list= listOf<TextInputLayout>(L1userfill,L1passfill)
         val list1= listOf<TextInputEditText>(L1user,L1pass)
         val listall=list.zip(list1)
+        val load=LoadingDialog(this)
         L1log.setOnClickListener {
             hidekeyboard()
-            if (L1user.text.toString().isNotEmpty() && L1pass.text.toString().isNotEmpty()) {
-                var pass = L1pass.text.toString()
-                var email = L1user.text.toString()
-                var ValueR = db.ViewPass(email)
-                if (ValueR.isEmpty()) {
-                    Toast.makeText(this, "Password of Email Invalid", Toast.LENGTH_SHORT).show()
-                } else {
-                    var passcheck = ValueR.get(0).Password
-                    var role = ValueR.get(0).Role
-                    if (pass == passcheck && role == 0.toString()) {
-                        Toast.makeText(this, "Success Login", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this, SVnavigation::class.java))
-                        this.finish()
-                    } else {
-                        Toast.makeText(this, "Password or Email is Incorrect", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                }
-            } else {
+            if (email.isEmpty()|| pass.isEmpty()){
                 for (i in listall){
                     if (i.second.text.toString().isEmpty()){
-                        i.first.error="Không được để trống"
+                        i.first.error="This can't not be empty"
                     }
                 }
+            }else{
+                load.startLoading()
+                val DBONL=MYSQLHandler(this)
+                val handler=Handler()
+                DBONL.getPassNRole(email,object : MYSQLHandler.VolleyCallback{
+                    override fun onSuccess(Data: ArrayList<User>) {
+                        super.onSuccess(Data)
+                        if (Data.isEmpty()){
+                            Toast.makeText(this@LoginSV,"Email or Password is Invalid",Toast.LENGTH_SHORT).show()
+                        }else{
+                            var passcheck=Data.get(0).Password
+                            var role=Data.get(0).Role
+                            if (pass==passcheck && role==0.toString()){
+                                Toast.makeText(this@LoginSV,"Success Login",Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this@LoginSV,SVnavigation::class.java))
+                                handler.postDelayed(Runnable {
+                                    load.isDissMiss()
+                                    this@LoginSV.finish()
+                                },5000L)
+                            }else{
+                                Toast.makeText(this@LoginSV,"Email or Password is Incorrect",Toast.LENGTH_SHORT).show()
+                                load.dismissDialog()
+                            }
+                        }
+                    }
+                })
             }
         }
     }
@@ -78,6 +96,7 @@ class LoginSV : AppCompatActivity() {
             if (L1user.text.toString().isEmpty()) {
                 L1userfill.error = "Không được để trống"
             } else {
+                email=L1user.text.toString().trim().lowercase()
                 L1userfill.error = null
                 L1userfill.isErrorEnabled = false
             }
@@ -86,6 +105,7 @@ class LoginSV : AppCompatActivity() {
             if (L1pass.text.toString().isEmpty()) {
                 L1passfill.error = "Không được để trống"
             } else {
+                pass=L1pass.text.toString().trim()
                 L1passfill.error = null
                 L1passfill.isErrorEnabled = false
             }
@@ -107,3 +127,12 @@ class LoginSV : AppCompatActivity() {
     }
 
 }
+
+//private fun Handler.postDelayed(runnable: Runnable){
+//    val handler=Handler()
+//    handler.postDelayed(object : Runnable{
+//        override fun run() {
+//
+//        }
+//    })
+//}

@@ -19,7 +19,6 @@ class GVnavigation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.gvnav)
-
         drawerLayout = findViewById(R.id.drawergvnav)
 
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
