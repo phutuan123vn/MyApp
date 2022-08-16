@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/rec"
-    tools:context=".quanly.quanlysv.SVqltk">
+    tools:context=".quanly.QLnavigation"
+    android:onClick="closekeyboard">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -82,18 +82,11 @@ class SVnavigation : AppCompatActivity() {
             hide.hideSoftInputFromWindow(xem.windowToken, 0)
         }
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
-//        svdkmonhosearch.clearFocus()
-//        hoedit.clearFocus()
-//        tenedit.clearFocus()
-//        gtedit.clearFocus()
-//        noiedit.clearFocus()
-//        cmndedit.clearFocus()
-//        sdtedit.clearFocus()
-//        mailedit.clearFocus()
-
+        currentFocus?.clearFocus()
     }
     fun closekeyboard(view: View) {
         hidekeyboard()
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
     }
 
 }

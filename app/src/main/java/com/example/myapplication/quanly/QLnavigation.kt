@@ -29,7 +29,7 @@ class QLnavigation : AppCompatActivity() {
         setContentView(R.layout.qlnav)
         hidekeyboard()
         drawerLayout = findViewById(R.id.drawerqlnav)
-
+        hidekeyboard()
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
@@ -80,12 +80,7 @@ class QLnavigation : AppCompatActivity() {
             hide.hideSoftInputFromWindow(xem.windowToken, 0)
         }
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
-//        dsgvsearch.clearFocus()
-//        gvqldlsearch.clearFocus()
-//        gvqltksearch.clearFocus()
-//        dssvsearch.clearFocus()
-//        svqldlsearch.clearFocus()
-//        svqltksearch.clearFocus()
+        currentFocus?.clearFocus()
     }
     fun closekeyboard(view: View) {
         hidekeyboard()

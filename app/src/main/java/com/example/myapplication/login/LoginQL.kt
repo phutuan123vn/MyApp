@@ -32,6 +32,7 @@ class LoginQL : AppCompatActivity() {
         this.textchange(this)
         QLback.setOnClickListener {
             this.finish()
+            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_right)
         }
         val list= listOf<TextInputLayout>(QLUserfill,QLPassfill)
         val list1= listOf<TextInputEditText>(QLUser,QLPass)

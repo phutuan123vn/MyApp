@@ -33,14 +33,17 @@ class LoginGV : AppCompatActivity() {
         this.textchange(this)
         GVback.setOnClickListener {
             this.finish()
+            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_right)
         }
         GVsignup.setOnClickListener{
             val intent=Intent(this, SignUpGV::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
         GVforget.setOnClickListener{
             val intent=Intent(this, ForgetPass::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
         val db = DatabaseHandler(applicationContext)
         val list= listOf<TextInputLayout>(GVUserfill,GVPassfill)

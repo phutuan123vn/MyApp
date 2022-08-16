@@ -10,15 +10,12 @@
     android:onClick="closekeyboard">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="closekeyboard">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/framelayoutgvnav"
-        android:onClick="closekeyboard"/>
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/framelayoutgvnav" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navgvview"

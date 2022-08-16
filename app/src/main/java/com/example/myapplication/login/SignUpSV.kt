@@ -45,7 +45,10 @@ class SignUpSV : AppCompatActivity() {
         val DBONL=MYSQLHandler(this)
         this.onTextChange(this)
         SUE.doAfterTextChanged { email=SUE.text.toString() }
-        SUback.setOnClickListener { this.finish() }
+        SUback.setOnClickListener {
+            this.finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
         SUbttn.setOnClickListener{
             hidekeyboard()
             var emailvalid :Boolean = false

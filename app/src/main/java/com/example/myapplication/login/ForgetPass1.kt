@@ -22,12 +22,14 @@ class ForgetPass1 : AppCompatActivity() {
             if(forget1code.text.toString().length>0){
                 startActivity(Intent(this, ForgetPass2::class.java))
                 this.finish()
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }else{
                 Toast.makeText(this,"Required Code",Toast.LENGTH_SHORT).show()
             }
         }
         forget1back.setOnClickListener {
             this.finish()
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
         forget1refresh.setOnClickListener {
             val intent=intent

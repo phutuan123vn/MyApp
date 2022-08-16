@@ -33,20 +33,23 @@ class LoginSV : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         supportActionBar?.hide()
-        super.onCreate(savedInstanceState)
 
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.login1)
         this.textchange(this)
         SVback.setOnClickListener {
             this.finish()
+            overridePendingTransition(R.anim.no_animation, R.anim.slide_out_right)
         }
         SVsignup.setOnClickListener {
             val intent = Intent(this, SignUpSV::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
         SVforget.setOnClickListener {
             val intent = Intent(this, ForgetPass::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
         val db = DatabaseHandler(applicationContext)
         val list= listOf<TextInputLayout>(L1userfill,L1passfill)
@@ -76,6 +79,7 @@ class LoginSV : AppCompatActivity() {
                             if (pass==passcheck && role==0.toString()){
                                 Toast.makeText(this@LoginSV,"Success Login",Toast.LENGTH_SHORT).show()
                                 startActivity(Intent(this@LoginSV,SVnavigation::class.java))
+                                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                                 handler.postDelayed(Runnable {
                                     load.isDissMiss()
                                     this@LoginSV.finish()

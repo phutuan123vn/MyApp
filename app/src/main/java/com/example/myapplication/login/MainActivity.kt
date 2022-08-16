@@ -31,14 +31,17 @@ class MainActivity : AppCompatActivity() {
         bttnSV.setOnClickListener {
             val intent= Intent(this, LoginSV::class.java)
             startActivity(intent)
-        }//QGV button
+            overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
+        }
         bttnGV.setOnClickListener {
             val intent= Intent(this, LoginGV::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
         bttnQL.setOnClickListener {
             val intent= Intent(this, LoginQL::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
     }
     override fun onBackPressed() {

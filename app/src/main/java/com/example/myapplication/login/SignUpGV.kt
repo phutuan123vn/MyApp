@@ -48,7 +48,10 @@ class SignUpGV : AppCompatActivity() {
         val MYSQL=MYSQLHandler(this)
         this.onTextChange(this)
         SUGE.doAfterTextChanged { email=SUGE.text.toString() }
-        SUGback.setOnClickListener { this.finish() }
+        SUGback.setOnClickListener {
+            this.finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
         SUGbttn.setOnClickListener{
             hidekeyboard()
             var emailvalid :Boolean = false

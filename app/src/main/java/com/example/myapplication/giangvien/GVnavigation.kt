@@ -76,6 +76,9 @@ class GVnavigation : AppCompatActivity() {
     }
     fun closekeyboard(view: View) {
         hidekeyboard()
+        currentFocus?.clearFocus()
+        val hide = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        hide.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
 }

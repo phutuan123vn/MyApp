@@ -22,7 +22,9 @@ class ForgetPass2 : AppCompatActivity() {
         supportActionBar?.hide()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.forgetpass2)
-        thoat.setOnClickListener{onBackPressed()}
+        thoat.setOnClickListener{
+            onBackPressed()
+        }
         forget2bttn.setOnClickListener {
             hidekeyboard()
         //nut thay doi kiem tra pass
@@ -49,6 +51,7 @@ class ForgetPass2 : AppCompatActivity() {
                 // if user press yes, then finish the current activity
                 finish()
                 super.onBackPressed()
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             }
             setNegativeButton("Không"){ _,_ ->
             }
@@ -66,7 +69,7 @@ class ForgetPass2 : AppCompatActivity() {
             hide.hideSoftInputFromWindow(xem.windowToken, 0)
         }
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
-        forget1code.clearFocus()
+        currentFocus?.clearFocus()
     }
     fun closekeyboard(view: View) {
         hidekeyboard()

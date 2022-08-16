@@ -21,11 +21,15 @@ class ForgetPass : AppCompatActivity() {
             hidekeyboard()
             if (forgetemail.text.toString().length>0){
                 startActivity(Intent(this, ForgetPass1::class.java))
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }else{
                 Toast.makeText(this,"Please Fill Your Email",Toast.LENGTH_SHORT).show()
             }
         }
-        forgetback.setOnClickListener { this.finish() }
+        forgetback.setOnClickListener {
+            this.finish()
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+        }
     }
 
     fun hidekeyboard() {
