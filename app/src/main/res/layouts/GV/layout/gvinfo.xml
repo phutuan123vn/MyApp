@@ -227,13 +227,14 @@
             </TableRow>
 
         </TableLayout>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/gvinfoedit"
             android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/chinhsua"
             android:layout_gravity="center"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/nextbutton"/>
     </LinearLayout>
 </ScrollView>

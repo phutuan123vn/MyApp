@@ -21,11 +21,12 @@
             layout="@layout/tablelichoc"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_marginTop="20dp"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/chinhsua"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

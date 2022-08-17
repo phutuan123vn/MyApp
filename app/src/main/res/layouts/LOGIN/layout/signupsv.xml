@@ -32,7 +32,7 @@
             android:layout_gravity="center"
             android:textStyle="italic"
             android:text="@string/taotaikhoansv"
-            android:textColor="@color/colornew"
+            android:textColor="@color/colornewdam"
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -155,14 +155,16 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
             <CheckBox
                 android:id="@+id/SVBox1"
                 android:clickable="false"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp">
 
             </CheckBox>
 
@@ -172,7 +174,8 @@
                 android:layout_marginStart="10dp"
                 android:gravity="center|start"
                 android:text="@string/boxmin"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -181,14 +184,16 @@
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
             <CheckBox
                 android:id="@+id/SVBox2"
                 android:clickable="false"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp">
 
             </CheckBox>
             <TextView
@@ -197,7 +202,8 @@
                 android:textColor="@android:color/black"
                 android:text="@string/boxnumber"
                 android:gravity="center|start"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -206,14 +212,16 @@
             android:gravity="start"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
             <CheckBox
                 android:id="@+id/SVBox3"
                 android:clickable="false"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp">
 
             </CheckBox>
             <TextView
@@ -222,26 +230,29 @@
                 android:textColor="@android:color/black"
                 android:text="@string/boxinhoa"
                 android:gravity="center|start"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SUbttn"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:text="@string/dangki" />
-        <Button
+            android:text="@string/dangki"
+            android:textColor="@color/black"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SUback"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/quaylai"
             android:layout_marginTop="5dp"
-            android:textColor="@color/black"
-            android:backgroundTint="@android:color/darker_gray"
+            android:textColor="@color/whitetrongsuot"
+            android:background="@drawable/backbutton"
             android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>

@@ -132,7 +132,7 @@
                 android:padding="6sp"/>
         </TableRow>
         <TableRow
-            android:background="@color/colorAccent">
+            android:background="@color/colornewtrongsuot">
             <TextView
                 android:layout_height="wrap_content"
                 android:text="Tiết 2"
@@ -214,7 +214,7 @@
                 android:padding="6sp"/>
         </TableRow>
         <TableRow
-            android:background="@color/colorAccent">
+            android:background="@color/colornewtrongsuot">
             <TextView
                 android:layout_height="wrap_content"
                 android:text="Tiết 4"
@@ -293,7 +293,7 @@
                 android:padding="6sp"/>
         </TableRow>
         <TableRow
-            android:background="@color/colorAccent">
+            android:background="@color/colornewtrongsuot">
             <TextView
                 android:layout_height="wrap_content"
                 android:text="Tiết 6"
@@ -375,7 +375,7 @@
                 android:padding="6sp"/>
         </TableRow>
         <TableRow
-            android:background="@color/colorAccent">
+            android:background="@color/colornewtrongsuot">
             <TextView
                 android:layout_height="wrap_content"
                 android:text="Tiết 8"
@@ -448,7 +448,7 @@
                 android:padding="6sp"/>
         </TableRow>
         <TableRow
-            android:background="@color/colorAccent">
+            android:background="@color/colornewtrongsuot">
             <TextView
                 android:layout_height="wrap_content"
                 android:text="Tiết 10"
@@ -521,7 +521,7 @@
                 android:padding="6sp"/>
         </TableRow>
         <TableRow
-            android:background="@color/colorAccent">
+            android:background="@color/colornewtrongsuot">
             <TextView
                 android:layout_height="wrap_content"
                 android:text="Tiết 12"

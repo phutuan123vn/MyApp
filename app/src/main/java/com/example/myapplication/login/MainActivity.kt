@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
         bttnGV.setOnClickListener {
-            val intent= Intent(this, GVnavigation::class.java)
+            val intent= Intent(this, LoginGV::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }

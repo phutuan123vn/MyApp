@@ -178,19 +178,20 @@
             app:layout_constraintTop_toBottomOf="@+id/table_recycler_view_svdiemdanh"
             tools:listitem="@layout/tablerowdiemdanh">
         </androidx.recyclerview.widget.RecyclerView>
-        <Button
-            android:layout_width="300dp"
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/guibandl" />
-        <Button
+            android:text="@string/guibandl"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/qldldetailback"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:text="@string/quaylai" />
 
     </LinearLayout>

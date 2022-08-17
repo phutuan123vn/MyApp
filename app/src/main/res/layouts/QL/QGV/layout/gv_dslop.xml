@@ -154,21 +154,22 @@
             tools:listitem="@layout/tablerowgvdslop">
         </androidx.recyclerview.widget.RecyclerView>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlygvdslopedit"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/chinhsua" />
+            android:text="@string/chinhsua"
+            android:background="@drawable/nextbutton"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlygvdslopback"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:text="@string/quaylai" />
 
     </LinearLayout>

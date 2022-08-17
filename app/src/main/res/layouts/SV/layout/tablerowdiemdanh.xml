@@ -10,7 +10,7 @@
         android:id="@+id/table_recycler_view_svdiemdanh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="1,2,3,4,5">
+        android:stretchColumns="1,2,3,4">
 
         <TableRow>
             <TextView
@@ -34,26 +34,37 @@
                 android:padding="6sp"
                 android:background="@drawable/border"/>
             <TextView
-                android:id="@+id/tietcol"
+                android:id="@+id/lopcol"
                 android:layout_width="60dp"
                 android:layout_height="35dp"
-                android:text="1,2"
+                android:text="L01"
                 android:layout_column="2"
                 android:textStyle="bold"
                 android:gravity="center"
                 android:padding="6sp"
                 android:background="@drawable/border"/>
-            <TextView
-                android:id="@+id/thucol"
-                android:layout_width="60dp"
-                android:text="2,3"
-                android:layout_height="35dp"
-                android:layout_column="3"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:padding="6sp"
-                android:background="@drawable/border"/>
+<!--            <TextView-->
+<!--                android:id="@+id/tietcol"-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:text="1,2"-->
+<!--                android:layout_column="2"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="6sp"-->
+<!--                android:background="@drawable/border"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/thucol"-->
+<!--                android:layout_width="60dp"-->
+<!--                android:text="2,3"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:layout_column="3"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="6sp"-->
+<!--                android:background="@drawable/border"/>-->
             <CheckBox
+                android:clickable="false"
                 android:layout_width="60dp"
                 android:layout_height="35dp"
                 android:background="@drawable/border"

@@ -34,7 +34,7 @@
             android:layout_marginTop="50dp"
             android:layout_gravity="center"
             android:text="@string/nhapmatkhaumoi"
-            android:textColor="@color/colornew"
+            android:textColor="@color/colornewdam"
             android:textSize="20sp" />
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="300dp"
@@ -73,21 +73,22 @@
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/forget2bttn"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
-            android:text="@string/thaydoi" />
-        <Button
+            android:text="@string/thaydoi"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/thoat"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:text="@string/thoat" />
 
     </LinearLayout>

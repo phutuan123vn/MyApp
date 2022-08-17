@@ -51,33 +51,33 @@
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/forget1reset"
             android:layout_marginTop="20dp"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/khoiphuc"
-            android:layout_gravity="center"/>
-        <Button
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/forget1back"
             android:layout_marginTop="10dp"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/quaylai"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:layout_gravity="center"/>
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:layout_marginStart="55dp"
             android:text="@string/neuchuanhanduocma"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_marginLeft="55dp"
+            android:gravity="center"
             android:textStyle="italic"/>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/forget1refresh"
             android:layout_marginTop="10dp"
             android:layout_width="250dp"

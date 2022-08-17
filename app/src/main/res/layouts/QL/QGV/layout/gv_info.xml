@@ -293,29 +293,31 @@
             </TableRow>
         </TableLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlygvdslop"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="@string/dslop" />
+            android:text="@string/dslop"
+            android:background="@drawable/nextbutton"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlygvinfoedit"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="@string/chinhsua" />
+            android:text="@string/chinhsua"
+            android:background="@drawable/nextbutton"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlygvinfoback"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:text="@string/quaylai"
             android:layout_marginBottom="@dimen/_30sdp"/>
     </LinearLayout>

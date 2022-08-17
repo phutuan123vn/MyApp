@@ -218,13 +218,14 @@
             </TableRow>
         </TableLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/svinfoedit"
             android:layout_marginTop="50dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/_30sdp"
             android:text="@string/chinhsua"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
     </LinearLayout>
 </ScrollView>

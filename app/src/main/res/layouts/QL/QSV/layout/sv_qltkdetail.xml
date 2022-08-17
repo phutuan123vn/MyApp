@@ -181,25 +181,26 @@
         <Button
             android:layout_marginTop="40dp"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/xoatk"
             android:layout_gravity="center"
             android:backgroundTint="@android:color/holo_red_dark"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_marginTop="100dp"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/capnhat"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SVqltkback"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:text="@string/quaylai" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

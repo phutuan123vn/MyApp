@@ -229,24 +229,25 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="70dp"/>
         </LinearLayout>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SUGbttn"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:padding="10dp"
-            android:text="@string/dangki" />
+            android:text="@string/dangki"
+            android:background="@drawable/nextbutton"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/SUGback"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:textColor="@color/black"
+            android:textColor="@color/whitetrongsuot"
             android:text="@string/quaylai"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/backbutton"/>
     </LinearLayout>
 </ScrollView>

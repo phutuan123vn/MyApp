@@ -2,10 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false" >
         <shape>
-<!--            <gradient android:startColor="@color/colornewtrongsuot"-->
-<!--                android:endColor="@color/teal_200trongsuot" />-->
             <solid
-                android:color="@color/colornewtrongsuot" />
+                android:color="@color/colornewtrongsuot"/>
             <corners
                 android:bottomRightRadius="50dp"
                 android:bottomLeftRadius="50dp"
@@ -19,9 +17,6 @@
         <shape>
             <solid
                 android:color="@color/teal_200trongsuot"/>
-<!--            <stroke-->
-<!--                android:width="2dp"-->
-<!--                android:color="@color/teal_200" />-->
             <corners
                 android:bottomRightRadius="50dp"
                 android:bottomLeftRadius="50dp"

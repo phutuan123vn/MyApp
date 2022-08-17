@@ -141,20 +141,21 @@
             tools:listitem="@layout/tablerowqlsvmondadk">
         </androidx.recyclerview.widget.RecyclerView>
         </TableLayout>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlysvdkmonedit"
             android:layout_marginTop="50dp"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/chinhsua"
-            android:layout_gravity="center"/>
-        <Button
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlysvdkmonback"
             android:layout_marginTop="10dp"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/quaylai"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:layout_gravity="center"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

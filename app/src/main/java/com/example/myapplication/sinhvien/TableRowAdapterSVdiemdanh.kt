@@ -29,8 +29,8 @@ class TableRowAdapterSVdiemdanh(private var userArrayListSV: ArrayList<User>) : 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val mmhcol: TextView = itemView.findViewById(R.id.mmhcol)
         val tenmhcol: TextView = itemView.findViewById(R.id.tenmhcol)
-        val tietcol: TextView = itemView.findViewById(R.id.tietcol)
-        val thucol: TextView = itemView.findViewById(R.id.thucol)
+        val lopcol: TextView = itemView.findViewById(R.id.lopcol)
+//        val thucol: TextView = itemView.findViewById(R.id.thucol)
     }
 }
 

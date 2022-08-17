@@ -275,19 +275,20 @@
                 tools:listitem="@layout/tablerowmondadk">
             </androidx.recyclerview.widget.RecyclerView>
         </TableLayout>
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_marginTop="50dp"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/capnhat"
-            android:layout_gravity="center"/>
-        <Button
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quanlysvdkmonchangeback"
             android:layout_marginTop="10dp"
-            android:layout_width="300dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="@string/quaylai"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/_30sdp"/>
     </LinearLayout>

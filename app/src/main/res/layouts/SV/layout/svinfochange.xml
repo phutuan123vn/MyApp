@@ -202,19 +202,20 @@
             </TableRow>
         </TableLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_marginTop="100dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/capnhat"
-            android:layout_gravity="center"/>
-        <Button
+            android:layout_gravity="center"
+            android:background="@drawable/nextbutton"/>
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/svinfochangeback"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/quaylai"
-            android:backgroundTint="@android:color/darker_gray"
+            android:background="@drawable/backbutton"
             android:layout_marginBottom="@dimen/_30sdp"
             android:layout_gravity="center"/>
     </LinearLayout>
