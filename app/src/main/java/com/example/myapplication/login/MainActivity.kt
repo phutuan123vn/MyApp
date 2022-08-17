@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
         bttnGV.setOnClickListener {
-            val intent= Intent(this, LoginGV::class.java)
+            val intent= Intent(this, GVnavigation::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
@@ -46,14 +46,14 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onBackPressed() {
         AlertDialog.Builder(this).apply {
-            setTitle("ĐÃ CHẮC CHẮN CHƯA")
-            setMessage("Muốn Thoát Thật Không?")
+            setTitle("WARNING!")
+            setMessage("Are you sure you want to exit?")
 
-            setPositiveButton("Thoát") { _,_ ->
+            setPositiveButton("Yes") { _,_ ->
                 // if user press yes, then finish the current activity
                 super.onBackPressed()
             }
-            setNegativeButton("Không"){ _,_ ->
+            setNegativeButton("NO"){ _,_ ->
             }
             setCancelable(true)
         }.create().show()

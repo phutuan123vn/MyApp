@@ -19,7 +19,13 @@
         android:id="@+id/svinfo"
         android:name="com.example.myapplication.sinhvien.Svinfo"
         android:label="Svinfo"
-        tools:layout="@layout/svinfo"/>
+        tools:layout="@layout/svinfo">
+        <action
+            android:id="@+id/action_svinfo_to_svinfochange"
+            app:destination="@id/svinfochange"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
     <fragment
         android:id="@+id/svdkmon"
         android:name="com.example.myapplication.sinhvien.Svdkmon"
@@ -30,4 +36,9 @@
         android:name="com.example.myapplication.sinhvien.Svpasschange"
         android:label="Svpasschange"
         tools:layout="@layout/svpasschange"/>
+    <fragment
+        android:id="@+id/svinfochange"
+        android:name="com.example.myapplication.sinhvien.Svinfochange"
+        android:label="Svinfochange"
+        tools:layout="@layout/svinfochange"/>
 </navigation>

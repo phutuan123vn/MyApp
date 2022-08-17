@@ -26,6 +26,7 @@ class Gvinfochange : Fragment() {
         back.setOnClickListener {
             val Gvinfo = Gvinfo()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
             transaction.replace(R.id.framelayoutgvnav, Gvinfo)
             transaction.commit()
         }

@@ -23,6 +23,7 @@ class Quanlygvinfo : Fragment() {
         dslop.setOnClickListener {
             val quanlygvdslop = Quanlygvdslop()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
             transaction.replace(R.id.framelayoutqlnav, quanlygvdslop)
             transaction.commit()
         }
@@ -31,16 +32,20 @@ class Quanlygvinfo : Fragment() {
         edit.setOnClickListener {
             val quanlygvinfochange = Quanlygvinfochange()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
             transaction.replace(R.id.framelayoutqlnav, quanlygvinfochange)
             transaction.commit()
+
         }
         // button back từ info gv về lại dsgv
         val back = v.findViewById<Button>(R.id.quanlygvinfoback)
         back.setOnClickListener {
             val gvdsgv = GVdsgv()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
             transaction.replace(R.id.framelayoutqlnav, gvdsgv)
             transaction.commit()
+
         }
         return v
     }

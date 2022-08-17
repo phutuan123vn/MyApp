@@ -56,6 +56,7 @@ class GVnavigation : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){

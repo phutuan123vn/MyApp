@@ -34,34 +34,40 @@
             android:layout_height="234dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/logobk" />
+            app:srcCompat="@drawable/logobk"
+            android:contentDescription="pic" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/roundbutt"
             android:id="@+id/bttnSV"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:textColor="@color/white"
+            android:textColor="@color/colornew"
+            android:textStyle="bold"
             android:text="@string/sinhvien" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/roundbutt"
             android:id="@+id/bttnGV"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="@color/white"
+            android:textColor="@color/colornew"
+            android:textStyle="bold"
             android:text="@string/giangvien" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/roundbutt"
             android:id="@+id/bttnQL"
             android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="@color/black"
-            android:textStyle=""
+            android:textColor="@color/colornew"
+            android:textStyle="bold"
             android:text="@string/quanly" />
 
 

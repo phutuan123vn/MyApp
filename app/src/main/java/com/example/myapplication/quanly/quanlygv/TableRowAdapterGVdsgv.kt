@@ -1,6 +1,7 @@
 package com.example.myapplication.quanly.quanlygv
 
 import android.view.LayoutInflater
+import android.view.SurfaceControl
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -25,6 +26,7 @@ class TableRowAdapterGVdsgv(private var userArrayListGV: ArrayList<User>) : Recy
             override fun onClick(v: View?) {
                 val activity = v!!.context as AppCompatActivity
                 val quanlygvinfo = Quanlygvinfo()
+//                activity.overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
                 activity.supportFragmentManager.beginTransaction().replace(R.id.framelayoutqlnav, quanlygvinfo).addToBackStack(null).commit()
             }
         })
