@@ -1,27 +1,20 @@
 package com.example.myapplication.sinhvien
 
-import android.content.Context
 import android.content.Intent
-import android.icu.text.TimeZoneFormat
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
-import kotlinx.android.synthetic.main.svnav.*
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.example.myapplication.*
-import com.example.myapplication.login.ForgetPass
-import com.example.myapplication.login.LoginSV
 import com.example.myapplication.login.MainActivity
 import kotlinx.android.synthetic.main.svdkmon.*
 import kotlinx.android.synthetic.main.svinfochange.*
+import kotlinx.android.synthetic.main.svnav.*
 
 class SVnavigation : AppCompatActivity() {
     lateinit var toogle : ActionBarDrawerToggle
@@ -35,7 +28,6 @@ class SVnavigation : AppCompatActivity() {
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         supportFragmentManager.beginTransaction().replace(R.id.framelayoutsvnav, Svlichhoc()).commit()
         navsvview.setNavigationItemSelectedListener {
 
@@ -67,6 +59,7 @@ class SVnavigation : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){

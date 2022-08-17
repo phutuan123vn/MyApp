@@ -22,6 +22,7 @@ class Gvqltkdetail : Fragment() {
         back.setOnClickListener {
             val Gvqltk = GVqltk()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
             transaction.replace(R.id.framelayoutqlnav, Gvqltk)
             transaction.commit()
         }

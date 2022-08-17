@@ -27,6 +27,7 @@ class Quanlygvinfochange : Fragment() {
         back.setOnClickListener {
             val quanlygvinfo = Quanlygvinfo()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right)
             transaction.replace(R.id.framelayoutqlnav, quanlygvinfo)
             transaction.commit()
         }

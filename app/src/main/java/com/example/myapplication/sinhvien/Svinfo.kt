@@ -24,6 +24,7 @@ class Svinfo : Fragment() {
         edit.setOnClickListener {
             val Svinfochange = Svinfochange()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
             transaction.replace(R.id.framelayoutsvnav, Svinfochange)
             transaction.commit()
         }

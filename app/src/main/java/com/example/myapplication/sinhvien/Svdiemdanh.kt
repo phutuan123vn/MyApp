@@ -49,6 +49,7 @@ class Svdiemdanh : Fragment() {
         qmqr.setOnClickListener {
             val Svquetmaqr = Svdiemdanhqr()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
             transaction.replace(R.id.framelayoutsvnav, Svquetmaqr)
             transaction.commit()
         }

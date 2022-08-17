@@ -28,6 +28,7 @@ class Quanlysvdkmon : Fragment() {
         back.setOnClickListener {
             val svdssv = SVdssv()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
             transaction.replace(R.id.framelayoutqlnav, svdssv)
             transaction.commit()
         }
@@ -35,6 +36,7 @@ class Quanlysvdkmon : Fragment() {
         edit.setOnClickListener{
             val svdkmonchange = Quanlysvdkmonchange()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
             transaction.replace(R.id.framelayoutqlnav, svdkmonchange)
             transaction.commit()
         }
