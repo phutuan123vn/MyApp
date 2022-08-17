@@ -29,7 +29,7 @@ class QLnavigation : AppCompatActivity() {
         setContentView(R.layout.qlnav)
         hidekeyboard()
         drawerLayout = findViewById(R.id.drawerqlnav)
-        hidekeyboard()
+
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
@@ -69,6 +69,7 @@ class QLnavigation : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){
+            hidekeyboard()
             return true
         }
         return super.onOptionsItemSelected(item)

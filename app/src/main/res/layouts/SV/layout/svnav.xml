@@ -24,6 +24,5 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu_sv"
-        android:onClick="closekeyboard"/>
+        app:menu="@menu/menu_sv" />
 </androidx.drawerlayout.widget.DrawerLayout>

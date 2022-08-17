@@ -29,17 +29,17 @@ class MainActivity : AppCompatActivity() {
 //                Toast.makeText(context, "Please fill information", Toast.LENGTH_SHORT).show()
 //            }
         bttnSV.setOnClickListener {
-            val intent= Intent(this, LoginSV::class.java)
+            val intent= Intent(this, SVnavigation::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
         bttnGV.setOnClickListener {
-            val intent= Intent(this, LoginGV::class.java)
+            val intent= Intent(this, GVnavigation::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
         bttnQL.setOnClickListener {
-            val intent= Intent(this, LoginQL::class.java)
+            val intent= Intent(this, QLnavigation::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }

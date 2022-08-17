@@ -23,7 +23,6 @@ class SVnavigation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.svnav)
         drawerLayout = findViewById(R.id.drawersvnav)
-        hidekeyboard()
         toogle = ActionBarDrawerToggle( this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
@@ -43,9 +42,7 @@ class SVnavigation : AppCompatActivity() {
             }
             true
         }
-    //}
     }
-
     private fun replaceFragment(fragment: Fragment, title : String){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
@@ -63,6 +60,7 @@ class SVnavigation : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){
+            hidekeyboard()
             return true
         }
             return super.onOptionsItemSelected(item)
@@ -81,5 +79,6 @@ class SVnavigation : AppCompatActivity() {
         hidekeyboard()
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
     }
-
 }
+
+

@@ -60,6 +60,7 @@ class GVnavigation : AppCompatActivity() {
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toogle.onOptionsItemSelected(item)){
+            hidekeyboard()
             return true
         }
         return super.onOptionsItemSelected(item)
