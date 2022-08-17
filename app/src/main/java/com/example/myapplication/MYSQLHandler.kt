@@ -9,6 +9,7 @@ import com.android.volley.*
 import com.android.volley.Response.Listener
 import com.android.volley.toolbox.*
 import com.example.myapplication.login.LoadingDialog
+import com.example.myapplication.model.TEMP
 
 import com.example.myapplication.model.User
 import org.json.JSONObject
@@ -22,8 +23,8 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.182.233/android/"
-        var DataG= arrayListOf<String>()
+        val BASE_URL="http://192.168.33.112/android/"
+        val DataG: ArrayList<TEMP> = ArrayList<TEMP>()
      }
     fun insertUser(user: User){
         val url=BASE_URL + "insertUser.php"
@@ -190,31 +191,34 @@ class MYSQLHandler(var context: Context){
         requestQueue.add(StringRequest)
     }
     // get data
-    fun getSub(){
+    fun getSub(volleyCallback1: VolleyCallback1){
         val url= BASE_URL + "getSub.php"
         val requestQueue=Volley.newRequestQueue(context)
+        data class SUB(var mmh:String,var name:String,var clas:String)
         val stringRequest=StringRequest(url, { response ->
             try {
                 val jsonObject = JSONObject(response)
                 if (jsonObject.get("response").equals("Success")) {
                     val jsonArray = jsonObject.getJSONArray("data")
-                    for (i in 0 until jsonArray.length()){
+                    DataG.clear()
+                    for (i in 0..jsonArray.length()-1){
                         var data = jsonArray.getJSONObject(i)
-                        var mmh=data.get("MMH").toString()
-                        var name=data.get("NAME").toString()
-                        var clas=data.get("CLASS").toString()
-                        DataG.add(i,mmh)
-                        DataG.add(i,name)
-                        DataG.add(i,clas)
-                        Log.d("Tea","$mmh $name $clas")
+                        var temp=TEMP()
+                        temp.t1=data.get("MMH").toString()
+                        temp.t2=data.get("NAME").toString()
+                        temp.t3=data.get("CLASS").toString()
+                        DataG.add(temp)
+                        Log.d("CHEKC", DataG.get(i).t1 +" "+DataG.get(i).t2+" "+ DataG.get(i).t3)
                     }
                 }
-                Log.d("RES",response.toString())
-//                else{
-//                    DataG.clear()
-//                }
+                else{
+                    DataG.clear()
+                }
             }finally {
-                Log.d("DATA", DataG.toString() )
+                for (i in 0..DataG.size-1) {
+                    Log.d("CHEKC", DataG.get(i).t1 + " " + DataG.get(i).t2 + " " + DataG.get(i).t3)
+                }
+                volleyCallback1.onSuccess(DataG)
             }
         }, { error ->
 
@@ -223,6 +227,14 @@ class MYSQLHandler(var context: Context){
     }
     public interface VolleyCallback{
         fun onSuccess(Data:ArrayList<User>) {
+
+        }
+        fun onError(result: String) {
+
+        }
+    }
+    public interface VolleyCallback1{
+        fun onSuccess(Data:ArrayList<TEMP>) {
 
         }
         fun onError(result: String) {
