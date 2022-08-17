@@ -47,6 +47,7 @@
 />
 
             <TextView
+                android:id="@+id/InfoLName"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,6 +71,7 @@
                 android:paddingLeft="@dimen/_5sdp" />
 
             <TextView
+                android:id="@+id/InfoFName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Giang"
@@ -92,6 +94,7 @@
                 android:paddingLeft="@dimen/_5sdp" />
 
             <TextView
+                android:id="@+id/InfoMS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sv191"
@@ -103,22 +106,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border">
-            <TextView
-                android:paddingStart="@dimen/_5sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_20sdp"
-                android:gravity="center_vertical"
-                android:text="Giới Tính:"
-                android:textColor="@color/colornew"
-                android:textStyle="bold"
-                android:paddingLeft="@dimen/_5sdp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nam"
-                android:layout_gravity="center"
-                android:textColor="@color/colornew"/>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -156,6 +143,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/InfoAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tân Bình"
@@ -177,6 +165,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/InfoCCCD"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="000XXX123"
@@ -198,6 +187,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/InfoPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0xxx123"
@@ -219,6 +209,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/InfoE"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="abc@gmail.com"
