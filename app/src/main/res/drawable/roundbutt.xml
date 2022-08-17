@@ -3,7 +3,8 @@
     <item android:state_pressed="false" >
         <shape>
 <!--            <gradient android:startColor="@color/colornewtrongsuot"-->
-<!--                android:endColor="@color/teal_200trongsuot" />-->
+<!--                android:endColor="@color/teal_200"-->
+<!--                android:angle="270"/>-->
             <solid
                 android:color="@color/colornewtrongsuot" />
             <corners
@@ -20,7 +21,7 @@
             <solid
                 android:color="@color/teal_200trongsuot"/>
 <!--            <stroke-->
-<!--                android:width="2dp"-->
+<!--                android:width="1dp"-->
 <!--                android:color="@color/teal_200" />-->
             <corners
                 android:bottomRightRadius="50dp"

@@ -1,6 +1,7 @@
 package com.example.myapplication.login
 
 import android.content.Context
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -147,25 +148,25 @@ class SignUpSV : AppCompatActivity() {
     // Pass world validate da xong
     private fun passwordValidate(pass:String, passcon:String) {
         if (pass.length>=8 && passcon.length>=8 ){
-            SVBox1.isChecked=true
+            SVBox1.setCardBackgroundColor(Color.parseColor("#FF03DAC5"))
             al8=true
         }else{
             al8=false
-            SVBox1.isChecked=false
+            SVBox1.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
         }
         if(pass.matches((".*[A-Z].*").toRegex()) && passcon.matches((".*[A-Z].*").toRegex()) ){
             uc=true
-            SVBox3.isChecked=true
+            SVBox3.setCardBackgroundColor(Color.parseColor("#FF03DAC5"))
         }else{
             uc=false
-            SVBox3.isChecked=false
+            SVBox3.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
         }
         if (pass.matches((".*[0-9].*").toRegex()) && passcon.matches((".*[0-9].*").toRegex()) ){
             num=true
-            SVBox2.isChecked=true
+            SVBox2.setCardBackgroundColor(Color.parseColor("#FF03DAC5"))
         }else{
             num=false
-            SVBox2.isChecked=false
+            SVBox2.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
         }
     }
     // KIEM TRA INPUT da xong

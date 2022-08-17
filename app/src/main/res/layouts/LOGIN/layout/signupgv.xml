@@ -44,6 +44,7 @@
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
+            app:endIconMode="clear_text"
             app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/SUGLname"
@@ -62,6 +63,7 @@
             android:hint="@string/ten"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            app:endIconMode="clear_text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
@@ -82,6 +84,7 @@
             android:hint="@string/email"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            app:endIconMode="clear_text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:helperTextEnabled="true"
             app:helperTextTextColor="@android:color/holo_red_dark">
@@ -156,15 +159,21 @@
             android:gravity="start"
             android:orientation="horizontal"
             android:layout_marginLeft="70dp">
-            <CheckBox
+            <androidx.cardview.widget.CardView
                 android:id="@+id/GVBox1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
-                android:clickable="false"
                 android:layout_marginStart="10dp"
                 android:layout_marginLeft="10dp">
-            </CheckBox>
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/check_24" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,15 +193,22 @@
             android:gravity="start"
             android:orientation="horizontal"
             android:layout_marginLeft="70dp">
-            <CheckBox
+            <androidx.cardview.widget.CardView
                 android:id="@+id/GVBox2"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
-                android:clickable="false"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="70dp">
-            </CheckBox>
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/check_24" />
+            </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -211,15 +227,22 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal"
             android:layout_marginLeft="70dp">
-            <CheckBox
+            <androidx.cardview.widget.CardView
                 android:id="@+id/GVBox3"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:clickable="false"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="70dp">
-            </CheckBox>
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/check_24" />
+            </androidx.cardview.widget.CardView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"

@@ -2,6 +2,7 @@ package com.example.myapplication.login
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -155,25 +156,25 @@ class SignUpGV : AppCompatActivity() {
     // Pass world validate da xong
     private fun passwordValidate(pass:String, passcon:String) {
         if (pass.length>=8 && passcon.length>=8 ){
-            GVBox1.isChecked=true
+            GVBox1.setCardBackgroundColor(Color.parseColor("#FF03DAC5"))
             al8=true
         }else{
             al8=false
-            GVBox1.isChecked=false
+            GVBox1.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
         }
         if(pass.matches((".*[A-Z].*").toRegex()) && passcon.matches((".*[A-Z].*").toRegex()) ){
             uc=true
-            GVBox3.isChecked=true
+            GVBox3.setCardBackgroundColor(Color.parseColor("#FF03DAC5"))
         }else{
             uc=false
-            GVBox3.isChecked=false
+            GVBox3.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
         }
         if (pass.matches((".*[0-9].*").toRegex()) && passcon.matches((".*[0-9].*").toRegex()) ){
             num=true
-            GVBox2.isChecked=true
+            GVBox2.setCardBackgroundColor(Color.parseColor("#FF03DAC5"))
         }else{
             num=false
-            GVBox2.isChecked=false
+            GVBox2.setCardBackgroundColor(Color.parseColor("#FFFFFFFF"))
         }
     }
     // KIEM TRA INPUT da xong

@@ -58,8 +58,8 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvthongtinday.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/tabledslop.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/tablerowgvdslop.xml" value="0.24895833333333334" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.176" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.6" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass1.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass2.xml" value="0.2" />
@@ -67,8 +67,8 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/login1.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/login2.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/login3.xml" value="0.264" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupgv.xml" value="0.264" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupsv.xml" value="0.264" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupgv.xml" value="0.4" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupsv.xml" value="0.536" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/GV/layout/gv_qltkdetail.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_dsgv.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_dslop.xml" value="0.25" />
