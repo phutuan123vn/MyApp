@@ -1,29 +1,17 @@
 package com.example.myapplication
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.os.AsyncTask
-import android.util.ArrayMap
 import android.util.Log
 import android.widget.Toast
 import com.android.volley.*
 import com.android.volley.Response.Listener
 import com.android.volley.toolbox.*
 import com.example.myapplication.login.LoadingDialog
-import com.example.myapplication.login.LoginSV
-import com.example.myapplication.login.MainActivity
 
 import com.example.myapplication.model.User
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import org.json.JSONObject
-import java.lang.RuntimeException
-import java.util.*
-import java.util.concurrent.CountDownLatch
-import java.util.concurrent.ExecutionException
-import java.util.concurrent.TimeUnit
-import java.util.concurrent.TimeoutException
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 import com.android.volley.Response as VolleyResponse
@@ -34,7 +22,8 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.11.60/android/"
+        val BASE_URL="http://192.168.231.112/android/"
+        var DataG= arrayListOf<String>()
      }
     fun insertUser(user: User){
         val url=BASE_URL + "insertUser.php"
@@ -73,7 +62,7 @@ class MYSQLHandler(var context: Context){
         var Ulist=ArrayList<User>()
         Ulist.clear()
         val load= LoadingDialog(context as Activity)
-        var doAsynct=object : doAsync(){
+        var doAsynct=object : doAsync({}) {
             override fun onPreExecute() {
                 load.startLoading()
                 count=true
@@ -200,6 +189,37 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(StringRequest)
     }
+    // get data
+    fun getSub(){
+        val url= BASE_URL + "getSub.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=StringRequest(url, { response ->
+            try {
+                val jsonObject = JSONObject(response)
+                if (jsonObject.get("response").equals("Success")) {
+                    val jsonArray = jsonObject.getJSONArray("data")
+                    for (i in 0 until jsonArray.length()){
+                        var data = jsonArray.getJSONObject(i)
+                        var mmh=data.get("MMH").toString()
+                        var name=data.get("NAME").toString()
+                        var clas=data.get("CLASS").toString()
+                        DataG.clear()
+                        DataG.add(i,mmh)
+                        DataG.add(i,name)
+                        DataG.add(i,clas)
+                        Log.d("Tea","$mmh $name $clas")
+                    }
+                }
+                else{
+                    DataG.clear()
+                }
+            }finally {
+                Log.d("DATA", DataG.toString() )
+            }
+        }, { error ->
+
+        })
+    }
     public interface VolleyCallback{
         fun onSuccess(Data:ArrayList<User>) {
 
@@ -211,7 +231,7 @@ class MYSQLHandler(var context: Context){
 }
 
 
-open class doAsync() : AsyncTask<Void, Void, Void>() {
+open class doAsync(function: () -> Unit) : AsyncTask<Void, Void, Void>() {
      internal var ulist= ArrayList<User>()
     override fun doInBackground(vararg params: Void?): Void? {
         onPostExecute(null)
