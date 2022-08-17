@@ -22,7 +22,7 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.231.112/android/"
+        val BASE_URL="http://192.168.182.233/android/"
         var DataG= arrayListOf<String>()
      }
     fun insertUser(user: User){
@@ -203,22 +203,23 @@ class MYSQLHandler(var context: Context){
                         var mmh=data.get("MMH").toString()
                         var name=data.get("NAME").toString()
                         var clas=data.get("CLASS").toString()
-                        DataG.clear()
                         DataG.add(i,mmh)
                         DataG.add(i,name)
                         DataG.add(i,clas)
                         Log.d("Tea","$mmh $name $clas")
                     }
                 }
-                else{
-                    DataG.clear()
-                }
+                Log.d("RES",response.toString())
+//                else{
+//                    DataG.clear()
+//                }
             }finally {
                 Log.d("DATA", DataG.toString() )
             }
         }, { error ->
 
         })
+        requestQueue.add(stringRequest)
     }
     public interface VolleyCallback{
         fun onSuccess(Data:ArrayList<User>) {
