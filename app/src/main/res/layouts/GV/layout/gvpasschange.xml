@@ -29,7 +29,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:id="@+id/GVPassOld"
+                android:inputType="textPassword"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -45,7 +46,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:id="@+id/GVPassNew"
+                android:inputType="textPassword"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -61,7 +63,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:id="@+id/GVPassNewCon"
+                android:inputType="textPassword"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -82,6 +85,7 @@
             android:gravity="start"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/GVPassBox1"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 app:cardBackgroundColor="@color/white"
@@ -114,6 +118,7 @@
             android:gravity="start"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/GVPassBox2"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 app:cardBackgroundColor="@color/white"
@@ -145,6 +150,7 @@
             android:layout_marginTop="5dp"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
+                android:id="@+id/GVPassBox3"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 app:cardBackgroundColor="@color/white"
