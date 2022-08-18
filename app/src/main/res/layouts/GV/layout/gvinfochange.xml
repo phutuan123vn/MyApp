@@ -43,7 +43,7 @@
 
                 <EditText
                     android:inputType="text"
-                    android:id="@+id/hoedit"
+                    android:id="@+id/GVhoedit"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -69,38 +69,11 @@
 
                 <EditText
                     android:inputType="text"
-                    android:id="@+id/tenedit"
+                    android:id="@+id/GVtenedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="A"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colornew"/>
-            </TableRow>
-
-
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border">
-                <TextView
-                    android:paddingStart="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_20sdp"
-                    android:gravity="center_vertical"
-                    android:text="Giới Tính:"
-                    android:textColor="@color/colornew"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/_5sdp" />
-
-                <EditText
-                    android:inputType="text"
-                    android:id="@+id/gtedit"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nam"
                     android:layout_gravity="center"
                     android:textColor="@color/colornew"/>
             </TableRow>
@@ -120,7 +93,7 @@
 
                 <EditText
                     android:inputType="text"
-                    android:id="@+id/noiedit"
+                    android:id="@+id/GVnoiedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,7 +117,7 @@
 
                 <EditText
                     android:inputType="text"
-                    android:id="@+id/cmndedit"
+                    android:id="@+id/GVcmndedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -168,7 +141,7 @@
 
                 <EditText
                     android:inputType="text"
-                    android:id="@+id/sdtedit"
+                    android:id="@+id/GVsdtedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -192,7 +165,7 @@
 
                 <EditText
                     android:inputType="text"
-                    android:id="@+id/mailedit"
+                    android:id="@+id/GVmailedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
