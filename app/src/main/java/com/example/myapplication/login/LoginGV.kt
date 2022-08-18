@@ -91,7 +91,7 @@ class LoginGV : AppCompatActivity() {
     private fun textchange(context: Context) {
         GVUser.doAfterTextChanged {
             if (GVUser.text.toString().isEmpty()){
-                GVUserfill.error = "Không được để trống"
+                GVUserfill.error = "This can't be Empty"
             }else{
                 email=GVUser.text.toString().trim().lowercase()
                 GVUserfill.error=null
@@ -100,7 +100,7 @@ class LoginGV : AppCompatActivity() {
         }
         GVPass.doAfterTextChanged {
             if (GVPass.text.toString().isEmpty()){
-                GVPassfill.error="Không được để trống"
+                GVPassfill.error="This can't be Empty"
             }else{
                 pass=GVPass.text.toString().trim()
                 GVPassfill.error=null

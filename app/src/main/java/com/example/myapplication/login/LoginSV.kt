@@ -98,7 +98,7 @@ class LoginSV : AppCompatActivity() {
     private fun textchange(context: Context) {
         L1user.doAfterTextChanged {
             if (L1user.text.toString().isEmpty()) {
-                L1userfill.error = "Không được để trống"
+                L1userfill.error = "This can't be Empty"
             } else {
                 email=L1user.text.toString().trim().lowercase()
                 L1userfill.error = null
@@ -107,7 +107,7 @@ class LoginSV : AppCompatActivity() {
         }
         L1pass.doAfterTextChanged {
             if (L1pass.text.toString().isEmpty()) {
-                L1passfill.error = "Không được để trống"
+                L1passfill.error = "This can't be Empty"
             } else {
                 pass=L1pass.text.toString().trim()
                 L1passfill.error = null

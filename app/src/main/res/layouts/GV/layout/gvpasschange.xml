@@ -25,7 +25,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="false">
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            android:id="@+id/gvpasschangepassHT"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,7 +46,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="false">
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            android:id="@+id/gvpasschangepassnewHT"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,7 +67,11 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="false">
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            android:id="@+id/gvpasschangepassconnewHT"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,15 +87,17 @@
             android:text="@string/passwordthoa"
             android:layout_marginTop="15dp"
             android:textColor="@android:color/black"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:layout_marginLeft="70dp" />
 
         <LinearLayout
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_marginStart="70dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
             <androidx.cardview.widget.CardView
                 android:id="@+id/GVPassBox1"
                 android:layout_width="20dp"
@@ -107,16 +121,18 @@
                 android:layout_marginStart="10dp"
                 android:gravity="center|start"
                 android:text="@string/boxmin"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_marginStart="70dp"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
             android:gravity="start"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
             <androidx.cardview.widget.CardView
                 android:id="@+id/GVPassBox2"
                 android:layout_width="20dp"
@@ -139,16 +155,18 @@
                 android:textColor="@android:color/black"
                 android:text="@string/boxnumber"
                 android:gravity="center|start"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_marginStart="70dp"
             android:gravity="start"
             android:layout_height="30dp"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="70dp">
             <androidx.cardview.widget.CardView
                 android:id="@+id/GVPassBox3"
                 android:layout_width="20dp"
@@ -171,9 +189,11 @@
                 android:textColor="@android:color/black"
                 android:text="@string/boxinhoa"
                 android:gravity="center|start"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp" />
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updategvpasschange"
             android:layout_marginTop="50dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"

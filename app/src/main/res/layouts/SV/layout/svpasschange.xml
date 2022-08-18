@@ -24,11 +24,16 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="false">
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            android:id="@+id/svpasschangepassHT"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:id="@+id/SVPassOld"
+                android:inputType="textPassword"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -40,11 +45,16 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="false">
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            android:id="@+id/svpasschangepassnewHT"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textPassword"
+                android:id="@+id/SVPassNew"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -56,11 +66,16 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:errorEnabled="false">
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:helperTextEnabled="true"
+            android:id="@+id/svpasschangepassconnewHT"
+            app:helperTextTextColor="@android:color/holo_red_dark">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
+                android:inputType="textPassword"
+                android:id="@+id/SVPassNewCon"
                 android:textColorHint="#616161"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -89,7 +104,8 @@
                 app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:id="@+id/SVPassBox1">
                 <ImageView
                     android:layout_gravity="center"
                     android:layout_width="15dp"
@@ -122,7 +138,8 @@
                 app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:id="@+id/SVPassBox2">
                 <ImageView
                     android:layout_gravity="center"
                     android:layout_width="15dp"
@@ -155,7 +172,8 @@
                 app:cardCornerRadius="25dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginLeft="10dp"
+                android:id="@+id/SVPassBox3">
                 <ImageView
                     android:layout_gravity="center"
                     android:layout_width="15dp"
@@ -172,6 +190,7 @@
                 android:layout_marginLeft="10dp" />
         </LinearLayout>
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updatesvpasschange"
             android:layout_marginTop="50dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"

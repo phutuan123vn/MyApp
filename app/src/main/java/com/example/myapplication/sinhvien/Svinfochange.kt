@@ -6,9 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
+import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
+import com.example.myapplication.model.TEMP
+import kotlinx.android.synthetic.main.svinfo.*
+import kotlinx.android.synthetic.main.svinfochange.*
 import kotlinx.android.synthetic.main.svinfochange.view.*
 
 
@@ -29,5 +34,5 @@ class Svinfochange : Fragment() {
         }
         return v
     }
-
 }
+
