@@ -47,6 +47,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/GVINfoLName"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -70,6 +71,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoFName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="A"
@@ -92,6 +94,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoMS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="GV1911"
@@ -99,27 +102,7 @@
                     android:textColor="@color/colornew"/>
             </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border">
-                <TextView
-                    android:paddingStart="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_20sdp"
-                    android:gravity="center_vertical"
-                    android:text="Giới Tính:"
-                    android:textColor="@color/colornew"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/_5sdp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nam"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colornew"/>
-            </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -135,6 +118,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoSub"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Thực tập điện tử 1"
@@ -156,6 +140,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tân Bình"
@@ -177,6 +162,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoPersonID"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="000XXX123"
@@ -198,6 +184,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0xxx123"
@@ -219,6 +206,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <TextView
+                    android:id="@+id/GVInfoEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="abc@gmail.com"

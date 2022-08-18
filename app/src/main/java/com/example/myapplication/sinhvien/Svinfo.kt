@@ -26,7 +26,7 @@ class Svinfo : Fragment() {
         val v = inflater.inflate(R.layout.svinfo, container, false)
         val edit = v.findViewById<Button>(R.id.svinfoedit)
         val db=MYSQLHandler(requireContext())
-        db.getInfo(MYSQLHandler.user.id,object :MYSQLHandler.VolleyCallback1{
+        db.getStuInfo(MYSQLHandler.user.id,object :MYSQLHandler.VolleyCallback1{
             override fun onSuccess(Data: ArrayList<TEMP>) {
                 super.onSuccess(Data)
                 InfoLName.text=Data.get(0).t1

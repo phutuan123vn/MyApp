@@ -227,8 +227,8 @@ class MYSQLHandler(var context: Context){
         requestQueue.add(stringRequest)
     }
     // getInfo
-    fun getInfo(id:Int,volleyCallback1: VolleyCallback1){
-        val url= BASE_URL + "getInfo.php"
+    fun getStuInfo(id:Int,volleyCallback1: VolleyCallback1){
+        val url= BASE_URL + "getStuInfo.php"
         val requestQueue=Volley.newRequestQueue(context)
         val stringRequest = object : StringRequest(
             Request.Method.POST,
@@ -245,11 +245,51 @@ class MYSQLHandler(var context: Context){
                         temp.t2=data.get("FIRST_NAME").toString()
                         temp.t3=data.get("CONCAT(CAREER,CODE)").toString()
                         temp.t4=data.get("ADDRESS").toString()
-                        temp.t5=data.get("CCCD").toString()
+                        temp.t5=data.get("PERSON_ID").toString()
                         temp.t6=data.get("PHONE").toString()
                         temp.t7=data.get("EMAIL").toString()
                         DataG.add(temp)
                         Log.d("CHECK", DataG.get(0).t1+" "+DataG.get(0).t2+" "+DataG.get(0).t3+" "+DataG.get(0).t4+" "+DataG.get(0).t5+" "+DataG.get(0).t6+" "+DataG.get(0).t7)
+                    }
+                }finally {
+                    volleyCallback1.onSuccess(DataG)
+                }
+            },
+            VolleyResponse.ErrorListener { error ->
+            }
+        ){
+            override fun getParams(): HashMap<String,String> {
+                val map=HashMap<String,String>()
+                map["ID"]=id.toString()
+                return map
+            }
+        }
+        requestQueue.add(stringRequest)
+    }
+    fun getTeachInfo(id:Int,volleyCallback1: VolleyCallback1){
+        val url= BASE_URL + "getTeachInfo.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest = object : StringRequest(
+            Request.Method.POST,
+            url,
+            Listener { response ->
+                try {
+                    val jsonObject = JSONObject(response)
+                    DataG.clear()
+                    if (jsonObject.get("response").equals("Success")) {
+                        val jsonArray = jsonObject.getJSONArray("data")
+                        var data=jsonArray.getJSONObject(0)
+                        var temp=TEMP()
+                        temp.t1=data.get("LAST_NAME").toString()
+                        temp.t2=data.get("FIRST_NAME").toString()
+                        temp.t3=data.get("CONCAT(CAREER,CODE)").toString()
+                        temp.t4=data.get("SUBJECT").toString()
+                        temp.t5=data.get("ADDRESS").toString()
+                        temp.t6=data.get("PERSON_ID").toString()
+                        temp.t7=data.get("PHONE").toString()
+                        temp.t8=data.get("EMAIL").toString()
+                        DataG.add(temp)
+                        Log.d("CHECK", DataG.get(0).t1+" "+DataG.get(0).t2+" "+DataG.get(0).t3+" "+DataG.get(0).t4+" "+DataG.get(0).t5+" "+DataG.get(0).t6+" "+DataG.get(0).t7+" "+ DataG.get(0).t8)
                     }
                 }finally {
                     volleyCallback1.onSuccess(DataG)
