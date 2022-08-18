@@ -306,6 +306,27 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(stringRequest)
     }
+    fun updatePass(pass:String,volleyCallback1: VolleyCallback1){
+        val url= BASE_URL+"updatePassUser.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=object :StringRequest(Request.Method.POST,
+        url,
+        Listener { response ->
+            Toast.makeText(context,response.toString())
+        },
+        VolleyResponse.ErrorListener { error ->
+            //
+            Toast.makeText(context,error.toString())
+        }){
+            override fun getParams(): HashMap<String, String>? {
+                var map:HashMap<String,String> = HashMap()
+                map["ID"]= user.id.toString()
+                map["PASSWORD"]=pass
+                return map
+            }
+        }
+        requestQueue.add(stringRequest)
+    }
     public interface VolleyCallback{
         fun onSuccess(Data:ArrayList<User>) {
 
