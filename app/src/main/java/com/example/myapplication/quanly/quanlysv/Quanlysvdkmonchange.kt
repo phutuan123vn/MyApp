@@ -49,7 +49,7 @@ class Quanlysvdkmonchange : Fragment() {
         tableRecyclerView = v.findViewById(R.id.table_recycler_view_qlsvmondadkchange)
         tableRecyclerView.layoutManager = layoutManager2
         tableRecyclerView.setHasFixedSize(true)
-        tableRowAdapterSVmondadk = TableRowAdapterSVmondadk(data1)
+//        tableRowAdapterSVmondadk = TableRowAdapterSVmondadk(data1)
         tableRecyclerView.adapter = tableRowAdapterSVmondadk
         return v
     }

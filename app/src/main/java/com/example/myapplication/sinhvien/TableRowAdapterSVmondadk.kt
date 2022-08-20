@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
+import com.example.myapplication.model.TEMP
 import com.example.myapplication.model.User
 import kotlin.collections.ArrayList
 
-class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<User>) : RecyclerView.Adapter<TableRowAdapterSVmondadk.ViewHolder>() {
+class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<TEMP>) : RecyclerView.Adapter<TableRowAdapterSVmondadk.ViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.tablerowmondadk, viewGroup, false)
         return ViewHolder(itemView)
@@ -19,6 +20,9 @@ class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<User>) : R
 //        viewHolder.tenmhcol.text = userArrayListSV[i].First_Name
 //        viewHolder.tietcol.text = userArrayListSV[i].First_Name
 //        viewHolder.thucol.text = userArrayListSV[i].First_Name
+        viewHolder.mmhcol.text=userArrayListSV[i].t1
+        viewHolder.tenmhcol.text=userArrayListSV[i].t2
+        viewHolder.tietcol.text=userArrayListSV[i].t3
     }
 
     override fun getItemCount(): Int {
