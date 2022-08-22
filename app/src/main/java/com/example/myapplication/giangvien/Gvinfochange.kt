@@ -1,11 +1,14 @@
 package com.example.myapplication.giangvien
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 import com.example.myapplication.R
 import androidx.navigation.Navigation
@@ -21,32 +24,37 @@ import kotlinx.android.synthetic.main.svinfochange.tenedit
 
 
 class Gvinfochange : Fragment() {
-
-
+    private var ho:String? = ""
+    private var ten:String? = ""
+    private var address:String? = ""
+    private var PID:String? = ""
+    private var phone:String? = ""
+    private var mail:String? = ""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val v = inflater.inflate(R.layout.gvinfochange, container, false)
         val back = v.findViewById<Button>(R.id.gvinfochangeback)
-        val db= MYSQLHandler(requireContext())
-        db.getTeachInfo(MYSQLHandler.user.id,object : MYSQLHandler.VolleyCallback1{
-            override fun onSuccess(Data: ArrayList<TEMP>) {
-                super.onSuccess(Data)
-                var lname=Data.get(0).t1
-                var fname=Data.get(0).t2
-                var addr=Data.get(0).t5
-                var pid=Data.get(0).t6
-                var phone=Data.get(0).t7
-                var emaill=Data.get(0).t8
-                GVhoedit.setText(lname)
-                GVtenedit.setText(fname)
-                GVnoiedit.setText(addr)
-                GVcmndedit.setText(pid)
-                GVsdtedit.setText(phone)
-                GVmailedit.setText(emaill)
-            }
-        })
+        val gvhoedit=v.findViewById<TextView>(R.id.GVhoedit)
+        val gvtenedit=v.findViewById<TextView>(R.id.GVtenedit)
+        val gvnoiedit=v.findViewById<EditText>(R.id.GVnoiedit)
+        val gvPIDedit=v.findViewById<EditText>(R.id.GVcmndedit)
+        val gvphonedit=v.findViewById<EditText>(R.id.GVsdtedit)
+        val gvmailedit=v.findViewById<EditText>(R.id.GVmailedit)
+        val arg=this.arguments
+        ho=arg?.getString("Ho")
+        ten=arg?.getString("Ten")
+        address=arg?.getString("Address")
+        PID=arg?.getString("PersonID")
+        phone=arg?.getString("Phone")
+        mail=arg?.getString("Email")
+        gvhoedit.text=ho
+        gvtenedit.text=ten
+        gvnoiedit.setText(address)
+        gvphonedit.setText(phone)
+        gvmailedit.setText(mail)
+        gvPIDedit.setText(PID)
         back.setOnClickListener {
             val Gvinfo = Gvinfo()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()

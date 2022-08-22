@@ -22,12 +22,14 @@ class Gvinfo : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var Daat = TEMP()
         val v = inflater.inflate(R.layout.gvinfo, container, false)
         val edit = v.findViewById<Button>(R.id.gvinfoedit)
         val db=MYSQLHandler(requireContext())
         db.getTeachInfo(MYSQLHandler.user.id,object :MYSQLHandler.VolleyCallback1{
             override fun onSuccess(Data: ArrayList<TEMP>) {
                 super.onSuccess(Data)
+                Daat=Data[0]
                 GVINfoLName.text=Data.get(0).t1
                 GVInfoFName.text=Data.get(0).t2
                 GVInfoMS.text=Data.get(0).t3
@@ -39,10 +41,18 @@ class Gvinfo : Fragment() {
             }
         })
         edit.setOnClickListener {
-            val Gvinfochange = Gvinfochange()
+            val bundle=Bundle()
+            bundle.putString("Ho",Daat.t1)
+            bundle.putString("Ten",Daat.t2)
+            bundle.putString("Address",Daat.t5)
+            bundle.putString("PersonID",Daat.t6)
+            bundle.putString("Phone",Daat.t7)
+            bundle.putString("Email",Daat.t8)
+            val gvinfochange = Gvinfochange()
+            gvinfochange.arguments=bundle
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
             transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
-            transaction.replace(R.id.framelayoutgvnav, Gvinfochange)
+            transaction.replace(R.id.framelayoutgvnav, gvinfochange)
             transaction.commit()
         }
         return v

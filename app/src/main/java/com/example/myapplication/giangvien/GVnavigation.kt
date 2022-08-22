@@ -11,13 +11,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.myapplication.*
 import com.example.myapplication.login.MainActivity
+import com.example.myapplication.model.TEMP
 import kotlinx.android.synthetic.main.gvdslop.*
 import kotlinx.android.synthetic.main.gvnav.*
 import kotlinx.android.synthetic.main.login1.*
 
-class GVnavigation : AppCompatActivity() {
+class GVnavigation: AppCompatActivity() {
     lateinit var toogle : ActionBarDrawerToggle
     private lateinit var drawerLayout: DrawerLayout
 
@@ -83,4 +85,7 @@ class GVnavigation : AppCompatActivity() {
         hide.hideSoftInputFromWindow(view.windowToken, 0)
     }
 
+
 }
+
+
