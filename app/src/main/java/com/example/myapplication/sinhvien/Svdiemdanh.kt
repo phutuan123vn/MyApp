@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.findFragment
@@ -25,6 +26,8 @@ import kotlinx.android.synthetic.main.svdiemdanh.*
 import kotlinx.android.synthetic.main.svdiemdanh.view.*
 
 class Svdiemdanh : Fragment() {
+        var output1 :String?=""
+
     private lateinit var tableRecyclerView : RecyclerView
     private lateinit var tableRowAdapterSVdiemdanh: TableRowAdapterSVdiemdanh
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +38,9 @@ class Svdiemdanh : Fragment() {
         savedInstanceState: Bundle?
     ):View? {
         val v = inflater.inflate(R.layout.svdiemdanh, container, false)
-
+        val textView : TextView = v.findViewById(R.id.textviewtest)
+                output1 = arguments?.getString("Test")
+        textView.text = output1
         val data=activity.createContext(this)
         dataInitlize(data)
         val layoutManager = LinearLayoutManager(context)
