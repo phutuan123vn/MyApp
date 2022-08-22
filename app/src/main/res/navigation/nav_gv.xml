@@ -4,13 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_gv"
-    app:startDestination="@id/gvthongtinday">
-    <fragment
-        android:id="@+id/gvthongtinday"
-        android:name="com.example.myapplication.giangvien.Gvthongtinday"
-        android:label="Gvthongtinday"
-        tools:layout="@layout/gvthongtinday">
-    </fragment>
+    app:startDestination="@id/gvdslop">
+<!--    <fragment-->
+<!--        android:id="@+id/gvthongtinday"-->
+<!--        android:name="com.example.myapplication.giangvien.Gvthongtinday"-->
+<!--        android:label="Gvthongtinday"-->
+<!--        tools:layout="@layout/gvthongtinday">-->
+<!--    </fragment>-->
     <fragment
         android:id="@+id/gvdslop"
         android:name="com.example.myapplication.giangvien.Gvdslop"

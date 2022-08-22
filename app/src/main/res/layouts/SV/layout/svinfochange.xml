@@ -42,14 +42,14 @@
                     />
 
                 <EditText
-                    android:id="@+id/hoedit"
-                    android:inputType="text"
-                    android:layout_gravity="center"
+                    android:id="@+id/SVhoedit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:inputType="text"
                     android:text="Huỳnh Khả "
-                    android:textSize="@dimen/_10sdp"
-                    android:textColor="@color/colornew"/>
+                    android:textColor="@color/colornew"
+                    android:textSize="@dimen/_10sdp" />
             </TableRow>
 
             <TableRow
@@ -68,7 +68,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:id="@+id/tenedit"
+                    android:id="@+id/SVtenedit"
                     android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -80,30 +80,7 @@
 
 
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border">
-                <TextView
-                    android:paddingStart="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_20sdp"
-                    android:gravity="center_vertical"
-                    android:text="Giới Tính:"
-                    android:textColor="@color/colornew"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/_5sdp" />
 
-                <EditText
-                    android:id="@+id/gtedit"
-                    android:inputType="text"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nam"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colornew"/>
-            </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,7 +96,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:id="@+id/noiedit"
+                    android:id="@+id/SVnoiedit"
                     android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -143,7 +120,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:id="@+id/cmndedit"
+                    android:id="@+id/SVcmndedit"
                     android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -167,7 +144,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:id="@+id/sdtedit"
+                    android:id="@+id/SVsdtedit"
                     android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -191,7 +168,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:id="@+id/mailedit"
+                    android:id="@+id/SVmailedit"
                     android:inputType="text"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -203,6 +180,7 @@
         </TableLayout>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/svinfochangeupdate"
             android:layout_marginTop="100dp"
             android:layout_width="300dp"
             android:layout_height="wrap_content"

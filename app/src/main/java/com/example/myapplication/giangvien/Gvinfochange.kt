@@ -18,9 +18,7 @@ import kotlinx.android.synthetic.main.gvinfo.*
 import kotlinx.android.synthetic.main.gvinfochange.*
 import kotlinx.android.synthetic.main.gvinfochange.view.*
 import kotlinx.android.synthetic.main.svinfochange.*
-import kotlinx.android.synthetic.main.svinfochange.hoedit
-import kotlinx.android.synthetic.main.svinfochange.noiedit
-import kotlinx.android.synthetic.main.svinfochange.tenedit
+
 
 
 class Gvinfochange : Fragment() {
@@ -59,6 +57,19 @@ class Gvinfochange : Fragment() {
             val Gvinfo = Gvinfo()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
             transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
+            transaction.replace(R.id.framelayoutgvnav, Gvinfo)
+            transaction.commit()
+        }
+        val update = v.findViewById<Button>(R.id.gvinfochangeupdate)
+        update.setOnClickListener {
+            val Gvinfo = Gvinfo()
+            val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+            transaction.setCustomAnimations(
+                R.anim.slide_in_left,
+                R.anim.slide_out_right,
+                R.anim.slide_in_right,
+                R.anim.slide_out_left
+            )
             transaction.replace(R.id.framelayoutgvnav, Gvinfo)
             transaction.commit()
         }

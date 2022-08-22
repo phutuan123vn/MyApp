@@ -48,6 +48,7 @@
             app:boxCornerRadiusBottomStart="10dp"
             app:errorEnabled="false"
             app:startIconDrawable="@drawable/icon_email"
+            app:endIconTint="@color/colornew"
             android:focusableInTouchMode="true"
             app:endIconMode="clear_text">
 

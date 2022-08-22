@@ -31,12 +31,11 @@ class GVnavigation: AppCompatActivity() {
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportFragmentManager.beginTransaction().replace(R.id.framelayoutgvnav, Gvthongtinday()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.framelayoutgvnav, Gvdslop()).commit()
         navgvview.setNavigationItemSelectedListener {
             it.isChecked = true
 
             when(it.itemId){
-                R.id.gvthongtinday -> replaceFragment(Gvthongtinday(),it.title.toString())
                 R.id.gvdslop -> replaceFragment(Gvdslop(),it.title.toString())
                 R.id.gvinfo -> replaceFragment(Gvinfo(),it.title.toString())
                 R.id.gvpasschange -> replaceFragment(Gvpasschange(),it.title.toString())
