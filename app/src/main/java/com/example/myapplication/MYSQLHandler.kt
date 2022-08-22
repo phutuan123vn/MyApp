@@ -23,7 +23,7 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.1.6/android/"
+        val BASE_URL="http://192.168.152.112/android/"
         val DataG: ArrayList<TEMP> = ArrayList<TEMP>()
      }
     fun insertUser(user: User){

@@ -25,26 +25,26 @@ class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick {
     private lateinit var tableRowAdapterSVdsmondk: TableRowAdapterSVdsmondk
     private lateinit var tableRowAdapterSVmondadk: TableRowAdapterSVmondadk
     val data1:ArrayList<TEMP> = ArrayList()
+    var data2: ArrayList<TEMP> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         data1.clear()
         val v = inflater.inflate(R.layout.svdkmon, container, false)
-        var data= ArrayList<TEMP>()
         val db=activity?.createContext(this@Svdkmon)
         db?.getSub(object : MYSQLHandler.VolleyCallback1{
             override fun onSuccess(Data: ArrayList<TEMP>) {
                 super.onSuccess(Data)
-                data=Data
-                for (i in 0..data.size-1) {
+                data2=Data
+                for (i in 0..data2.size-1) {
                     Log.d("check", Data.get(i).t1 + Data.get(i).t2 + Data.get(i).t3)
                 }
                 val layoutManager = LinearLayoutManager(context)
                 tableRecyclerView1 = v.findViewById(R.id.table_recycler_view_dsmondk)
                 tableRecyclerView1.layoutManager = layoutManager
                 tableRecyclerView1.setHasFixedSize(true)
-                tableRowAdapterSVdsmondk = TableRowAdapterSVdsmondk(data,this@Svdkmon)
+                tableRowAdapterSVdsmondk = TableRowAdapterSVdsmondk(data2,this@Svdkmon)
                 tableRecyclerView1.adapter = tableRowAdapterSVdsmondk
             }
         })
@@ -61,15 +61,14 @@ class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick {
     }
     private fun dataInitlize(data: TEMP) {
         data1.add(data)
-        tableRowAdapterSVmondadk = TableRowAdapterSVmondadk(data1)
-        tableRecyclerView2.adapter = tableRowAdapterSVmondadk
         tableRecyclerView2.adapter!!.notifyDataSetChanged()
     }
 
     override fun onitemclick(data: TEMP, pos: Int) {
         Toast.makeText(requireContext(),"Click $pos ${data.t1}",Toast.LENGTH_SHORT).show()
         dataInitlize(data)
-
+        data2.removeAt(pos)
+        tableRecyclerView1.adapter!!.notifyDataSetChanged()
     }
 }
 
