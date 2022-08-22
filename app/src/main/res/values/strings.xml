@@ -99,5 +99,7 @@
     <string name="tiet">Tiết 1</string>
     <string name="hocki">Học Kì:</string>
     <string name="lopcol">Lớp</string>
+    <string name="tenmonhoc">Tên môn học:</string>
+    <string name="lop">Lớp:</string>
 
 </resources>

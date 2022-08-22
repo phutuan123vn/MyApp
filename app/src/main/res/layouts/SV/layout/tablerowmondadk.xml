@@ -64,6 +64,7 @@
                 android:padding="6sp"
                 android:background="@drawable/border"/>
             <Button
+                android:id="@+id/xoacol"
                 android:layout_width="50dp"
                 android:layout_column="5"
                 android:layout_height="35dp"

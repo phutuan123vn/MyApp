@@ -19,12 +19,12 @@ import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdsmondk
 import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVmondadk
 
 
-class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick {
+class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick,TableRowAdapterSVmondadk.callbackmon {
     private lateinit var tableRecyclerView1 : RecyclerView
     private lateinit var tableRecyclerView2 : RecyclerView
     private lateinit var tableRowAdapterSVdsmondk: TableRowAdapterSVdsmondk
     private lateinit var tableRowAdapterSVmondadk: TableRowAdapterSVmondadk
-    val data1:ArrayList<TEMP> = ArrayList()
+    var data1:ArrayList<TEMP> = ArrayList()
     var data2: ArrayList<TEMP> = ArrayList()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,15 +36,15 @@ class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick {
         db?.getSub(object : MYSQLHandler.VolleyCallback1{
             override fun onSuccess(Data: ArrayList<TEMP>) {
                 super.onSuccess(Data)
-                data2=Data
-                for (i in 0..data2.size-1) {
+                data1=Data
+                for (i in 0..data1.size-1) {
                     Log.d("check", Data.get(i).t1 + Data.get(i).t2 + Data.get(i).t3)
                 }
                 val layoutManager = LinearLayoutManager(context)
                 tableRecyclerView1 = v.findViewById(R.id.table_recycler_view_dsmondk)
                 tableRecyclerView1.layoutManager = layoutManager
                 tableRecyclerView1.setHasFixedSize(true)
-                tableRowAdapterSVdsmondk = TableRowAdapterSVdsmondk(data2,this@Svdkmon)
+                tableRowAdapterSVdsmondk = TableRowAdapterSVdsmondk(data1,this@Svdkmon)
                 tableRecyclerView1.adapter = tableRowAdapterSVdsmondk
             }
         })
@@ -53,21 +53,28 @@ class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick {
         tableRecyclerView2 = v.findViewById(R.id.table_recycler_view_mondadk)
         tableRecyclerView2.layoutManager = layoutManager2
         tableRecyclerView2.setHasFixedSize(true)
-        tableRowAdapterSVmondadk = TableRowAdapterSVmondadk(data1)
+        tableRowAdapterSVmondadk = TableRowAdapterSVmondadk(data2,this@Svdkmon)
         tableRecyclerView2.adapter = tableRowAdapterSVmondadk
         tableRecyclerView2.adapter!!.notifyDataSetChanged()
 
         return v
     }
-    private fun dataInitlize(data: TEMP) {
-        data1.add(data)
+    private fun dataInitlize1(data: TEMP) {
+        data2.add(data)
         tableRecyclerView2.adapter!!.notifyDataSetChanged()
     }
 
     override fun onitemclick(data: TEMP, pos: Int) {
         Toast.makeText(requireContext(),"Click $pos ${data.t1}",Toast.LENGTH_SHORT).show()
-        dataInitlize(data)
+        dataInitlize1(data)
+        data1.removeAt(pos)
+        tableRecyclerView1.adapter!!.notifyDataSetChanged()
+    }
+
+    override fun onItemClickmondadk(Data: TEMP, pos: Int) {
         data2.removeAt(pos)
+        tableRecyclerView2.adapter!!.notifyDataSetChanged()
+        data1.add(Data)
         tableRecyclerView1.adapter!!.notifyDataSetChanged()
     }
 }
