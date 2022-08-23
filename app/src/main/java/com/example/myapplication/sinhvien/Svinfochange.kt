@@ -11,13 +11,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.Navigation
 import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
 import com.example.myapplication.model.TEMP
-import kotlinx.android.synthetic.main.svinfo.*
-import kotlinx.android.synthetic.main.svinfochange.*
-import kotlinx.android.synthetic.main.svinfochange.view.*
 import java.util.regex.Pattern
 
 
@@ -77,7 +73,7 @@ class Svinfochange : Fragment() {
                 }else{
                     Toast.makeText(requireContext(),"Email is Invalid",Toast.LENGTH_SHORT).show()
                 }
-                if (svPIDedit.text.toString().trim().length==10){
+                if (svPIDedit.text.toString().trim().length in 8..10){
                     PIDcheck=true
                 }else{
                     Toast.makeText(requireContext(),"Person ID is Invalid",Toast.LENGTH_SHORT).show()
@@ -89,7 +85,42 @@ class Svinfochange : Fragment() {
                 }
                 if (emailcheck && phonecheck && PIDcheck){
                     val db=MYSQLHandler(requireContext())
-                    db.checkmail()
+                    var email= svmail.text.toString().trim().lowercase()
+                    var phone= svphone.text.toString().trim()
+                    var PID=svPIDedit.text.toString().trim()
+                    var address=svnoiedit.text.toString().trim()
+                    db.checkinfo(email,phone,PID,object :MYSQLHandler.VolleyCallback1{
+                        override fun onSuccess(Data: ArrayList<TEMP>) {
+                            super.onSuccess(Data)
+                            var mailu:Boolean=false
+                            var phoneu:Boolean=false
+                            var pidu:Boolean=false
+                            var checkmail= Data[0].t1
+                            var checkphone=Data[0].t2
+                            var checkPID=Data[0].t3
+                            if (checkmail==1.toString()){
+                                mailu=false
+                                Toast.makeText(requireContext(),"Email have been used",Toast.LENGTH_SHORT).show()
+                            }else{
+                                mailu=true
+                            }
+                            if (checkphone==1.toString()){
+                                phoneu=false
+                                Toast.makeText(requireContext(),"Phone have been used",Toast.LENGTH_SHORT).show()
+                            }else{
+                                phoneu=true
+                            }
+                            if (checkPID==1.toString()){
+                                pidu=false
+                                Toast.makeText(requireContext(),"Person ID is not Correct",Toast.LENGTH_SHORT).show()
+                            }else{
+                                pidu=true
+                            }
+                            if (pidu && phoneu && mailu){
+                                db.updateStuInfo(email,phone,PID,address)
+                            }
+                        }
+                    })
                 }
             }
 //            val Svinfo = Svinfo()

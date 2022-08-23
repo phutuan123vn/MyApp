@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.os.AsyncTask
 import android.util.Log
+import android.widget.EditText
 import android.widget.Toast
 import com.android.volley.*
 import com.android.volley.Response.Listener
@@ -23,7 +24,7 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.160.112/android/"
+        val BASE_URL="http://192.168.137.112/android/"
         val DataG: ArrayList<TEMP> = ArrayList<TEMP>()
      }
     fun insertUser(user: User){
@@ -266,7 +267,6 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(stringRequest)
     }
-    // lay du lieu dssv
     fun getStuInfoDS(volleyCallback1: VolleyCallback1){
         val url= BASE_URL + "getAllData.php" // sua link php
         val requestQueue=Volley.newRequestQueue(context)
@@ -300,7 +300,6 @@ class MYSQLHandler(var context: Context){
         )
         requestQueue.add(stringRequest)
     }
-    //
     fun getTeachInfo(id:Int,volleyCallback1: VolleyCallback1){
         val url= BASE_URL + "getTeachInfo.php"
         val requestQueue=Volley.newRequestQueue(context)
@@ -341,38 +340,6 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(stringRequest)
     }
-    // lay du lieu dsGV
-    fun getTeachInfoDS(volleyCallback1: VolleyCallback1){
-        val url= BASE_URL + "getAllData.php" // sua link php
-        val requestQueue=Volley.newRequestQueue(context)
-        val stringRequest = StringRequest(url,
-            { response ->
-                try {
-                    val jsonObject = JSONObject(response)
-                    DataG.clear()
-                    if (jsonObject.get("response").equals("Success")) {
-                        val jsonArray = jsonObject.getJSONArray("data")
-                        for (i in 0..jsonArray.length() - 1) {
-                            var data = jsonArray.getJSONObject(i)
-                            var temp = TEMP()
-                            temp.t1 = data.get("LAST_NAME").toString()
-                            temp.t2 = data.get("FIRST_NAME").toString()
-//                        temp.t3=data.get("CONCAT(CAREER,CODE)").toString()
-                            temp.t4 = data.get("ID").toString()
-                            DataG.add(temp)
-                            Log.d("CHECK", DataG.get(0).t1 + " " + DataG.get(0).t2 + " " + DataG.get(0).t3)
-                        }
-                    }
-                }finally {
-                    volleyCallback1.onSuccess(DataG)
-                }
-            },
-            VolleyResponse.ErrorListener { error ->
-            }
-        )
-        requestQueue.add(stringRequest)
-    }
-
     fun updatePass(pass:String){
         val url= BASE_URL+"updatePassUser.php"
         val requestQueue=Volley.newRequestQueue(context)
@@ -395,7 +362,68 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(stringRequest)
     }
-    public interface VolleyCallback{
+
+    fun checkinfo(email: String, phone: String, pid: String,callback1: VolleyCallback1) {
+        val url= BASE_URL+"checkDataInfo.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=object :StringRequest(
+            Request.Method.POST,
+            url,
+            Listener { response ->
+                try {
+                    val jsonObject=JSONObject(response)
+                    val jsonarray=jsonObject.getJSONArray("data")
+                    var data=jsonarray.getJSONObject(0)
+                    var temp=TEMP()
+                    temp.t1=data.get("COLEMAIL").toString()
+                    temp.t2=data.get("COLPHONE").toString()
+                    temp.t3=data.get("COLPID").toString()
+                    DataG.clear()
+                    DataG.add(temp)
+                }finally {
+                    callback1.onSuccess(DataG)
+                }
+
+            }, com.android.volley.Response.ErrorListener { error ->
+
+            }
+        ){
+            override fun getParams(): HashMap<String, String>? {
+                val map:HashMap<String,String> = HashMap()
+                map["EMAIL"]=email
+                map["PHONE"]=phone
+                map["PERSON_ID"]=pid
+                return map
+            }
+        }
+        requestQueue.add(stringRequest)
+    }
+    fun updateStuInfo(email: String,phone: String,pid: String,address:String){
+        val url= BASE_URL+"updateStuInfo.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=object :StringRequest(
+            Request.Method.POST,
+            url,
+            Listener { response ->
+                Toast.makeText(context,response,Toast.LENGTH_SHORT).show()
+            }, com.android.volley.Response.ErrorListener {error ->
+                Toast.makeText(context,"${error(error)}",Toast.LENGTH_SHORT).show()
+            }
+        ){
+            override fun getParams(): HashMap<String, String>? {
+                val map:HashMap<String,String> =HashMap()
+                map["ID"]= user.id.toString()
+                map["EMAIL"]=email
+                map["PHONE"]=phone
+                map["ADDRESS"]=address
+                map["PID"]=pid
+                return map
+            }
+        }
+        requestQueue.add(stringRequest)
+    }
+
+    interface VolleyCallback{
         fun onSuccess(Data:ArrayList<User>) {
 
         }
