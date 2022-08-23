@@ -19,7 +19,7 @@ import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdsmondk
 import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVmondadk
 
 
-class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick,TableRowAdapterSVmondadk.callbackmon {
+class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackdsmon,TableRowAdapterSVmondadk.callbackmondadk {
     private lateinit var tableRecyclerView1 : RecyclerView
     private lateinit var tableRecyclerView2 : RecyclerView
     private lateinit var tableRowAdapterSVdsmondk: TableRowAdapterSVdsmondk
@@ -64,14 +64,14 @@ class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackclick,TableRowAdapte
         tableRecyclerView2.adapter!!.notifyDataSetChanged()
     }
 
-    override fun onitemclick(data: TEMP, pos: Int) {
+    override fun onitemclickdsmon(data: TEMP, pos: Int) {
         Toast.makeText(requireContext(),"Click $pos ${data.t1}",Toast.LENGTH_SHORT).show()
         dataInitlize1(data)
         data1.removeAt(pos)
         tableRecyclerView1.adapter!!.notifyDataSetChanged()
     }
 
-    override fun onItemClickmondadk(Data: TEMP, pos: Int) {
+    override fun onitemclickmondadk(Data: TEMP, pos: Int) {
         data2.removeAt(pos)
         tableRecyclerView2.adapter!!.notifyDataSetChanged()
         data1.add(Data)

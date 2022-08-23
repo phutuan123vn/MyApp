@@ -7,27 +7,29 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
+import com.example.myapplication.model.TEMP
 import com.example.myapplication.model.User
 import kotlin.collections.ArrayList
 
-class TableRowAdapterSVqldl(private var userArrayListSV: ArrayList<User>) : RecyclerView.Adapter<TableRowAdapterSVqldl.ViewHolder>() {
+class TableRowAdapterSVqldl(private var userArrayListSV: ArrayList<TEMP>,
+                            private var cAllbackSVqldl:callbackSVqldl ) : RecyclerView.Adapter<TableRowAdapterSVqldl.ViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.table_row_layout, viewGroup, false)
         return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.lnamecol.text = userArrayListSV[i].Last_Name
-        viewHolder.fnamecol.text = userArrayListSV[i].First_Name
-        viewHolder.mssvcol.text = userArrayListSV[i].Email
-
-        viewHolder.morecol.setOnClickListener(object :View.OnClickListener{
-            override fun onClick(v: View?) {
-                val activity = v!!.context as AppCompatActivity
-                val svqldldetail = SVqldldetail()
-                activity.supportFragmentManager.beginTransaction().replace(R.id.framelayoutqlnav, svqldldetail).addToBackStack(null).commit()
-            }
-        })
+        viewHolder.lnamecol.text = userArrayListSV[i].t1
+        viewHolder.fnamecol.text = userArrayListSV[i].t2
+        viewHolder.mssvcol.text = userArrayListSV[i].t3
+        viewHolder.bind(userArrayListSV[i],cAllbackSVqldl)
+//        viewHolder.morecol.setOnClickListener(object :View.OnClickListener{
+//            override fun onClick(v: View?) {
+//                val activity = v!!.context as AppCompatActivity
+//                val svqldldetail = SVqldldetail()
+//                activity.supportFragmentManager.beginTransaction().replace(R.id.framelayoutqlnav, svqldldetail).addToBackStack(null).commit()
+//            }
+//        })
     }
 
     override fun getItemCount(): Int {
@@ -39,6 +41,12 @@ class TableRowAdapterSVqldl(private var userArrayListSV: ArrayList<User>) : Recy
         val fnamecol: TextView = itemView.findViewById(R.id.fnamecol)
         val mssvcol: TextView = itemView.findViewById(R.id.mscol)
         val morecol: TextView = itemView.findViewById(R.id.morecol)
+        fun bind(data:TEMP,callback: callbackSVqldl){
+            morecol.setOnClickListener { callback.onitemclickSVqldl(data,adapterPosition) }
+        }
+    }
+    interface callbackSVqldl{
+        fun onitemclickSVqldl(data: TEMP, pos:Int)
     }
 }
 

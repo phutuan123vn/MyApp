@@ -77,6 +77,29 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:paddingStart="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:text="Email:"
+                    android:textColor="@color/colornew"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_5sdp" />
+
+                <TextView
+                    android:inputType="text"
+                    android:id="@+id/GVmailedit"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="abc@gmail.com"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colornew"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border">
                 <TextView
@@ -90,7 +113,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:inputType="text"
+                    android:inputType="textCapWords"
                     android:id="@+id/GVnoiedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -147,30 +170,7 @@
                     android:layout_gravity="center"
                     android:textColor="@color/colornew"/>
             </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border">
-                <TextView
-                    android:paddingStart="@dimen/_5sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/_20sdp"
-                    android:gravity="center_vertical"
-                    android:text="Email:"
-                    android:textColor="@color/colornew"
-                    android:textStyle="bold"
-                    android:paddingLeft="@dimen/_5sdp" />
 
-                <EditText
-                    android:inputType="text"
-                    android:id="@+id/GVmailedit"
-                    android:textSize="@dimen/_10sdp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="abc@gmail.com"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colornew"/>
-            </TableRow>
         </TableLayout>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/gvinfochangeupdate"

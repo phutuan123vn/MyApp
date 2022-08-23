@@ -139,7 +139,7 @@
                     android:background="@drawable/boderhead"
                     android:gravity="center"
                     android:padding="6sp"
-                    android:text="@string/tietcol"
+                    android:text="@string/lopcol"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
@@ -147,17 +147,6 @@
                 <TextView
                     android:layout_width="60dp"
                     android:layout_column="3"
-                    android:layout_height="wrap_content"
-                    android:text="@string/thucol"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:padding="6sp"
-                    android:textAlignment="center"
-                    android:background="@drawable/boderhead" />
-                <TextView
-                    android:layout_width="60dp"
-                    android:layout_column="4"
                     android:layout_height="wrap_content"
                     android:text="ĐD"
                     android:textStyle="bold"

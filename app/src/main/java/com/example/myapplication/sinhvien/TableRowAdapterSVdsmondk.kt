@@ -12,7 +12,8 @@ import com.example.myapplication.model.TEMP
 import kotlinx.android.synthetic.main.tablerowmondk.view.*
 import kotlin.collections.ArrayList
 
-class TableRowAdapterSVdsmondk(private var userArrayListSV: ArrayList<TEMP>,private var callback: callbackclick) : RecyclerView.Adapter<TableRowAdapterSVdsmondk.ViewHolder>() {
+class TableRowAdapterSVdsmondk(private var userArrayListSV: ArrayList<TEMP>,
+                               private var cAllbackdsmon: callbackdsmon) : RecyclerView.Adapter<TableRowAdapterSVdsmondk.ViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.tablerowmondk, viewGroup, false)
         return ViewHolder(itemView)
@@ -25,27 +26,25 @@ class TableRowAdapterSVdsmondk(private var userArrayListSV: ArrayList<TEMP>,priv
         viewHolder.tietcol.text = userArrayListSV[i].t3
 //        Log.d("T3",userArrayListSV.get(i).t3)
 //        viewHolder.thucol.text = userArrayListSV[i].First_Name
-        viewHolder.bind(userArrayListSV[i],callback)
-
+        viewHolder.bind(userArrayListSV[i],cAllbackdsmon)
 
     }
 
     override fun getItemCount(): Int {
         return userArrayListSV.size
     }
-
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val mmhcol: TextView = itemView.findViewById(R.id.mmhcol)
         val tenmhcol: TextView = itemView.findViewById(R.id.tenmhcol)
         val tietcol: TextView = itemView.findViewById(R.id.tietcol)
         val thucol: TextView = itemView.findViewById(R.id.thucol)
         val choncol: TextView = itemView.findViewById(R.id.choncol)
-        fun bind(data:TEMP,callback:callbackclick){
-            itemView.choncol.setOnClickListener { callback.onitemclick(data,adapterPosition) }
+        fun bind(data:TEMP,callback:callbackdsmon){
+            choncol.setOnClickListener { callback.onitemclickdsmon(data,adapterPosition) }
         }
     }
-    interface callbackclick{
-        fun onitemclick(data: TEMP, pos:Int)
+    interface callbackdsmon{
+        fun onitemclickdsmon(data: TEMP, pos:Int)
     }
 }
 

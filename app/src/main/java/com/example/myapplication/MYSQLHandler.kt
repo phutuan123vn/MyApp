@@ -24,7 +24,7 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.137.112/android/"
+        val BASE_URL="http://192.168.53.112/android/"
         val DataG: ArrayList<TEMP> = ArrayList<TEMP>()
      }
     fun insertUser(user: User){
@@ -338,6 +338,37 @@ class MYSQLHandler(var context: Context){
                 return map
             }
         }
+        requestQueue.add(stringRequest)
+    }
+    // lay du lieu dsGV
+    fun getTeachInfoDS(volleyCallback1: VolleyCallback1){
+        val url= BASE_URL + "getAllData.php" // sua link php
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest = StringRequest(url,
+            { response ->
+                try {
+                    val jsonObject = JSONObject(response)
+                    DataG.clear()
+                    if (jsonObject.get("response").equals("Success")) {
+                        val jsonArray = jsonObject.getJSONArray("data")
+                        for (i in 0..jsonArray.length() - 1) {
+                            var data = jsonArray.getJSONObject(i)
+                            var temp = TEMP()
+                            temp.t1 = data.get("LAST_NAME").toString()
+                            temp.t2 = data.get("FIRST_NAME").toString()
+//                        temp.t3=data.get("CONCAT(CAREER,CODE)").toString()
+                            temp.t4 = data.get("ID").toString()
+                            DataG.add(temp)
+                            Log.d("CHECK", DataG.get(0).t1 + " " + DataG.get(0).t2 + " " + DataG.get(0).t3)
+                        }
+                    }
+                }finally {
+                    volleyCallback1.onSuccess(DataG)
+                }
+            },
+            VolleyResponse.ErrorListener { error ->
+            }
+        )
         requestQueue.add(stringRequest)
     }
     fun updatePass(pass:String){

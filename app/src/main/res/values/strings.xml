@@ -78,7 +78,7 @@
     <string name="hocol">HỌ</string>
     <string name="tencol">TÊN</string>
     <string name="mssvcol">MSSV</string>
-    <string name="tkcol">TÀI KHOẢN</string>
+    <string name="tkcol">ACCOUNT</string>
     <string name="user">User</string>
     <string name="pw">Password</string>
     <string name="role">Role</string>
@@ -93,7 +93,7 @@
     <string name="designation">Designation</string>
     <string name="mondkcol">MÔN ĐK</string>
     <string name="ndcol">NỘI DUNG</string>
-    <string name="infocol">THÔNG TIN</string>
+    <string name="infocol">INFO</string>
     <string name="tsmdk">Tổng Số Môn Đăng Kí:</string>
     <string name="tstcdk">Tổng Số Tín Chỉ Đăng Kí:</string>
     <string name="tiet">Tiết 1</string>

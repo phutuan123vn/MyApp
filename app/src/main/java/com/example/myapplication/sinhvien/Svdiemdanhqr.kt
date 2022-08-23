@@ -25,14 +25,14 @@ import kotlinx.coroutines.delay
 private const val CAMERA_REQUEST_CODE = 101
 class Svdiemdanhqr : Fragment() {
     private lateinit var codeScanner: CodeScanner
-    private lateinit var svinfodata :Svinfodata
+//    private lateinit var svinfodata :Svinfodata
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val v = inflater.inflate(R.layout.svdiemdanhqr, container, false)
-        svinfodata = activity as Svinfodata
+//        svinfodata = activity as Svinfodata
         val back = v.findViewById<Button>(R.id.quetmaqrback)
         back.setOnClickListener {
             val Svdiemdanh = Svdiemdanh()
@@ -58,9 +58,11 @@ class Svdiemdanhqr : Fragment() {
         }
         codeScanner.decodeCallback = DecodeCallback {
             activity.runOnUiThread {
-                val temp = TEMP()
-                temp.t9 = it.text
-                svinfodata.passData1(temp)
+//                val temp = TEMP()
+//                temp.t9 = it.text
+//                svinfodata.passData1(temp)
+                camerascantext.text = it.text
+
             }
             val bundle = Bundle()
             val svdiemdanh = Svdiemdanh()

@@ -11,7 +11,8 @@ import com.example.myapplication.model.User
 import kotlinx.android.synthetic.main.tablerowmondadk.view.*
 import kotlin.collections.ArrayList
 
-class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<TEMP>,private var callbak :callbackmon) : RecyclerView.Adapter<TableRowAdapterSVmondadk.ViewHolder>() {
+class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<TEMP>,
+                               private var cAllbackmondadk :callbackmondadk) : RecyclerView.Adapter<TableRowAdapterSVmondadk.ViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.tablerowmondadk, viewGroup, false)
         return ViewHolder(itemView)
@@ -24,7 +25,7 @@ class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<TEMP>,priv
         viewHolder.mmhcol.text=userArrayListSV[i].t1
         viewHolder.tenmhcol.text=userArrayListSV[i].t2
         viewHolder.tietcol.text=userArrayListSV[i].t3
-        viewHolder.bind(userArrayListSV[i],callbak)
+        viewHolder.bind(userArrayListSV[i],cAllbackmondadk)
     }
 
     override fun getItemCount(): Int {
@@ -37,12 +38,12 @@ class TableRowAdapterSVmondadk(private var userArrayListSV: ArrayList<TEMP>,priv
         val tietcol: TextView = itemView.findViewById(R.id.tietcol)
         val thucol: TextView = itemView.findViewById(R.id.thucol)
         val xoacol: TextView = itemView.findViewById(R.id.xoacol)
-        fun bind(data:TEMP,callbackmon: callbackmon){
-            xoacol.setOnClickListener{callbackmon.onItemClickmondadk(data,adapterPosition)}
+        fun bind(data:TEMP,callbackmon: callbackmondadk){
+            xoacol.setOnClickListener{callbackmon.onitemclickmondadk(data,adapterPosition)}
         }
     }
-    interface callbackmon{
-        fun onItemClickmondadk(Data:TEMP,pos:Int)
+    interface callbackmondadk{
+        fun onitemclickmondadk(Data:TEMP,pos:Int)
     }
 }
 

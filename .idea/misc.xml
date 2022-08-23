@@ -62,7 +62,7 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/gvthongtinday.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/tabledslop.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/GV/layout/tablerowgvdslop.xml" value="0.24895833333333334" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.6" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/account.xml" value="0.176" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass.xml" value="0.19157608695652173" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/forgetpass1.xml" value="0.19157608695652173" />
@@ -74,22 +74,22 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupgv.xml" value="0.4" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/LOGIN/layout/signupsv.xml" value="0.2" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/GV/layout/gv_qltkdetail.xml" value="0.25" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_dsgv.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_dsgv.xml" value="0.2" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_dslop.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_dslopchange.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_info.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_infochange.xml" value="0.25" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_qldl.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_qldl.xml" value="0.152" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_qldldetail.xml" value="0.25" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_qltk.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_qltk.xml" value="0.176" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/gv_qltkdetail.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QGV/layout/tablerowqlgvdslop.xml" value="0.24895833333333334" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_dkmh.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_dkmh.xml" value="0.176" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_dkmhchange.xml" value="0.25" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_dssv.xml" value="0.25" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_qldl.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_dssv.xml" value="0.2406311637080868" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_qldl.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_qldldetail.xml" value="0.25" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_qltk.xml" value="0.25" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_qltk.xml" value="0.176" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/sv_qltkdetail.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/QSV/layout/tablerowqlsvmondadk.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/SV/layout/sv_qltkdetail.xml" value="0.25" />
@@ -111,7 +111,7 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/sv_qldldetail.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/sv_qltk.xml" value="0.2" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/sv_qltkdetail.xml" value="0.4" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/table_row_layout.xml" value="0.2" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/table_row_layout.xml" value="0.8" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/table_row_layout_dssv.xml" value="0.264" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/QL/layout/tkb.xml" value="0.25" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/drawable/border.xml" value="0.1725" />
@@ -119,7 +119,7 @@
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/loading.xml" value="0.18697916666666667" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svdiemdanh.xml" value="0.2" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svdiemdanhqr.xml" value="0.18704710144927536" />
-        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svdkmon.xml" value="0.6" />
+        <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svdkmon.xml" value="0.152" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svinfo.xml" value="0.2" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svinfochange.xml" value="0.2" />
         <entry key="..\:/Users/monke/AndroidStudioProjects/MyApp4/app/src/main/res/layouts/SV/layout/svlichhoc.xml" value="0.264" />

@@ -36,70 +36,67 @@
 
         <TableLayout
             android:id="@+id/table_heading_layout"
-            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="400dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_4sdp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center"
+            android:stretchColumns="1,2,3,4">
 
             <TableRow>
                 <TextView
-                    style="@style/table_header"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_column="0"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:paddingEnd="@dimen/_5sdp"
+                    android:layout_width="140dp"
                     android:text="@string/hocol"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_column="0"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boderhead"
+                    android:padding="6sp"
+                    android:gravity="center_horizontal"/>
 
                 <TextView
-                    style="@style/table_header"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_column="1"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:paddingEnd="@dimen/_5sdp"
+                    android:layout_width="50dp"
                     android:text="@string/tencol"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_column="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boderhead"
+                    android:padding="6sp"
+                    android:gravity="center_horizontal" />
                 <TextView
-                    style="@style/table_header"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_30sdp"
-                    android:layout_column="2"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:paddingEnd="@dimen/_5sdp"
+                    android:layout_width="60dp"
                     android:text="@string/msgvcol"
-                    android:textAlignment="center" />
-                <TextView
-                    style="@style/table_header"
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/_30sdp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:layout_column="2"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:paddingEnd="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boderhead"
+                    android:padding="6sp"
+                    android:gravity="center_horizontal"/>
+                <TextView
+                    android:layout_width="50dp"
                     android:text="@string/infocol"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_column="3"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boderhead"
+                    android:padding="6sp"
+                    android:gravity="center_horizontal" />
 
             </TableRow>
         </TableLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/table_recycler_view_gvdsgv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_width="400dp"
+            android:layout_height="500dp"
+            android:layout_gravity="center"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/table_heading_layout"
