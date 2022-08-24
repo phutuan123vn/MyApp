@@ -24,7 +24,7 @@ class MYSQLHandler(var context: Context){
         var respnseDone:Boolean=false
         val user = User()
         var DataUser: ArrayList<User> = ArrayList<User>()
-        val BASE_URL="http://192.168.53.112/android/"
+        val BASE_URL="http://192.168.42.175/android/"
         val DataG: ArrayList<TEMP> = ArrayList<TEMP>()
      }
     fun insertUser(user: User){
@@ -209,6 +209,7 @@ class MYSQLHandler(var context: Context){
                         temp.t1=data.get("MMH").toString()
                         temp.t2=data.get("NAME").toString()
                         temp.t3=data.get("CLASS").toString()
+                        temp.t4=data.get("ID").toString()
                         DataG.add(temp)
                         Log.d("CHEKC", DataG.get(i).t1 +" "+DataG.get(i).t2+" "+ DataG.get(i).t3)
                     }
@@ -394,42 +395,45 @@ class MYSQLHandler(var context: Context){
         requestQueue.add(stringRequest)
     }
 
-    fun checkinfo(email: String, phone: String, pid: String,callback1: VolleyCallback1) {
-        val url= BASE_URL+"checkDataInfo.php"
+    fun checkInfo(phone: String,pid: String,callback:VolleyCallback1){
+        val url= BASE_URL + "checkDataInfo.php"
         val requestQueue=Volley.newRequestQueue(context)
-        val stringRequest=object :StringRequest(
+        val StringRequest = object : StringRequest(
             Request.Method.POST,
             url,
             Listener { response ->
                 try {
-                    val jsonObject=JSONObject(response)
-                    val jsonarray=jsonObject.getJSONArray("data")
-                    var data=jsonarray.getJSONObject(0)
-                    var temp=TEMP()
-                    temp.t1=data.get("COLEMAIL").toString()
-                    temp.t2=data.get("COLPHONE").toString()
-                    temp.t3=data.get("COLPID").toString()
-                    DataG.clear()
-                    DataG.add(temp)
+                    var jsonObject = JSONObject(response)
+                    if (jsonObject.get("response").equals("Success")) {
+                        val jsonArray = jsonObject.getJSONArray("data")
+                        val data = jsonArray.getJSONObject(0)
+                        var temp=TEMP()
+                        temp.t1=data.get("COLPHONE").toString()
+                        temp.t2=data.get("COLPID").toString()
+                        DataG.clear()
+                        DataG.add(temp)
+                        Log.d("id","${temp.t1} ${temp.t2} ${user.id}")
+                    }else{
+                        DataG.clear()
+                    }
                 }finally {
-                    callback1.onSuccess(DataG)
+                    callback.onSuccess(DataG)
                 }
-
-            }, com.android.volley.Response.ErrorListener { error ->
-
+            },
+            VolleyResponse.ErrorListener { error ->
             }
         ){
-            override fun getParams(): HashMap<String, String>? {
-                val map:HashMap<String,String> = HashMap()
-                map["EMAIL"]=email
+            override fun getParams(): HashMap<String, String> {
+                val map=HashMap<String,String>()
                 map["PHONE"]=phone
                 map["PERSON_ID"]=pid
                 return map
             }
+
         }
-        requestQueue.add(stringRequest)
+        requestQueue.add(StringRequest)
     }
-    fun updateStuInfo(email: String,phone: String,pid: String,address:String){
+    fun updateStuInfo(phone: String,pid: String,address:String){
         val url= BASE_URL+"updateStuInfo.php"
         val requestQueue=Volley.newRequestQueue(context)
         val stringRequest=object :StringRequest(
@@ -444,10 +448,54 @@ class MYSQLHandler(var context: Context){
             override fun getParams(): HashMap<String, String>? {
                 val map:HashMap<String,String> =HashMap()
                 map["ID"]= user.id.toString()
-                map["EMAIL"]=email
                 map["PHONE"]=phone
                 map["ADDRESS"]=address
                 map["PID"]=pid
+                return map
+            }
+        }
+        requestQueue.add(stringRequest)
+    }
+    fun updateTeachInfo(phone: String,pid: String,address:String){
+        val url= BASE_URL+"updateTeachInfo.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=object :StringRequest(
+            Request.Method.POST,
+            url,
+            Listener { response ->
+                Toast.makeText(context,response,Toast.LENGTH_SHORT).show()
+            }, com.android.volley.Response.ErrorListener {error ->
+                Toast.makeText(context,"${error(error)}",Toast.LENGTH_SHORT).show()
+            }
+        ){
+            override fun getParams(): HashMap<String, String>? {
+                val map:HashMap<String,String> =HashMap()
+                map["ID"]= user.id.toString()
+                map["PHONE"]=phone
+                map["ADDRESS"]=address
+                map["PID"]=pid
+                return map
+            }
+        }
+        requestQueue.add(stringRequest)
+    }
+
+    fun dkmh(temp: TEMP) {
+        val url= BASE_URL+"dkmh.php"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=object :StringRequest(
+            Request.Method.POST,
+            url,
+            Listener { response ->
+                Log.d("SC",response)
+            },com.android.volley.Response.ErrorListener{error ->
+
+            }
+        ){
+            override fun getParams(): MutableMap<String, String>? {
+                val map:HashMap<String,String> = HashMap()
+                map["ID"]= user.id.toString()
+                map["SID"]=temp.t4
                 return map
             }
         }
