@@ -36,7 +36,7 @@ class Svinfochange : Fragment() {
         val svnoiedit=v.findViewById<EditText>(R.id.SVnoiedit)
         val svPIDedit=v.findViewById<EditText>(R.id.SVcmndedit)
         val svphone=v.findViewById<EditText>(R.id.SVsdtedit)
-        val svmail=v.findViewById<EditText>(R.id.SVmailedit)
+        val svmail=v.findViewById<TextView>(R.id.SVmailedit)
         val arg=this.arguments
         Log.d("SAD","$ho $ten")
         ho=arg?.getString("Ho")
@@ -47,10 +47,10 @@ class Svinfochange : Fragment() {
         mail=arg?.getString("Email")
         svho.text=ho
         svten.text=ten
+        svmail.text=mail
         svnoiedit.setText(address)
         svPIDedit.setText(PID)
         svphone.setText(phone)
-        svmail.setText(mail)
         back.setOnClickListener {
             val Svinfo = Svinfo()
             val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
@@ -61,18 +61,11 @@ class Svinfochange : Fragment() {
         update.setOnClickListener {
             if (svnoiedit.text.toString().isEmpty()
                 || svPIDedit.text.toString().isEmpty()
-                || svphone.text.toString().isEmpty()
-                || svmail.text.toString().isEmpty()){
+                || svphone.text.toString().isEmpty()){
                 Toast.makeText(requireContext(),"Please fill all your Information",Toast.LENGTH_SHORT).show()
             }else{
-                var emailcheck:Boolean=false
                 var phonecheck:Boolean=false
                 var PIDcheck:Boolean=false
-                if (isEmailValid(svmail.text.toString().trim())){
-                    emailcheck=true
-                }else{
-                    Toast.makeText(requireContext(),"Email is Invalid",Toast.LENGTH_SHORT).show()
-                }
                 if (svPIDedit.text.toString().trim().length in 8..10){
                     PIDcheck=true
                 }else{
@@ -83,27 +76,18 @@ class Svinfochange : Fragment() {
                 }else{
                     Toast.makeText(requireContext(),"Number is Invalid",Toast.LENGTH_SHORT).show()
                 }
-                if (emailcheck && phonecheck && PIDcheck){
+                if ( phonecheck && PIDcheck){
                     val db=MYSQLHandler(requireContext())
-                    var email= svmail.text.toString().trim().lowercase()
                     var phone= svphone.text.toString().trim()
                     var PID=svPIDedit.text.toString().trim()
                     var address=svnoiedit.text.toString().trim()
-                    db.checkinfo(email,phone,PID,object :MYSQLHandler.VolleyCallback1{
+                    db.checkInfo(phone,PID,object :MYSQLHandler.VolleyCallback1{
                         override fun onSuccess(Data: ArrayList<TEMP>) {
                             super.onSuccess(Data)
-                            var mailu:Boolean=false
                             var phoneu:Boolean=false
                             var pidu:Boolean=false
-                            var checkmail= Data[0].t1
-                            var checkphone=Data[0].t2
-                            var checkPID=Data[0].t3
-                            if (checkmail==1.toString()){
-                                mailu=false
-                                Toast.makeText(requireContext(),"Email have been used",Toast.LENGTH_SHORT).show()
-                            }else{
-                                mailu=true
-                            }
+                            var checkphone=Data[0].t1
+                            var checkPID=Data[0].t2
                             if (checkphone==1.toString()){
                                 phoneu=false
                                 Toast.makeText(requireContext(),"Phone have been used",Toast.LENGTH_SHORT).show()
@@ -116,39 +100,27 @@ class Svinfochange : Fragment() {
                             }else{
                                 pidu=true
                             }
-                            if (pidu && phoneu && mailu){
-                                db.updateStuInfo(email,phone,PID,address)
+                            if (pidu && phoneu ){
+                                db.updateStuInfo(phone,PID,address)
+                                val Svinfo = Svinfo()
+                                val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+                                transaction.setCustomAnimations(
+                                    R.anim.slide_in_left,
+                                    R.anim.slide_out_right,
+                                    R.anim.slide_in_right,
+                                    R.anim.slide_out_left
+                                )
+                                transaction.replace(R.id.framelayoutsvnav, Svinfo)
+                                transaction.commit()
                             }
                         }
                     })
                 }
             }
-//            val Svinfo = Svinfo()
-//            val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-//            transaction.setCustomAnimations(
-//                R.anim.slide_in_left,
-//                R.anim.slide_out_right,
-//                R.anim.slide_in_right,
-//                R.anim.slide_out_left
-//            )
-//            transaction.replace(R.id.framelayoutsvnav, Svinfo)
-//            transaction.commit()
         }
 
         return v
     }
-    fun isEmailValid(email: String): Boolean {
-        return Pattern.compile(
-            "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]|[\\w-]{2,}))"
-                    + "@gmail.com"  //thay doi email tai day
-//                     "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-//                    "\\@" +
-//                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-//                    "(" +
-//                    "\\." +
-//                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-//                    ")+"
-        ).matcher(email).matches()
-    }
+
 }
 

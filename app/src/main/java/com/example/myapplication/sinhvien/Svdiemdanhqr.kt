@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Camera
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.view.contains
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
 import com.budiyev.android.codescanner.*
@@ -61,7 +63,13 @@ class Svdiemdanhqr : Fragment() {
 //                val temp = TEMP()
 //                temp.t9 = it.text
 //                svinfodata.passData1(temp)
-                camerascantext.text = it.text
+                var checkStr = it.text.toString()
+                if (checkStr.contains("http://192.168.11.60/android/")){
+                    Log.d("QR",checkStr)
+                }else{
+                    Toast.makeText(requireContext(),"Cant",Toast.LENGTH_SHORT).show()
+                }
+
 
             }
             val bundle = Bundle()

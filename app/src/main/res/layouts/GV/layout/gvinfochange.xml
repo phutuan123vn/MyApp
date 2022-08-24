@@ -137,7 +137,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:inputType="text"
+                    android:inputType="number"
                     android:id="@+id/GVcmndedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
@@ -161,7 +161,7 @@
                     android:paddingLeft="@dimen/_5sdp" />
 
                 <EditText
-                    android:inputType="text"
+                    android:inputType="phone"
                     android:id="@+id/GVsdtedit"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
