@@ -64,6 +64,7 @@
 <!--                android:padding="6sp"-->
 <!--                android:background="@drawable/border"/>-->
             <CheckBox
+                android:id="@+id/attend"
                 android:clickable="false"
                 android:layout_width="60dp"
                 android:layout_height="35dp"

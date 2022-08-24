@@ -16,9 +16,11 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.DatabaseHandler
+import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
 //import com.example.myapplication.databinding.SvdiemdanhBinding
 import com.example.myapplication.login.LoginSV
+import com.example.myapplication.model.TEMP
 import com.example.myapplication.model.User
 import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdiemdanh
 import com.example.myapplication.quanly.quanlysv.TableRowAdapterSVdsmondk
@@ -27,7 +29,7 @@ import kotlinx.android.synthetic.main.svdiemdanh.view.*
 
 class Svdiemdanh : Fragment() {
         var output1 :String?=""
-
+    var data:ArrayList<TEMP> = ArrayList()
     private lateinit var tableRecyclerView : RecyclerView
     private lateinit var tableRowAdapterSVdiemdanh: TableRowAdapterSVdiemdanh
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,18 +39,30 @@ class Svdiemdanh : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ):View? {
+        data.clear()
         val v = inflater.inflate(R.layout.svdiemdanh, container, false)
         val textView : TextView = v.findViewById(R.id.textviewtest)
-                output1 = arguments?.getString("Test")
+        val layoutManager = LinearLayoutManager(context)
+
+        val db=MYSQLHandler(requireContext())
+        db.datadiemdanh(object :MYSQLHandler.VolleyCallback1{
+            override fun onSuccess(Data: ArrayList<TEMP>) {
+                super.onSuccess(Data)
+                data=Data
+                for (i in 0 until data.size) {
+                    Log.d("check", Data.get(i).t1 + Data.get(i).t2 + Data.get(i).t3 + Data[i].t4)
+                }
+                tableRecyclerView = v.findViewById(R.id.table_recycler_view_diemdanh)
+                tableRecyclerView.layoutManager = layoutManager
+                tableRecyclerView.setHasFixedSize(true)
+                tableRowAdapterSVdiemdanh = TableRowAdapterSVdiemdanh(data)
+                tableRecyclerView.adapter = tableRowAdapterSVdiemdanh
+                tableRecyclerView.adapter!!.notifyDataSetChanged()
+            }
+        })
         textView.text = output1
         val data=activity.createContext(this)
         dataInitlize(data)
-        val layoutManager = LinearLayoutManager(context)
-        tableRecyclerView = v.findViewById(R.id.table_recycler_view_diemdanh)
-        tableRecyclerView.layoutManager = layoutManager
-        tableRecyclerView.setHasFixedSize(true)
-        tableRowAdapterSVdiemdanh = TableRowAdapterSVdiemdanh(data)
-        tableRecyclerView.adapter = tableRowAdapterSVdiemdanh
 
         val qmqr = v.findViewById<Button>(R.id.quetmaqr)
         qmqr.setOnClickListener {

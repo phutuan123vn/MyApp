@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.MYSQLHandler
@@ -75,8 +76,13 @@ class Svdkmon : Fragment(),TableRowAdapterSVdsmondk.callbackdsmon,TableRowAdapte
                     handler.postDelayed({
                         db?.dkmh(data2[i])
                     },1000)
-
+                    Thread.sleep(1000)
                 }
+                val svdiemdanh = Svlichhoc()
+                val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+                transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
+                transaction.replace(R.id.framelayoutsvnav, svdiemdanh)
+                transaction.commit()
             }
         }
         return v

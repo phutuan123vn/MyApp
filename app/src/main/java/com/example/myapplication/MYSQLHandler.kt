@@ -501,6 +501,49 @@ class MYSQLHandler(var context: Context){
         }
         requestQueue.add(stringRequest)
     }
+    fun diemdanh(Str:String){
+        val url=Str+"&id=${user.id}"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=StringRequest(url,
+            {response ->
+                //
+            },
+            {error->
+                //
+            })
+        requestQueue.add(stringRequest)
+    }
+    fun datadiemdanh(callback:VolleyCallback1){
+        val url= BASE_URL+"getDiemdanh.php"+"?id=${user.id}"
+        val requestQueue=Volley.newRequestQueue(context)
+        val stringRequest=StringRequest(url,
+            {
+            try {
+                DataG.clear()
+                val jsonObject=JSONObject(it)
+                if (jsonObject.get("response").equals("Success")){
+                    val jsonArray=jsonObject.getJSONArray("data")
+                    for (i in 0 until jsonArray.length()) {
+                        var data = jsonArray.getJSONObject(i)
+                        var temp = TEMP()
+//                        temp.t1 = data.get("SUB_ID").toString()
+//                        temp.t3=data.get("CONCAT(CAREER,CODE)").toString()
+                        temp.t1 = data.get("MMH").toString()
+                        temp.t2 = data.get("NAME").toString()
+                        temp.t3 = data.get("CLASS").toString()
+                        temp.t4 = data.get("ATTEND").toString()
+                        DataG.add(temp)
+                        Log.d("CHECK", DataG.get(0).t1 + " " + DataG.get(0).t2 + " " + DataG.get(0).t3)
+                    }
+                }
+            }finally {
+                callback.onSuccess(DataG)
+            }
+            },{
+
+            })
+        requestQueue.add(stringRequest)
+    }
 
     interface VolleyCallback{
         fun onSuccess(Data:ArrayList<User>) {

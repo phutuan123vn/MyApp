@@ -17,6 +17,7 @@ import androidx.core.view.contains
 import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.Navigation
 import com.budiyev.android.codescanner.*
+import com.example.myapplication.MYSQLHandler
 import com.example.myapplication.R
 import com.example.myapplication.login.LoginSV
 import com.example.myapplication.model.TEMP
@@ -66,19 +67,21 @@ class Svdiemdanhqr : Fragment() {
                 var checkStr = it.text.toString()
                 if (checkStr.contains("http://192.168.11.60/android/")){
                     Log.d("QR",checkStr)
+                    val db=MYSQLHandler(requireContext())
+                    db.diemdanh(checkStr)
+                    val bundle = Bundle()
+                    val svdiemdanh = Svdiemdanh()
+                    svdiemdanh.arguments = bundle
+                    val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
+                    transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
+                    transaction.replace(R.id.framelayoutsvnav, svdiemdanh)
+                    transaction.commit()
                 }else{
                     Toast.makeText(requireContext(),"Cant",Toast.LENGTH_SHORT).show()
                 }
 
 
             }
-            val bundle = Bundle()
-            val svdiemdanh = Svdiemdanh()
-            svdiemdanh.arguments = bundle
-            val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
-            transaction.setCustomAnimations(R.anim.slide_in_left,R.anim.slide_out_right,R.anim.slide_in_right,R.anim.slide_out_left)
-            transaction.replace(R.id.framelayoutsvnav, svdiemdanh)
-            transaction.commit()
         }
         scannerView.setOnClickListener {
             camerascantext.setText("Scan somthing...")

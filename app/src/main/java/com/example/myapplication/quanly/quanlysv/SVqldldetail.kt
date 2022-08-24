@@ -39,7 +39,7 @@ class SVqldldetail : Fragment() {
         tableRecyclerView = v.findViewById(R.id.table_recycler_view_diemdanh)
         tableRecyclerView.layoutManager = layoutManager
         tableRecyclerView.setHasFixedSize(true)
-        tableRowAdapterSVdiemdanh = TableRowAdapterSVdiemdanh(data)
+//        tableRowAdapterSVdiemdanh = TableRowAdapterSVdiemdanh(data)
         tableRecyclerView.adapter = tableRowAdapterSVdiemdanh
         return v
     }
