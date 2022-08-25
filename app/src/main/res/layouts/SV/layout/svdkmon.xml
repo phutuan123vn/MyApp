@@ -230,6 +230,7 @@
                 tools:listitem="@layout/tablerowmondadk">
             </androidx.recyclerview.widget.RecyclerView>
         </TableLayout>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/dkmhgui"
             android:layout_marginTop="30dp"

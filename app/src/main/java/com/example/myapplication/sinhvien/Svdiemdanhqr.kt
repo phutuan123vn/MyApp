@@ -65,7 +65,7 @@ class Svdiemdanhqr : Fragment() {
 //                temp.t9 = it.text
 //                svinfodata.passData1(temp)
                 var checkStr = it.text.toString()
-                if (checkStr.contains("http://192.168.11.60/android/")){
+                if (checkStr.contains("http://192.168.34.112/android/diemdanh.php")){
                     Log.d("QR",checkStr)
                     val db=MYSQLHandler(requireContext())
                     db.diemdanh(checkStr)

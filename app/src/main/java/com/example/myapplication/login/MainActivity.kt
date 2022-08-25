@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }
         bttnQL.setOnClickListener {
-            val intent= Intent(this, QLnavigation::class.java)
+            val intent= Intent(this, LoginQL::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation)
         }

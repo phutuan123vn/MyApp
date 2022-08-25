@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:id="@android:id/text1"
     android:gravity="center"
-    android:padding="10dp"
+    android:paddingVertical="10dp"
     tools:text="Title"
     android:background="@drawable/customemauchonngay"
     android:textColor="@drawable/customemauchuchonngay"

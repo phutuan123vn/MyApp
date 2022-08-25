@@ -43,7 +43,12 @@ class SVqltk : Fragment(),TableRowAdapterSVqltk.callbackSVqltk {
     }
     override fun onitemclickSVqltk(data: TEMP, pos: Int) {
         Toast.makeText(requireContext(),"Click $pos ${data.t1}", Toast.LENGTH_SHORT).show()
+        val bundle=Bundle()
+        bundle.putString("Last_name",data.t1)
+        bundle.putString("First_name",data.t2)
+        bundle.putString("Email",data.t7)
         val svqltkdetail = Svqltkdetail()
+        svqltkdetail.arguments=bundle
         val transaction: FragmentTransaction = fragmentManager!!.beginTransaction()
         transaction.setCustomAnimations(R.anim.slide_in_right,R.anim.slide_out_left,R.anim.slide_in_left,R.anim.slide_out_right)
         transaction.replace(R.id.framelayoutqlnav, svqltkdetail)

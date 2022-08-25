@@ -1,5 +1,6 @@
 package com.example.myapplication.quanly.quanlysv
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,7 +25,9 @@ class TableRowAdapterSVdssv(private var userArrayListSV: ArrayList<TEMP>,
         viewHolder.fnamecol.text = userArrayListSV[i].t2
         viewHolder.mssvcol.text = userArrayListSV[i].t3
         viewHolder.bind(userArrayListSV[i],cAllbackSVdssv)
-
+//        if((i % 2) != 0){
+//           viewHolder.itemView.setBackgroundColor(Color.parseColor("#800A7E8C"));
+//        }
 //        viewHolder.morecol.setOnClickListener(object :View.OnClickListener{
 //            override fun onClick(v: View?) {
 //                val activity = v!!.context as AppCompatActivity
